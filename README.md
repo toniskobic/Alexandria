@@ -28,3 +28,4 @@ F09 | Statistika | Statistika posuđenih knjiga nam prikazuje broj posuđivanja 
 
 ## Tehnologije i oprema
 
+GitHub, GitHub Classroom, Visual Paradigm CE, .NET(Visual Studio), Word, MySQL, Draw.io
