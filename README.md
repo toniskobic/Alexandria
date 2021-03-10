@@ -1,35 +1,30 @@
-# Inicijalne upute za prijavu projekta iz Programskog inženjerstva
-
-Poštovane kolegice i kolege, 
-
-čestitamo vam jer ste uspješno prijavili svoj projektni tim na kolegiju Programsko inženjerstvo, te je za vas automatski kreiran repozitorij koji ćete koristiti za verzioniranje vašega koda, ali i za pisanje dokumentacije.
-
-Ovaj dokument (README.md) predstavlja **osobnu iskaznicu vašeg projekta**. Vaš prvi zadatak, ukoliko niste odabrali da želite raditi na projektu sa nastavnicima ili u sklopu WBL-a je **prijaviti vlastiti projektni prijedlog** na način da ćete prijavu vašeg projekta, sukladno uputama danim u ovom tekstu, napisati upravo u ovaj dokument, umjesto ovoga teksta.
-
-Za upute o sintaksi koju možete koristiti u ovom dokumentu i kod pisanje vaše projektne dokumentacije pogledajte [ovaj link](https://guides.github.com/features/mastering-markdown/).
-
-Nakon vaše prijave bit će vam dodijeljen mentor s kojim ćete tijekom semestra raditi na ovom projektu. A sada, vrijeme je da prijavite vaš projekt. Za prijavu vašeg projektnog prijedloga molimo vas koristite **predložak** koji je naveden u nastavku, a započnite tako da kliknete na *olovku* u desnom gornjem kutu ovoga dokumenta :) 
-
-# Naziv projekta
-(u redak iznad navedite kratki proizvoljni naziv projekta prikladan akademskoj zajednici, a ovaj tekst obrišite)
+# Alexandria - Softver za zaposlenike knjižnice
 
 ## Projektni tim
 
 Ime i prezime | E-mail adresa (FOI) | JMBAG | Github korisničko ime
 ------------  | ------------------- | ----- | ---------------------
-Ime i prezime | mojaadresa@foi.hr | 000000000 | githubuser
-Ime i prezime | ... | ... | ...
+Toni Škobić | tskobic@foi.hr | 0016140017 | tskobic
+Luka Bojka | lbojka@foi.hr | 0016135382 | lbojka
+Petar Šiljeg | psiljeg@foi.hr | 0016133650 | piljeg
 
 ## Opis domene
-Umjesto ovih uputa opišite domenu ili problem koji pokrivate vašim  projektom. Domena može biti proizvoljna, ali obratite pozornost da sukladno ishodima učenja, domena omogući primjenu zahtijevanih koncepata kako je to navedeno u sljedećem poglavlju. Priložite odgovarajuće skice gdje je to prikladno.
+
+Rad u knjižnjici je jako kompliciran bez prikladnog softvera. Zaposlenici nemaju jednostavan način za praćenje količine, posudbi i članstva korisnika. Funkcionalnosti ove aplikacije će uvelike olakšavati prethodno navedenu problematiku.
 
 ## Specifikacija projekta
-Umjesto ovih uputa opišite zahtjeve za funkcionalnošću programskog proizvoda. Pobrojite osnovne funkcionalnosti i za svaku naznačite ime odgovornog člana tima. Opišite buduću arhitekturu programskog proizvoda. Obratite pozornost da bi arhitektura trebala biti višeslojna s odvojenom (dislociranom) bazom podatka. Također uzmite u obzir da bi svaki član tima treba biti odgovorana za otprilike 3 funkcionalnosti, te da bi opterećenje članova tima trebalo biti ujednačeno. Priložite odgovarajuće dijagrame i skice gdje je to prikladno. Funkcionalnosti sustava bobrojite u tablici ispod koristeći predložak koji slijedi:
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Login | Za pristup dnevniku potrebnba je autentikacija korisnika pomoću login funkcionalnosti. Korisnik se logira s podacima koji su mu dodijeljeni prilikom ... | Zlatko Stapić
-F02 | Pregled dnevnika | .... | ...
+F01 | Praćenje zaliha | Evidencija količine zaliha knjiga koje knjižnica posjeduje. S novom posudbom, kupnjom ili krađom i sl. baza se ažurira | Toni Škobić
+F02 | Praćenje posudbi | Praćenje posudbi knjiga po članovima. S novom posudbom ili vraćanjem knjige, baza se ažurira | Toni Škobić
+F03 | Praćenje članstva | Evidencija valjanih i isteklih iskaznica | Toni Škobić
+F04 | Prijava zaposlenika | Prijava i odjava zaposlenika iz aplikacije | Luka Bojka
+F05 | Skeniranje članskih iskaznica | Skeniranjem RFID članske iskaznice očitavamo podatke o članu, valjanosti njegovog članstva, rezervacije, trenutno i prethodno posuđene knjige | Luka Bojka
+F06 | Skeniranje knjiga | Skeniranjem bar koda na poleđini knjige možemo pratiti zalihe, prikazati detalje o knjizi, vratiti posuđene knjige i tako izračunati zakasninu ako postoji kao i posuditi knjige| Luka Bojka
+F07 | Rezervacija knjiga za posudbu | Član može rezervirati knjigu koja nije dostupna tako da bude sljedeći na redu za posuđivanje | Petar Šiljeg
+F08 | Učlanjenje novih članova | Dodavanje novih članova u aplikaciju i brisanje starih | Petar Šiljeg
+F09 | Statistika | Statistika posuđenih knjiga nam prikazuje broj posuđivanja po knjizi, vrijeme koje je potrebno za vraćanje knjiga, broj posuđivanja po žanru itd. | Petar Šiljeg
 
 ## Tehnologije i oprema
-Umjesto ovih uputa jasno popišite sve tehnologije, alate i opremu koju ćete koristiti pri implementaciji vašeg rješenja. Ne zaboravite planirati korištenje tehnologija u aktivnostima kao što su projektni menadžment ili priprema dokumentacije. Tehnologije koje ćete koristiti bi trebale biti javno dostupne, a ako ih ne budemo obrađivali na vježbama u vašoj dokumentaciji ćete morati navesti način preuzimanja, instaliranja i korištenja onih tehnologija koje su neopbodne kako bi se vaš programski proizvod preveo i pokrenuo. Pazite da svi alati koje ćete koristiti moraju imati odgovarajuću licencu.
+
