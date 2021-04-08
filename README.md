@@ -16,15 +16,15 @@ Rad u knjižnjici je jako kompliciran bez prikladnog softvera. Zaposlenici nemaj
 
 Oznaka | Naziv | Kratki opis | Odgovorni član tima
 ------ | ----- | ----------- | -------------------
-F01 | Praćenje zaliha | Evidencija količine zaliha knjiga koje knjižnica posjeduje. S novom posudbom, kupnjom ili krađom i sl. baza se ažurira | Toni Škobić
-F02 | Praćenje posudbi | Praćenje posudbi knjiga po članovima. S novom posudbom ili vraćanjem knjige, baza se ažurira | Toni Škobić
-F03 | Praćenje članstva | Evidencija valjanih i isteklih iskaznica | Toni Škobić
-F04 | Prijava zaposlenika | Prijava i odjava zaposlenika iz aplikacije | Luka Bojka
-F05 | Skeniranje članskih iskaznica | Skeniranjem RFID članske iskaznice očitavamo podatke o članu, valjanosti njegovog članstva, rezervacije, trenutno i prethodno posuđene knjige | Luka Bojka
-F06 | Skeniranje knjiga | Skeniranjem bar koda na poleđini knjige možemo pratiti zalihe, prikazati detalje o knjizi, vratiti posuđene knjige i tako izračunati zakasninu ako postoji kao i posuditi knjige| Luka Bojka
-F07 | Rezervacija knjiga za posudbu | Član može rezervirati knjigu koja nije dostupna tako da bude sljedeći na redu za posuđivanje | Petar Šiljeg
-F08 | Učlanjenje novih članova | Dodavanje novih članova u aplikaciju i brisanje starih | Petar Šiljeg
-F09 | Statistika | Statistika posuđenih knjiga nam prikazuje broj posuđivanja po knjizi, vrijeme koje je potrebno za vraćanje knjiga, broj posuđivanja po žanru itd. | Petar Šiljeg
+F01 | Upravljanje katalogom knjiga | Unos nove knjižne građe (kao posljedica kupnje, donacija i sl.) te razduživanje knjižne građe (npr. dotrajale, izgubljene knjige, oštećene knjge). Treba voditi računa o konceptima knjige, primjerka knjige, kategorije i sl. | Toni Škobić
+F02 | Upravljanje posudbama | Posudba knjige, vraćanje knjige, slanje upozorenja za zakasnine, naplata zakasnine. | Petar Šiljeg
+F03 | Upravljanje članovima |Profil člana, učlanjenje novih članova, dodjela login podataka, produljenje članstva, zamrzavanje članstva, prekid članstva. | Luka Bojka
+F04 | Upravljanje korisnicima | Prijava i odjava korisnika iz aplikacije, kreiranje korisnika od strane administratora, aktiviranje/deaktiviranje korisnika. | Toni Škobić
+F05 | Generiranje članskih iskaznica | Generiranje članske iskaznice i definiranje njenog izgleda. Skeniranje članske iskaznice. | Luka Bojka
+F06 | Pregled knjiga | Član knjižnice se može logirati i pretraživati knjige, te otvoriti unutar aplikacije ograničeni pregled nekoliko stranica knjige. | Toni Škobić
+F07 | Rezervacija knjiga za posudbu | Član može rezervirati knjigu koja nije dostupna tako da bude sljedeći na redu za posuđivanje. Članu dolazi obavijest na mail da je knjiga postala dostupna. Tu knjigu/primjerak ne može nitko drugi posuditi dok je rezervirana. | Petar Šiljeg
+F08 | Statistika posudbi | Dodavanje novih članova u aplikaciju i brisanje starih | Petar Šiljeg
+F09 | Statistika članova	 | Korisnik može pregledati statistiku članova po dobnim skupinama koji su najviše knjiga pročitali i sl.	 | Luka Bojka
 
 ## Tehnologije i oprema
 
