@@ -23,7 +23,7 @@ F04 | Upravljanje korisnicima | Prijava i odjava korisnika iz aplikacije, kreira
 F05 | Generiranje članskih iskaznica | Generiranje članske iskaznice i definiranje njenog izgleda. Skeniranje članske iskaznice. | Luka Bojka
 F06 | Pregled knjiga | Član knjižnice se može logirati i pretraživati knjige, te otvoriti unutar aplikacije ograničeni pregled nekoliko stranica knjige. | Toni Škobić
 F07 | Rezervacija knjiga za posudbu | Član može rezervirati knjigu koja nije dostupna tako da bude sljedeći na redu za posuđivanje. Članu dolazi obavijest na mail da je knjiga postala dostupna. Tu knjigu/primjerak ne može nitko drugi posuditi dok je rezervirana. | Petar Šiljeg
-F08 | Statistika posudbi | Dodavanje novih članova u aplikaciju i brisanje starih | Petar Šiljeg
+F08 | Statistika posudbi | Korisnik može pregledati statistiku najčitanijih knjiga, autora i sl. po razdobljima, kategoriji (u tabličnom formatu, grafikon i sl). | Petar Šiljeg
 F09 | Statistika članova	 | Korisnik može pregledati statistiku članova po dobnim skupinama koji su najviše knjiga pročitali i sl.	 | Luka Bojka
 
 ## Tehnologije i oprema
