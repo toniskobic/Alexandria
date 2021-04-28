@@ -28,4 +28,4 @@ F09 | Statistika članova	 | Korisnik može pregledati statistiku članova po do
 
 ## Tehnologije i oprema
 
-GitHub, GitHub Classroom, Visual Paradigm CE, .NET(Visual Studio), Word, MySQL, Draw.io, MS Project
+GitHub, GitHub Classroom, Visual Paradigm CE, .NET(Visual Studio), Word, Microsoft SQL Server, Draw.io, MS Project
