@@ -21,7 +21,7 @@ F02 | Upravljanje katalogom knjiga | Unos nove knjižne građe (kao posljedica k
 F03 | Upravljanje posudbama | Posudba knjige, vraćanje knjige, slanje upozorenja za zakasnine, naplata zakasnine. | Petar Šiljeg
 F04 | Upravljanje članovima | Profil člana, učlanjivanje novih članova, dodjela login podataka, produljenje članstva, zamrzavanje članstva, prekid članstva. | Luka Bojka
 F05 | Upravljanje korisnicima | Prijava i odjava korisnika iz aplikacije, kreiranje korisnika od strane administratora, aktiviranje/deaktiviranje korisnika. | Toni Škobić
-F06 | Generiranje članskih iskaznica | Generiranje članske iskaznice. Skeniranje članske iskaznice. | Luka Bojka
+F06 | Upravljanje članskim iskaznicama | Generiranje članske iskaznice. Skeniranje članske iskaznice. | Luka Bojka
 F07 | Rezervacija knjiga za posudbu | Član može rezervirati knjigu koja nije dostupna tako da bude sljedeći na redu za posuđivanje. Članu dolazi obavijest na mail da je knjiga postala dostupna. Tu knjigu/primjerak ne može nitko drugi posuditi dok je rezervirana. | Petar Šiljeg
 F08 | Statistika posudbi | Korisnik može pregledati statistiku najčitanijih knjiga, autora i sl. po razdobljima, kategoriji (u tabličnom formatu, grafikon i sl). | Petar Šiljeg
 F09 | Statistika članova	 | Korisnik može pregledati statistiku članova po dobnim skupinama koji su najviše knjiga pročitali i sl.	 | Luka Bojka
