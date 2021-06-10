@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alexandria", "Alexandria\Alexandria.csproj", "{255F010B-CA7D-479D-85D7-C410115260AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{255F010B-CA7D-479D-85D7-C410115260AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255F010B-CA7D-479D-85D7-C410115260AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255F010B-CA7D-479D-85D7-C410115260AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255F010B-CA7D-479D-85D7-C410115260AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10D928C6-8C04-4E30-90E8-6E024CC167FF}
+	EndGlobalSection
+EndGlobal
