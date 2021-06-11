@@ -1,5 +1,5 @@
 ﻿
-namespace Alexandria
+namespace BussinessLayer
 {
     partial class Form1
     {

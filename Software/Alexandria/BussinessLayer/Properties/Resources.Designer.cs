@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-namespace Alexandria.Properties
+namespace BussinessLayer.Properties
 {
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
@@ -43,7 +43,7 @@ namespace Alexandria.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Alexandria.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BussinessLayer.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
