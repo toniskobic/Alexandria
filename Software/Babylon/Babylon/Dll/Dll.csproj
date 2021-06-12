@@ -41,6 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ReceiptItem.cs" />
+    <Compile Include="Model\Arrival.cs" />
+    <Compile Include="Model\ArrivalItem.cs" />
+    <Compile Include="Model\Author.cs" />
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\Dismiss.cs" />
+    <Compile Include="Model\DismissItem.cs" />
+    <Compile Include="Model\Loan.cs" />
+    <Compile Include="Model\LoanItem.cs" />
+    <Compile Include="Model\Membership.cs" />
+    <Compile Include="Model\Receipt.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
