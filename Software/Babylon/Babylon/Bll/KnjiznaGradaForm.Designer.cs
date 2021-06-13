@@ -58,6 +58,7 @@ namespace Bll
             this.btnDodajKnjiznuGradu.TabIndex = 1;
             this.btnDodajKnjiznuGradu.Text = "Dodaj knjižnu građu";
             this.btnDodajKnjiznuGradu.UseVisualStyleBackColor = true;
+            this.btnDodajKnjiznuGradu.Click += new System.EventHandler(this.btnDodajKnjiznuGradu_Click);
             // 
             // btnRazduzi
             // 
@@ -122,6 +123,7 @@ namespace Bll
             this.Name = "KnjiznaGradaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knjižne građe";
+            this.Load += new System.EventHandler(this.KnjiznaGradaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjizneGrade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

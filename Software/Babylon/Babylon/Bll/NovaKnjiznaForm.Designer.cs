@@ -115,6 +115,7 @@ namespace Bll
             this.btnOdustani.TabIndex = 16;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // btnDodaj
             // 
@@ -142,6 +143,7 @@ namespace Bll
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NovaKnjiznaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodaj knjižnu građu";
             this.ResumeLayout(false);
             this.PerformLayout();
