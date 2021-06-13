@@ -8,9 +8,9 @@ namespace Dll.Model
 {
     public class Author
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public List<Book> Book { get; set; }
+        public List<Literature> Literature { get; set; }
     }
 }

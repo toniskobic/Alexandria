@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dll.Model
 {
-    public class LoanItem
+    public class PickingInItem
     {
-        public int Id { get; set; }
-        public Loan Loan { get; set; }
+        public int PickingIn_Id { get; set; }
+        public int Literaure_Id { get; set; }
+        public PickingIn PickingIn { get; set; }
         public Literature Literature { get; set; }
+
     }
 }

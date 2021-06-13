@@ -9,7 +9,6 @@ namespace Dll.Model
     public class ReceiptItem
     {
         public int ReceiptId { get; set; }
-        public Receipt Receipt{ get; set; }
 
         public int LoanId { get; set; }
         public Loan Loan{ get; set; }

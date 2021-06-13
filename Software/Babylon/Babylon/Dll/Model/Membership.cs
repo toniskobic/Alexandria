@@ -8,9 +8,9 @@ namespace Dll.Model
 {
     public class Membership
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public User User { get; set; }
         public DateTime DateFrom{ get; set; }
         public DateTime DateTo{ get; set; }
-    }
+}
 }

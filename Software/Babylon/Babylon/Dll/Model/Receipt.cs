@@ -8,9 +8,11 @@ namespace Dll.Model
 {
     public class Receipt
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
+        public DateTime DateOfIssue { get; set; }
+        public int User_Id { get; set; }
+        public int Employee_Id { get; set; }
         public User User { get; set; }
         public User Employee { get; set; }
-        public List<ReceiptItem> ReceiptItem { get; set; }
     }
 }

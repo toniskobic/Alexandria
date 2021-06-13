@@ -42,12 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\ReceiptItem.cs" />
-    <Compile Include="Model\Arrival.cs" />
-    <Compile Include="Model\ArrivalItem.cs" />
+    <Compile Include="Model\PickingIn.cs" />
+    <Compile Include="Model\PickingInItem.cs" />
     <Compile Include="Model\Author.cs" />
-    <Compile Include="Model\Book.cs" />
+    <Compile Include="Model\Literature.cs" />
     <Compile Include="Model\Category.cs" />
-    <Compile Include="Model\Dismiss.cs" />
+    <Compile Include="Model\PickingOut.cs" />
     <Compile Include="Model\DismissItem.cs" />
     <Compile Include="Model\Loan.cs" />
     <Compile Include="Model\LoanItem.cs" />

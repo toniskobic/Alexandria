@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bll", "Bll\Bll.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dll", "Dll\Dll.csproj", "{4AA6C8DC-39E1-44AC-9462-F9806C3F837A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pll", "Pll\Pll.csproj", "{CAAB0C3D-B490-439D-91D4-09165CC31FC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4AA6C8DC-39E1-44AC-9462-F9806C3F837A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AA6C8DC-39E1-44AC-9462-F9806C3F837A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AA6C8DC-39E1-44AC-9462-F9806C3F837A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAAB0C3D-B490-439D-91D4-09165CC31FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAAB0C3D-B490-439D-91D4-09165CC31FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAAB0C3D-B490-439D-91D4-09165CC31FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAAB0C3D-B490-439D-91D4-09165CC31FC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

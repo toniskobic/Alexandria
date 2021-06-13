@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Dll.Model
 {
-    public class Loan
+    public class Literature
     {
         public int Id { get; set; }
-        public User User { get; set; }
-        public bool Started { get; set; }
-        public DateTime DateFrom { get; set; }
-        public DateTime DateTo { get; set; }
+        public string Title { get; set; }
+        public Category Category { get; set; }
+        public Author Author{ get; set; }
         public List<LoanItem> LoanItem { get; set; }
+        public List<PickingInItem> PickingInItem { get; set; }
 
     }
 }

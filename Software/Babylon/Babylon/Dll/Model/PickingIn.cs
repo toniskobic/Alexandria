@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dll.Model
 {
-    public class Role
+    public class PickingIn
     {
         public int Id { get; set; }
-        public string RoleName { get; set; }
-        public int AuthorisationLevel { get; set; }
-        public List<User> User { get; set; }
+        public DateTime Date{ get; set; }
+        public List<PickingInItem> PickingInItem { get; set; }
+
     }
 }

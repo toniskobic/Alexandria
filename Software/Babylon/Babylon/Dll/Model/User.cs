@@ -8,7 +8,7 @@ namespace Dll.Model
 {
     public class User
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EMail { get; set; }
@@ -19,5 +19,13 @@ namespace Dll.Model
         public string PhoneNumber { get; set; }
         public bool Locked { get; set; }
         public Role Role { get; set; }
+        public List<Membership> Membership { get; set; }
+        public List<Receipt> UserReceipt { get; set; }
+        public List<Receipt> EmployeeReceipt { get; set; }
+        public List<Loan> Loan { get; set; }
+
+
+
+
     }
 }
