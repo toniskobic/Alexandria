@@ -29,19 +29,23 @@ namespace Bll
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PocetnaForm));
             this.label1 = new System.Windows.Forms.Label();
             this.btnKnjizneGrade = new System.Windows.Forms.Button();
             this.btnKorisnici = new System.Windows.Forms.Button();
             this.btnPosudbe = new System.Windows.Forms.Button();
             this.btnStatistika = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(157, 60);
+            this.label1.Location = new System.Drawing.Point(162, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 32);
             this.label1.TabIndex = 0;
@@ -49,7 +53,7 @@ namespace Bll
             // 
             // btnKnjizneGrade
             // 
-            this.btnKnjizneGrade.Location = new System.Drawing.Point(103, 135);
+            this.btnKnjizneGrade.Location = new System.Drawing.Point(113, 239);
             this.btnKnjizneGrade.Name = "btnKnjizneGrade";
             this.btnKnjizneGrade.Size = new System.Drawing.Size(97, 54);
             this.btnKnjizneGrade.TabIndex = 1;
@@ -59,7 +63,7 @@ namespace Bll
             // 
             // btnKorisnici
             // 
-            this.btnKorisnici.Location = new System.Drawing.Point(249, 135);
+            this.btnKorisnici.Location = new System.Drawing.Point(259, 239);
             this.btnKorisnici.Name = "btnKorisnici";
             this.btnKorisnici.Size = new System.Drawing.Size(97, 54);
             this.btnKorisnici.TabIndex = 2;
@@ -69,7 +73,7 @@ namespace Bll
             // 
             // btnPosudbe
             // 
-            this.btnPosudbe.Location = new System.Drawing.Point(103, 226);
+            this.btnPosudbe.Location = new System.Drawing.Point(113, 330);
             this.btnPosudbe.Name = "btnPosudbe";
             this.btnPosudbe.Size = new System.Drawing.Size(97, 54);
             this.btnPosudbe.TabIndex = 3;
@@ -79,7 +83,7 @@ namespace Bll
             // 
             // btnStatistika
             // 
-            this.btnStatistika.Location = new System.Drawing.Point(249, 226);
+            this.btnStatistika.Location = new System.Drawing.Point(259, 330);
             this.btnStatistika.Name = "btnStatistika";
             this.btnStatistika.Size = new System.Drawing.Size(97, 54);
             this.btnStatistika.TabIndex = 4;
@@ -97,20 +101,42 @@ namespace Bll
             this.btnOdjava.UseVisualStyleBackColor = true;
             this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(95, 218);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(294, 183);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Bll.Properties.Resources.smalllighthouse;
+            this.pictureBox1.Location = new System.Drawing.Point(193, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // PocetnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnStatistika);
             this.Controls.Add(this.btnPosudbe);
             this.Controls.Add(this.btnKorisnici);
             this.Controls.Add(this.btnKnjizneGrade);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PocetnaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna stranica";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +150,7 @@ namespace Bll
         private System.Windows.Forms.Button btnPosudbe;
         private System.Windows.Forms.Button btnStatistika;
         private System.Windows.Forms.Button btnOdjava;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

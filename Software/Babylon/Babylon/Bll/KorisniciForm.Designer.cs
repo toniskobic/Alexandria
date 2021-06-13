@@ -29,6 +29,7 @@ namespace Bll
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KorisniciForm));
             this.btnOdjava = new System.Windows.Forms.Button();
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
             this.btnAktDeakt = new System.Windows.Forms.Button();
@@ -166,6 +167,7 @@ namespace Bll
             this.Controls.Add(this.btnAktDeakt);
             this.Controls.Add(this.dgvKorisnici);
             this.Controls.Add(this.btnOdjava);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KorisniciForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Korisnici";

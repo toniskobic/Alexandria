@@ -29,6 +29,7 @@ namespace Bll
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KnjiznaGradaForm));
             this.dgvKnjizneGrade = new System.Windows.Forms.DataGridView();
             this.btnDodajKnjiznuGradu = new System.Windows.Forms.Button();
             this.btnRazduzi = new System.Windows.Forms.Button();
@@ -117,6 +118,7 @@ namespace Bll
             this.Controls.Add(this.btnRazduzi);
             this.Controls.Add(this.btnDodajKnjiznuGradu);
             this.Controls.Add(this.dgvKnjizneGrade);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "KnjiznaGradaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knjižne građe";
