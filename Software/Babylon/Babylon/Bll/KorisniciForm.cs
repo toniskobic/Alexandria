@@ -50,9 +50,7 @@ namespace Bll
         private void btnDodajClana_Click(object sender, EventArgs e)
         {
             DodajClanForm dodajClanForm= new DodajClanForm();
-            this.Hide();
             dodajClanForm.ShowDialog();
-            this.Close();
         }
     }
 }

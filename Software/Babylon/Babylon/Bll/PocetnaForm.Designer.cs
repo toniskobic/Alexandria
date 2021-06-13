@@ -75,6 +75,7 @@ namespace Bll
             this.btnPosudbe.TabIndex = 3;
             this.btnPosudbe.Text = "Posudbe";
             this.btnPosudbe.UseVisualStyleBackColor = true;
+            this.btnPosudbe.Click += new System.EventHandler(this.btnPosudbe_Click);
             // 
             // btnStatistika
             // 

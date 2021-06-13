@@ -118,6 +118,7 @@ namespace Bll
             this.Controls.Add(this.btnDodajKnjiznuGradu);
             this.Controls.Add(this.dgvKnjizneGrade);
             this.Name = "KnjiznaGradaForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Knjižne građe";
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjizneGrade)).EndInit();
             this.ResumeLayout(false);

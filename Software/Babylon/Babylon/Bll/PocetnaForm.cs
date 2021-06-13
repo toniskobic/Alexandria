@@ -48,5 +48,13 @@ namespace Bll
             statistikaForm.ShowDialog();
             this.Close();
         }
+
+        private void btnPosudbe_Click(object sender, EventArgs e)
+        {
+            PosudbeForm posudbeForm = new PosudbeForm();
+            this.Hide();
+            posudbeForm.ShowDialog();
+            this.Close();
+        }
     }
 }

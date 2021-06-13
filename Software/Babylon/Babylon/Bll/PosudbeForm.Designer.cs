@@ -85,6 +85,7 @@ namespace Bll
             this.Controls.Add(this.btnVrati);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PosudbeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posudbe";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -16,5 +16,21 @@ namespace Bll
         {
             InitializeComponent();
         }
+
+        private void btnNatrag_Click(object sender, EventArgs e)
+        {
+            PocetnaForm pocetnaForm = new PocetnaForm();
+            this.Hide();
+            pocetnaForm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            PrijavaForm prijavaForm = new PrijavaForm();
+            this.Hide();
+            prijavaForm.ShowDialog();
+            this.Close();
+        }
     }
 }
