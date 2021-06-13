@@ -32,5 +32,16 @@ namespace Pll
             pocetnaForm.ShowDialog();
             this.Close();
         }
+
+        private void btnDodajKnjiznuGradu_Click(object sender, EventArgs e)
+        {
+            NovaKnjiznaForm novaKnjiznaForm = new NovaKnjiznaForm();
+            novaKnjiznaForm.ShowDialog();
+        }
+
+        private void KnjiznaGradaForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

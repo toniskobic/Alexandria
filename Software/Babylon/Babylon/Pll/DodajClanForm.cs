@@ -24,9 +24,6 @@ namespace Pll
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
-            KorisniciForm korisniciForm= new KorisniciForm();
-            this.Hide();
-            korisniciForm.ShowDialog();
             this.Close();
         }
 

@@ -29,6 +29,7 @@ namespace Pll
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PosudbeForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnVrati = new System.Windows.Forms.Button();
             this.btnOdjava = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@ namespace Pll
             this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnVrati);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PosudbeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posudbe";
