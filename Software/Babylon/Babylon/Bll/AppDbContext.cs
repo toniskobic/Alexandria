@@ -29,8 +29,6 @@ namespace Bll
         public DbSet<LoanItem> LoanItems { get; set; }
         public DbSet<PickingInItem> PickingInItems { get; set; }
 
-
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

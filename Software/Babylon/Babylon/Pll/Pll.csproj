@@ -102,7 +102,6 @@
     <Compile Include="RegistracijaForm.Designer.cs">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="System\Windows\Forms\DataVisualization.cs" />
     <Compile Include="ZaboravljenaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,5 +170,6 @@
       <Name>Dll</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
