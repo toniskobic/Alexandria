@@ -14,5 +14,7 @@ namespace Dll.Model
         public int Employee_Id { get; set; }
         public User User { get; set; }
         public User Employee { get; set; }
+        public List<ReceiptItem> ReceiptItem { get; set; }
+
     }
 }

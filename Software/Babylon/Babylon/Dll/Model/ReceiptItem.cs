@@ -8,10 +8,10 @@ namespace Dll.Model
 {
     public class ReceiptItem
     {
-        public int ReceiptId { get; set; }
-
-        public int LoanId { get; set; }
+        public int Receipt_Id { get; set; }
+        public int Loan_Id { get; set; }
         public Loan Loan{ get; set; }
+        public Receipt Receipt { get; set; }
 
         public double Money{ get; set; }
     }

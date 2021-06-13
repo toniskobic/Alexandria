@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dll.Model
 {
-    public class PickingInItem
+    public class PickingOutItem
     {
-        public int PickingIn_Id { get; set; }
+        public int PickingOut_Id { get; set; }
         public int Literature_Id { get; set; }
-        public PickingIn PickingIn { get; set; }
+        public PickingOut PickingOut { get; set; }
         public Literature Literature { get; set; }
 
     }

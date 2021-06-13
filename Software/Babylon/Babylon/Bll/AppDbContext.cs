@@ -28,6 +28,10 @@ namespace Bll
         public DbSet<PickingIn> PickingsIn { get; set; }
         public DbSet<LoanItem> LoanItems { get; set; }
         public DbSet<PickingInItem> PickingInItems { get; set; }
+        public DbSet<PickingOutItem> PickingOutItems { get; set; }
+        public DbSet<ReceiptItem> ReceiptItems { get; set; }
+
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -44,7 +48,7 @@ namespace Bll
                         .HasForeignKey(m => m.Employee_Id)
                         .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<PickingInItem>().HasKey(x => new { x.PickingIn_Id, x.Literaure_Id });
+            modelBuilder.Entity<PickingInItem>().HasKey(x => new { x.PickingIn_Id, x.Literature_Id });
             modelBuilder.Entity<PickingInItem>()
               .HasRequired(x => x.PickingIn)
               .WithMany(x => x.PickingInItem)
@@ -53,7 +57,31 @@ namespace Bll
             modelBuilder.Entity<PickingInItem>()
               .HasRequired(x => x.Literature)
               .WithMany(x => x.PickingInItem)
-              .HasForeignKey(x => x.Literaure_Id)
+              .HasForeignKey(x => x.Literature_Id)
+              .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<PickingOutItem>().HasKey(x => new { x.PickingOut_Id, x.Literature_Id });
+            modelBuilder.Entity<PickingOutItem>()
+              .HasRequired(x => x.PickingOut)
+              .WithMany(x => x.PickingOutItem)
+              .HasForeignKey(x => x.PickingOut_Id)
+              .WillCascadeOnDelete(true);
+            modelBuilder.Entity<PickingOutItem>()
+              .HasRequired(x => x.Literature)
+              .WithMany(x => x.PickingOutItem)
+              .HasForeignKey(x => x.Literature_Id)
+              .WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<ReceiptItem>().HasKey(x => new { x.Receipt_Id, x.Loan_Id });
+            modelBuilder.Entity<ReceiptItem>()
+              .HasRequired(x => x.Receipt)
+              .WithMany(x => x.ReceiptItem)
+              .HasForeignKey(x => x.Receipt_Id)
+              .WillCascadeOnDelete(true);
+            modelBuilder.Entity<ReceiptItem>()
+              .HasRequired(x => x.Loan)
+              .WithMany(x => x.ReceiptItem)
+              .HasForeignKey(x => x.Loan_Id)
               .WillCascadeOnDelete(true);
         }
     }

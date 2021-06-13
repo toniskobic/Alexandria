@@ -48,7 +48,7 @@
     <Compile Include="Model\Literature.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\PickingOut.cs" />
-    <Compile Include="Model\DismissItem.cs" />
+    <Compile Include="Model\PickingOutItem.cs" />
     <Compile Include="Model\Loan.cs" />
     <Compile Include="Model\LoanItem.cs" />
     <Compile Include="Model\Membership.cs" />

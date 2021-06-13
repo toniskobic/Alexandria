@@ -14,6 +14,8 @@ namespace Dll.Model
         public Author Author{ get; set; }
         public List<LoanItem> LoanItem { get; set; }
         public List<PickingInItem> PickingInItem { get; set; }
+        public List<PickingOutItem> PickingOutItem { get; set; }
+
 
     }
 }

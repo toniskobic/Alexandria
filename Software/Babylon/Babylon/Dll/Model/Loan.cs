@@ -14,6 +14,8 @@ namespace Dll.Model
         public DateTime DateFrom { get; set; }
         public DateTime DateTo { get; set; }
         public List<LoanItem> LoanItem { get; set; }
+        public List<ReceiptItem> ReceiptItem { get; set; }
+
 
     }
 }

@@ -10,5 +10,7 @@ namespace Dll.Model
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
+        public List<PickingOutItem> PickingOutItem { get; set; }
+
     }
 }
