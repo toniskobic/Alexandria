@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Software",
+    "\\Software\\Babylon",
+    "\\Software\\Babylon\\Babylon"
   ],
+  "SelectedNode": "\\Software\\Babylon\\Babylon\\Babylon.sln",
   "PreviewInSolutionExplorer": false
 }

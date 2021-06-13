@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace Bll
 {
-    public partial class Form1 : Form
+    public partial class DodajClanForm : Form
     {
-        public Form1()
+        public DodajClanForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
         {
-            AppDbContext dbContext = new AppDbContext();
+            KorisniciForm korisniciForm= new KorisniciForm();
+            this.Hide();
+            korisniciForm.ShowDialog();
+            this.Close();
         }
     }
 }
