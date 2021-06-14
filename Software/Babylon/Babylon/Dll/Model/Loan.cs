@@ -16,11 +16,7 @@ namespace Dll.Model
         public List<LoanItem> LoanItem { get; set; }
         public List<ReceiptItem> ReceiptItem { get; set; }
 
-        public Loan()
-        {
-
-        }
-        public Loan(User user, bool started, DateTime dateFrom, DateTime dateTo)
+        public Loan(User user, DateTime dateFrom, DateTime dateTo, bool started = true)
         {
             User = user;
             Started = started;

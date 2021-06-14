@@ -16,7 +16,8 @@ namespace Bll.Services
 
         public static LoginResult LogInUser(string username, string password)
         {
-            var user = UnitOfWork.Users.FindEmployee(username, password);
+            //var user = UnitOfWork.Users.FindEmployee(username, password);
+            var user = UnitOfWork.Users.Find(u => u.Password == password && u.UserName == username);
 
             if (user == null)
             {

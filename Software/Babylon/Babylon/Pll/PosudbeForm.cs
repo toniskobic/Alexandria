@@ -49,7 +49,7 @@ namespace Pll
         {
             DateTime monthFromNow = new DateTime();
             monthFromNow = DateTime.Now.AddDays(30);
-            Loan loan = new Loan(dataGridViewMembers.CurrentRow.DataBoundItem as User, true, DateTime.Now, monthFromNow);
+            Loan loan = new Loan(dataGridViewMembers.CurrentRow.DataBoundItem as User, DateTime.Now, monthFromNow);
             UnitOfWork.Loans.Add(loan);
             LoanItem loanItem = new LoanItem(loan, dataGridViewLiterature.CurrentRow.DataBoundItem as Literature);
             UnitOfWork.LoanItems.Add(loanItem);
