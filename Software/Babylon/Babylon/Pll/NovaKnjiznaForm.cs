@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bll;
+using Bll.Services;
+using Dll.Model;
 
 namespace Pll
 {
@@ -20,6 +23,11 @@ namespace Pll
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
