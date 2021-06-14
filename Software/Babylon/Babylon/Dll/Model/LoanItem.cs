@@ -11,5 +11,14 @@ namespace Dll.Model
         public int Id { get; set; }
         public Loan Loan { get; set; }
         public Literature Literature { get; set; }
+        public LoanItem()
+        {
+
+        }
+        public LoanItem(Loan loan, Literature literature)
+        {
+            Loan = loan;
+            Literature = literature;
+        }
     }
 }

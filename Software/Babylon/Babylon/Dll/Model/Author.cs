@@ -12,5 +12,14 @@ namespace Dll.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public List<Literature> Literature { get; set; }
+        public Author()
+        {
+
+        }
+        public Author(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
     }
 }

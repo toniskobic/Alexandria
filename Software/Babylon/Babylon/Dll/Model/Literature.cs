@@ -16,6 +16,15 @@ namespace Dll.Model
         public List<PickingInItem> PickingInItem { get; set; }
         public List<PickingOutItem> PickingOutItem { get; set; }
 
+        public Literature()
+        {
 
+        }
+        public Literature(string title, Category category, Author author)
+        {
+            Title = title;
+            Category = category;
+            Author = author;
+        }
     }
 }
