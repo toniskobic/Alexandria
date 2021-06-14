@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Bll
 {
-    public class AppDbContext : DbContext
+    public partial class AppDbContext : DbContext
     {
         public AppDbContext() : base("AppContext")
         {

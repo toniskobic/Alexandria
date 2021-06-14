@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Bll.Enums;
+using Bll.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,11 +25,37 @@ namespace Pll
 
         private void btnPrijava_Click(object sender, EventArgs e)
         {
-            //Sredit provjeru
-            PocetnaForm pocetnaForm = new PocetnaForm();
-            this.Hide();
-            pocetnaForm.ShowDialog();
-            this.Close();
+            var result = LoginResult.Null;
+            string username = textBoxUsername.Text;
+            string password = textBoxPassword.Text;
+
+            if (ValidationService.IsNotEmpty(username) || ValidationService.IsNotEmpty(password)) 
+            {
+                result = UserManager.LogInUser(username, password);
+
+                if (result != LoginResult.Succesful)
+                {
+                    textBoxPassword.Clear();
+                    MessageBox.Show("Prijava neuspješna!");
+                }
+                else 
+                {
+                    PocetnaForm form = new PocetnaForm()
+                    {
+                        Owner = this
+                    };
+
+                    this.Hide();
+                    form.ShowDialog();
+                    UserManager.LogOut();
+                    this.Show();
+
+                    textBoxUsername.Clear();
+                    textBoxPassword.Clear();
+                }
+            
+            }
+
         }
 
         private void labelZaboravljena_Click_1(object sender, EventArgs e)

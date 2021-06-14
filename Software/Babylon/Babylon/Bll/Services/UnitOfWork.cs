@@ -27,6 +27,7 @@ namespace Bll.Services
 
         public UnitOfWork(AppDbContext dbContext)
         {
+            _appDbContext = dbContext;
             Users = new UserRepository(_appDbContext);
             PickingIns = new PickingInRepository(_appDbContext);
             Authors = new AuthorRepository(_appDbContext);
@@ -41,7 +42,6 @@ namespace Bll.Services
             Receipts = new ReceiptRepository(_appDbContext);
             ReceiptItems = new ReceiptItemRepository(_appDbContext);
             Roles = new RoleRepository(_appDbContext);
-            _appDbContext = dbContext;
         }
 
         public int Complete()

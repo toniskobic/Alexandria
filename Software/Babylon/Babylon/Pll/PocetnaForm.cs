@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bll.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace Pll
         public PocetnaForm()
         {
             InitializeComponent();
+            if (UserManager.LoggedUser.Role.RoleName == "user")
+            {
+                btnKorisnici.Enabled = false;
+            }
         }
 
         private void btnKorisnici_Click(object sender, EventArgs e)
@@ -48,6 +53,10 @@ namespace Pll
             this.Hide();
             posudbeForm.ShowDialog();
             this.Close();
+        }
+
+        private void PocetnaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
         }
     }
 }

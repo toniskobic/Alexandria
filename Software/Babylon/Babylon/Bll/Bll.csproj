@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="Enums\LoginResult.cs" />
     <Compile Include="Migrations\202106132227178_update.cs" />
     <Compile Include="Migrations\202106132227178_update.designer.cs">
       <DependentUpon>202106132227178_update.cs</DependentUpon>
@@ -68,6 +69,10 @@
     <Compile Include="Migrations\202106132238273_update1.cs" />
     <Compile Include="Migrations\202106132238273_update1.designer.cs">
       <DependentUpon>202106132238273_update1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106140055476_update2.cs" />
+    <Compile Include="Migrations\202106140055476_update2.designer.cs">
+      <DependentUpon>202106140055476_update2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +92,8 @@
     <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Services\UnitOfWork.cs" />
+    <Compile Include="Services\UserManager.cs" />
+    <Compile Include="Services\ValidationService.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -113,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106132238273_update1.resx">
       <DependentUpon>202106132238273_update1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106140055476_update2.resx">
+      <DependentUpon>202106140055476_update2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
