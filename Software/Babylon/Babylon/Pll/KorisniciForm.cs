@@ -19,7 +19,7 @@ namespace Pll
 
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
-            RegistracijaForm registracijaForm = new RegistracijaForm();
+            FormCreateUser registracijaForm = new FormCreateUser();
             registracijaForm.ShowDialog();
         }
 

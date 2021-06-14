@@ -37,6 +37,8 @@ namespace Pll
             this.btnOdjava = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
+            this.buttonAddCategory = new System.Windows.Forms.Button();
+            this.buttonAddAuthor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKnjizneGrade)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,11 +109,33 @@ namespace Pll
             this.btnNatrag.UseVisualStyleBackColor = true;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
+            // buttonAddCategory
+            // 
+            this.buttonAddCategory.Location = new System.Drawing.Point(250, 19);
+            this.buttonAddCategory.Name = "buttonAddCategory";
+            this.buttonAddCategory.Size = new System.Drawing.Size(122, 55);
+            this.buttonAddCategory.TabIndex = 13;
+            this.buttonAddCategory.Text = "Dodaj kategoriju";
+            this.buttonAddCategory.UseVisualStyleBackColor = true;
+            this.buttonAddCategory.Click += new System.EventHandler(this.buttonAddCategory_Click);
+            // 
+            // buttonAddAuthor
+            // 
+            this.buttonAddAuthor.Location = new System.Drawing.Point(131, 19);
+            this.buttonAddAuthor.Name = "buttonAddAuthor";
+            this.buttonAddAuthor.Size = new System.Drawing.Size(101, 55);
+            this.buttonAddAuthor.TabIndex = 14;
+            this.buttonAddAuthor.Text = "Dodaj autora";
+            this.buttonAddAuthor.UseVisualStyleBackColor = true;
+            this.buttonAddAuthor.Click += new System.EventHandler(this.buttonAddAuthor_Click);
+            // 
             // KnjiznaGradaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 424);
+            this.Controls.Add(this.buttonAddAuthor);
+            this.Controls.Add(this.buttonAddCategory);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnOdjava);
@@ -139,5 +163,7 @@ namespace Pll
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNatrag;
+        private System.Windows.Forms.Button buttonAddCategory;
+        private System.Windows.Forms.Button buttonAddAuthor;
     }
 }

@@ -35,13 +35,31 @@ namespace Pll
 
         private void btnDodajKnjiznuGradu_Click(object sender, EventArgs e)
         {
-            NovaKnjiznaForm novaKnjiznaForm = new NovaKnjiznaForm();
-            novaKnjiznaForm.ShowDialog();
+            FormPickingIn form = new FormPickingIn();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
 
         private void KnjiznaGradaForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonAddCategory_Click(object sender, EventArgs e)
+        {
+            FormAddCategory form = new FormAddCategory();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void buttonAddAuthor_Click(object sender, EventArgs e)
+        {
+            FormAddAuthor form = new FormAddAuthor();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

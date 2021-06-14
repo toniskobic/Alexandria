@@ -18,10 +18,12 @@ namespace Dll.Model
 
         public Loan(User user, DateTime dateFrom, DateTime dateTo, bool started = true)
         {
+            LoanItem = new List<LoanItem>();
             User = user;
             Started = started;
             DateFrom = dateFrom;
             DateTo = dateTo;
+            
         }
     }
 }

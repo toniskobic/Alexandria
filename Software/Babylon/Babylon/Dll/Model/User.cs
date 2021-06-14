@@ -16,7 +16,6 @@ namespace Dll.Model
         public string Password { get; set; }
         public DateTime DateOfBirth { get; set; }
         public DateTime RegistrationDate { get; set; }
-        public DateTime ExpirationDate { get; set; }
         public string PhoneNumber { get; set; }
         public bool Locked { get; set; }
         public Role Role { get; set; }
@@ -25,7 +24,10 @@ namespace Dll.Model
         public List<Receipt> EmployeeReceipt { get; set; }
         public List<Loan> Loan { get; set; }
 
-
+        public User()
+        {
+            Loan = new List<Loan>();
+        }
 
 
 

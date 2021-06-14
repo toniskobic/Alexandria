@@ -1,7 +1,7 @@
 ﻿
 namespace Pll
 {
-    partial class RegistracijaForm
+    partial class FormCreateUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Pll
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistracijaForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCreateUser));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -143,9 +143,9 @@ namespace Pll
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.Location = new System.Drawing.Point(156, 61);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(307, 32);
+            this.label7.Size = new System.Drawing.Size(269, 32);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Registracija korisnika";
+            this.label7.Text = "Kreiranje korisnika";
             // 
             // btnRegistrirajSe
             // 
@@ -173,7 +173,7 @@ namespace Pll
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 15;
             // 
-            // RegistracijaForm
+            // FormCreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,9 +194,9 @@ namespace Pll
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "RegistracijaForm";
+            this.Name = "FormCreateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registracija";
+            this.Text = "Kreiraj korisnika";
             this.ResumeLayout(false);
             this.PerformLayout();
 

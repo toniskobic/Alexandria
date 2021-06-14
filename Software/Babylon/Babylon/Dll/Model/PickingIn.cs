@@ -12,5 +12,9 @@ namespace Dll.Model
         public DateTime Date{ get; set; }
         public List<PickingInItem> PickingInItem { get; set; }
 
+        public PickingIn()
+        {
+            PickingInItem = new List<PickingInItem>();
+        }
     }
 }

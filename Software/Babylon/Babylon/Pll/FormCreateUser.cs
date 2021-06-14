@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pll
 {
-    public partial class RegistracijaForm : Form
+    public partial class FormCreateUser : Form
     {
-        public RegistracijaForm()
+        public FormCreateUser()
         {
             InitializeComponent();
         }
@@ -21,5 +21,7 @@ namespace Pll
         {
             this.Close();
         }
+
+      
     }
 }

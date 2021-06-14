@@ -12,6 +12,8 @@ namespace Dll.Model
         public int Literature_Id { get; set; }
         public PickingIn PickingIn { get; set; }
         public Literature Literature { get; set; }
-
+        public PickingInItem()
+        {
+        }
     }
 }
