@@ -17,13 +17,11 @@ namespace Pll
     public partial class FormPickingIn : Form
     {
         private readonly UnitOfWork _unitOfWork;
-        private readonly AppDbContext appDbContext;
         private PickingIn NewPickingIn = new PickingIn();
 
         public FormPickingIn()
         {
             _unitOfWork = new UnitOfWork(new AppDbContext());
-            appDbContext = new AppDbContext();
             InitializeComponent();
         }
 
@@ -33,12 +31,12 @@ namespace Pll
             Author selectedAuthor = comboBoxAuthor.SelectedItem as Author;
             Category selectedCategory = comboBoxCategory.SelectedItem as Category;
             Literature literature = new Literature(title, selectedCategory, selectedAuthor);
-            _unitOfWork.Literatures.Add(literature);
+            var newLiterature = _unitOfWork.Literatures.Add(literature);
             _unitOfWork.Complete();
 
             NewPickingIn.PickingInItem.Add(new PickingInItem
                {
-                    Literature = literature
+                    Literature = newLiterature
                });
 
             RefreshDataGrid();
@@ -67,6 +65,13 @@ namespace Pll
             RefreshDataGrid();
             RefreshAuthors();
             RefreshCategories();
+        }
+
+        private void buttonSpremi_Click(object sender, EventArgs e)
+        {
+            _unitOfWork.PickingIns.Add(NewPickingIn);
+            _unitOfWork.Complete();
+            this.Close();
         }
     }
 }

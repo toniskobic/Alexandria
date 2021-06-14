@@ -70,6 +70,7 @@ namespace Pll
             this.btnRazduzi.TabIndex = 2;
             this.btnRazduzi.Text = "Razduži knjižnu građu";
             this.btnRazduzi.UseVisualStyleBackColor = true;
+            this.btnRazduzi.Click += new System.EventHandler(this.btnRazduzi_Click);
             // 
             // label1
             // 

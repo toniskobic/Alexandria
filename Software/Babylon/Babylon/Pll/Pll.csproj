@@ -98,6 +98,12 @@
     <Compile Include="KorisniciForm.Designer.cs">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LateLoansListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LateLoansListForm.Designer.cs">
+      <DependentUpon>LateLoansListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NovaKnjiznaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="KorisniciForm.resx">
       <DependentUpon>KorisniciForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LateLoansListForm.resx">
+      <DependentUpon>LateLoansListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NovaKnjiznaForm.resx">
       <DependentUpon>NovaKnjiznaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +194,8 @@
       <DependentUpon>ZaboravljenaForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Dll.Model.Loan.datasource" />
+    <None Include="Properties\DataSources\Dll.Model.PickingInItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

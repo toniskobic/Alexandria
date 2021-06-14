@@ -16,9 +16,9 @@ namespace Bll.Repositories
             _appDbContext = appDbContext;
         }
 
-        public void Add(TEntity entity)
+        public TEntity Add(TEntity entity)
         {
-            _appDbContext.Set<TEntity>().Add(entity);
+            return _appDbContext.Set<TEntity>().Add(entity);
         }
 
         public void Delete(TEntity entity)

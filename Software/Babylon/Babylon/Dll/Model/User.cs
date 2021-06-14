@@ -26,6 +26,7 @@ namespace Dll.Model
 
         public User()
         {
+            RegistrationDate = DateTime.Now;
             Loan = new List<Loan>();
         }
 

@@ -12,5 +12,9 @@ namespace Dll.Model
         public DateTime Date { get; set; }
         public List<PickingOutItem> PickingOutItem { get; set; }
 
+        public PickingOut()
+        {
+            Date = DateTime.Now;
+        }
     }
 }

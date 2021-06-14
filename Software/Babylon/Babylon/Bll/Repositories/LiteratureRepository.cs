@@ -13,6 +13,22 @@ namespace Bll.Repositories
         {
 
         }
+        public bool IsLoaned(int id)
+        {
+            var loanItems = _appDbContext.Literatures.Include("LoanItem").FirstOrDefault(l => l.Id == id).LoanItem;
+            bool isLoaned = false;
+            foreach (var loanItem in loanItems)
+            {
+                var newLoanItem = _appDbContext.LoanItems.Include("Loan").FirstOrDefault(li => li.Id == loanItem.Id);
+                if (loanItem.Loan.DateTo >= DateTime.Now)
+                {
+                    isLoaned = true;
+                    break;
+                }
+            }
+
+            return isLoaned;
+        }
         
     }
 }

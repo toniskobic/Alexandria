@@ -47,12 +47,18 @@ namespace Pll
 
         private void btnLoanBook_Click(object sender, EventArgs e)
         {
-            DateTime monthFromNow = new DateTime();
-            monthFromNow = DateTime.Now.AddDays(30);
-            Loan loan = new Loan(dataGridViewMembers.CurrentRow.DataBoundItem as User, DateTime.Now, monthFromNow);
+            User user = dataGridViewLiterature.CurrentRow.DataBoundItem as User;
+            var literature = dataGridViewLiterature.CurrentRow.DataBoundItem as Literature;
+            Loan loan = new Loan();
+            loan.User = user;
+            loan.DateFrom = DateTime.Now;
+            loan.DateTo = DateTime.Now.AddDays(30);
+
+            loan.LoanItem.Add(new LoanItem
+            {
+                Literature = literature,
+            });
             UnitOfWork.Loans.Add(loan);
-            LoanItem loanItem = new LoanItem(loan, dataGridViewLiterature.CurrentRow.DataBoundItem as Literature);
-            UnitOfWork.LoanItems.Add(loanItem);
             UnitOfWork.Complete();
         }
     }

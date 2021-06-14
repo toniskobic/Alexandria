@@ -18,7 +18,9 @@ namespace Pll
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrijavaForm());
+            Application.Run(new KnjiznaGradaForm());
+            //Application.Run(new PosudbeForm());
+
         }
     }
 }

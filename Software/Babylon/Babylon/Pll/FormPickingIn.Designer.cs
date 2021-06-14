@@ -29,6 +29,7 @@ namespace Pll
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,11 +38,17 @@ namespace Pll
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPickingInItem = new System.Windows.Forms.DataGridView();
+            this.pickingInItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAddLiterature = new System.Windows.Forms.Button();
+            this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonSpremi = new System.Windows.Forms.Button();
+            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,13 +113,21 @@ namespace Pll
             // 
             // dataGridViewPickingInItem
             // 
+            this.dataGridViewPickingInItem.AutoGenerateColumns = false;
             this.dataGridViewPickingInItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPickingInItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.literatureNameDataGridViewTextBoxColumn});
+            this.dataGridViewPickingInItem.DataSource = this.pickingInItemBindingSource1;
             this.dataGridViewPickingInItem.Location = new System.Drawing.Point(20, 53);
             this.dataGridViewPickingInItem.Name = "dataGridViewPickingInItem";
             this.dataGridViewPickingInItem.RowHeadersWidth = 51;
             this.dataGridViewPickingInItem.RowTemplate.Height = 24;
-            this.dataGridViewPickingInItem.Size = new System.Drawing.Size(718, 223);
+            this.dataGridViewPickingInItem.Size = new System.Drawing.Size(243, 223);
             this.dataGridViewPickingInItem.TabIndex = 0;
+            // 
+            // pickingInItemBindingSource1
+            // 
+            this.pickingInItemBindingSource1.DataSource = typeof(Dll.Model.PickingInItem);
             // 
             // groupBox2
             // 
@@ -140,11 +155,35 @@ namespace Pll
             this.buttonAddLiterature.UseVisualStyleBackColor = true;
             this.buttonAddLiterature.Click += new System.EventHandler(this.buttonAddLiterature_Click);
             // 
+            // pickingInItemBindingSource
+            // 
+            this.pickingInItemBindingSource.DataSource = typeof(Dll.Model.PickingInItem);
+            // 
+            // buttonSpremi
+            // 
+            this.buttonSpremi.Location = new System.Drawing.Point(545, 83);
+            this.buttonSpremi.Name = "buttonSpremi";
+            this.buttonSpremi.Size = new System.Drawing.Size(140, 38);
+            this.buttonSpremi.TabIndex = 7;
+            this.buttonSpremi.Text = "Spremi";
+            this.buttonSpremi.UseVisualStyleBackColor = true;
+            this.buttonSpremi.Click += new System.EventHandler(this.buttonSpremi_Click);
+            // 
+            // literatureNameDataGridViewTextBoxColumn
+            // 
+            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
+            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "LiteratureName";
+            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
+            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FormPickingIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 497);
+            this.Controls.Add(this.buttonSpremi);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormPickingIn";
@@ -152,8 +191,10 @@ namespace Pll
             this.Load += new System.EventHandler(this.FormPickingIn_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +211,9 @@ namespace Pll
         private System.Windows.Forms.DataGridView dataGridViewPickingInItem;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonAddLiterature;
+        private System.Windows.Forms.BindingSource pickingInItemBindingSource;
+        private System.Windows.Forms.BindingSource pickingInItemBindingSource1;
+        private System.Windows.Forms.Button buttonSpremi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn literatureNameDataGridViewTextBoxColumn;
     }
 }

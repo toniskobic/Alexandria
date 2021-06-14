@@ -15,7 +15,10 @@ namespace Dll.Model
         public DateTime DateTo { get; set; }
         public List<LoanItem> LoanItem { get; set; }
         public List<ReceiptItem> ReceiptItem { get; set; }
-
+        public Loan()
+        {
+            LoanItem = new List<LoanItem>();
+        }
         public Loan(User user, DateTime dateFrom, DateTime dateTo, bool started = true)
         {
             LoanItem = new List<LoanItem>();
