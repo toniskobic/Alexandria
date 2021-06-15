@@ -15,9 +15,10 @@ namespace Pll
 {
     public partial class FormLoans : Form
     {
-        UnitOfWork UnitOfWork = new UnitOfWork(new AppDbContext());
+        private readonly UnitOfWork _unitOfWork;
         public FormLoans()
         {
+            _unitOfWork = new UnitOfWork(new AppDbContext());
             InitializeComponent();
         }
 
@@ -40,9 +41,9 @@ namespace Pll
         private void PosudbeForm_Load(object sender, EventArgs e)
         {
             dataGridViewLiterature.DataSource = null;
-            dataGridViewLiterature.DataSource = UnitOfWork.Literatures.GetAll();
+            dataGridViewLiterature.DataSource = _unitOfWork.Literatures.GetAll();
             dataGridViewMembers.DataSource = null;
-            dataGridViewMembers.DataSource = UnitOfWork.Users.GetAll();
+            dataGridViewMembers.DataSource = _unitOfWork.Users.GetAll();
         }
 
         private void btnLoanBook_Click(object sender, EventArgs e)
@@ -58,8 +59,8 @@ namespace Pll
             {
                 Literature = literature,
             });
-            UnitOfWork.Loans.Add(loan);
-            UnitOfWork.Complete();
+            _unitOfWork.Loans.Add(loan);
+            _unitOfWork.Complete();
         }
 
         private void buttonLateLoansList_Click(object sender, EventArgs e)
@@ -67,7 +68,12 @@ namespace Pll
             FormLateLoansList newForm = new FormLateLoansList();
             this.Hide();
             newForm.ShowDialog();
-            this.Close();
+            this.Show();
+        }
+
+        private void btnVrati_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

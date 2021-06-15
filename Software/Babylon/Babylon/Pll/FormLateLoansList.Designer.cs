@@ -32,10 +32,11 @@ namespace Pll
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLateLoansList));
             this.dataGridViewLoans = new System.Windows.Forms.DataGridView();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonWarnUser = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -48,28 +49,12 @@ namespace Pll
             this.dateFromDataGridViewTextBoxColumn,
             this.dateToDataGridViewTextBoxColumn});
             this.dataGridViewLoans.DataSource = this.loanBindingSource;
-            this.dataGridViewLoans.Location = new System.Drawing.Point(32, 35);
+            this.dataGridViewLoans.Location = new System.Drawing.Point(45, 58);
             this.dataGridViewLoans.Name = "dataGridViewLoans";
             this.dataGridViewLoans.RowHeadersWidth = 51;
             this.dataGridViewLoans.RowTemplate.Height = 24;
-            this.dataGridViewLoans.Size = new System.Drawing.Size(475, 351);
+            this.dataGridViewLoans.Size = new System.Drawing.Size(462, 328);
             this.dataGridViewLoans.TabIndex = 0;
-            // 
-            // dateFromDataGridViewTextBoxColumn
-            // 
-            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
-            this.dateFromDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateToDataGridViewTextBoxColumn
-            // 
-            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
-            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanBindingSource
             // 
@@ -85,11 +70,38 @@ namespace Pll
             this.buttonWarnUser.UseVisualStyleBackColor = true;
             this.buttonWarnUser.Click += new System.EventHandler(this.buttonWarnUser_Click);
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(12, 12);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(75, 26);
+            this.buttonClose.TabIndex = 3;
+            this.buttonClose.Text = "Natrag";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // dateFromDataGridViewTextBoxColumn
+            // 
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateToDataGridViewTextBoxColumn
+            // 
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Date do";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FormLateLoansList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonWarnUser);
             this.Controls.Add(this.dataGridViewLoans);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -107,6 +119,7 @@ namespace Pll
         private System.Windows.Forms.DataGridView dataGridViewLoans;
         private System.Windows.Forms.BindingSource loanBindingSource;
         private System.Windows.Forms.Button buttonWarnUser;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
     }

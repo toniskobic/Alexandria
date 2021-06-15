@@ -39,12 +39,12 @@ namespace Pll
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPickingInItem = new System.Windows.Forms.DataGridView();
-            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pickingInItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAddLiterature = new System.Windows.Forms.Button();
             this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSpremi = new System.Windows.Forms.Button();
+            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
@@ -126,15 +126,6 @@ namespace Pll
             this.dataGridViewPickingInItem.Size = new System.Drawing.Size(243, 223);
             this.dataGridViewPickingInItem.TabIndex = 0;
             // 
-            // literatureNameDataGridViewTextBoxColumn
-            // 
-            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
-            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "LiteratureName";
-            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
-            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // pickingInItemBindingSource1
             // 
             this.pickingInItemBindingSource1.DataSource = typeof(Dll.Model.PickingInItem);
@@ -178,6 +169,15 @@ namespace Pll
             this.buttonSpremi.Text = "Spremi";
             this.buttonSpremi.UseVisualStyleBackColor = true;
             this.buttonSpremi.Click += new System.EventHandler(this.buttonSpremi_Click);
+            // 
+            // literatureNameDataGridViewTextBoxColumn
+            // 
+            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
+            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "Naslov";
+            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
+            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormPickingIn
             // 
