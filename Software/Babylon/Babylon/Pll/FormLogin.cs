@@ -29,7 +29,7 @@ namespace Pll
             string username = textBoxUsername.Text;
             string password = textBoxPassword.Text;
 
-            if (ValidationService.IsNotEmpty(username) || ValidationService.IsNotEmpty(password)) 
+            if (ValidationService.IsNotEmpty(username) || ValidationService.IsNotEmpty(password))
             {
                 result = UserManager.LogInUser(username, password);
 
@@ -38,8 +38,9 @@ namespace Pll
                     textBoxPassword.Clear();
                     MessageBox.Show("Prijava neuspješna!");
                 }
-                else 
+                else if (UserManager.LoggedUser.Role.RoleName != "member")
                 {
+
                     FormMain form = new FormMain()
                     {
                         Owner = this
@@ -50,14 +51,18 @@ namespace Pll
                     UserManager.LogOut();
                     this.Show();
 
-                    textBoxUsername.Clear();
-                    textBoxPassword.Clear();
+
+
                 }
-            
+                else
+                {
+                    MessageBox.Show("Prijava neuspješna!");
+                }
+
+                textBoxUsername.Clear();
+                textBoxPassword.Clear();
+
             }
-
         }
-
-  
     }
 }
