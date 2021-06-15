@@ -18,9 +18,7 @@ namespace Pll
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLoans());
-            //Application.Run(new FormLateLoansList());
-
+            Application.Run(new FormLogin());
         }
     }
 }
