@@ -37,11 +37,11 @@ namespace Pll
             this.btnKreiraj = new System.Windows.Forms.Button();
             this.btnNatrag = new System.Windows.Forms.Button();
             this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
+            this.membershipBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonDeleteUser = new System.Windows.Forms.Button();
             this.buttonAddMember = new System.Windows.Forms.Button();
-            this.membershipBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.membershipBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.membershipBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -122,6 +122,10 @@ namespace Pll
             this.dataGridViewMemberships.Size = new System.Drawing.Size(459, 221);
             this.dataGridViewMemberships.TabIndex = 11;
             // 
+            // membershipBindingSource3
+            // 
+            this.membershipBindingSource3.DataSource = typeof(Dll.Model.Membership);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -160,10 +164,6 @@ namespace Pll
             this.buttonAddMember.UseVisualStyleBackColor = true;
             this.buttonAddMember.Click += new System.EventHandler(this.btnDodajClana_Click);
             // 
-            // membershipBindingSource3
-            // 
-            this.membershipBindingSource3.DataSource = typeof(Dll.Model.Membership);
-            // 
             // membershipBindingSource
             // 
             this.membershipBindingSource.DataSource = typeof(Dll.Model.Membership);
@@ -179,7 +179,7 @@ namespace Pll
             // UserName
             // 
             this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "UserName";
+            this.UserName.HeaderText = "Korisničko ime";
             this.UserName.MinimumWidth = 6;
             this.UserName.Name = "UserName";
             this.UserName.ReadOnly = true;
@@ -188,7 +188,7 @@ namespace Pll
             // dateFromDataGridViewTextBoxColumn
             // 
             this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
@@ -196,7 +196,7 @@ namespace Pll
             // dateToDataGridViewTextBoxColumn
             // 
             this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum do";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
             this.dateToDataGridViewTextBoxColumn.Width = 125;

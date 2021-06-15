@@ -60,6 +60,7 @@ namespace Pll
             this.btnVrati.TabIndex = 1;
             this.btnVrati.Text = "Vrati";
             this.btnVrati.UseVisualStyleBackColor = true;
+            this.btnVrati.Click += new System.EventHandler(this.btnVrati_Click);
             // 
             // btnOdjava
             // 
