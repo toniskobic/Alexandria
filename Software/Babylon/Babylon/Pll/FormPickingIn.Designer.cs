@@ -45,6 +45,7 @@ namespace Pll
             this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSpremi = new System.Windows.Forms.Button();
             this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
@@ -179,11 +180,22 @@ namespace Pll
             this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.literatureNameDataGridViewTextBoxColumn.Width = 125;
             // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(449, 86);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(140, 40);
+            this.buttonClose.TabIndex = 8;
+            this.buttonClose.Text = "Natrag";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // FormPickingIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 485);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonSpremi);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -217,5 +229,6 @@ namespace Pll
         private System.Windows.Forms.BindingSource pickingInItemBindingSource1;
         private System.Windows.Forms.Button buttonSpremi;
         private System.Windows.Forms.DataGridViewTextBoxColumn literatureNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

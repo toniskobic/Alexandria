@@ -16,10 +16,10 @@ namespace Pll
         public FormMain()
         {
             InitializeComponent();
-            //if (UserManager.LoggedUser.Role.RoleName == "user")
-            //{
-            //    btnKorisnici.Enabled = false;
-            //}
+            if (UserManager.LoggedUser.Role.RoleName == "user")
+            {
+                btnKorisnici.Enabled = false;
+            }
         }
 
         private void btnKorisnici_Click(object sender, EventArgs e)
