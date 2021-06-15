@@ -18,8 +18,8 @@ namespace Pll
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KnjiznaGradaForm());
-            //Application.Run(new PosudbeForm());
+            Application.Run(new FormMain());
+            //Application.Run(new FormLateLoansList());
 
         }
     }

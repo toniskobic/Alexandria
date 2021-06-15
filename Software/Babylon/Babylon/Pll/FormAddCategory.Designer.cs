@@ -29,6 +29,7 @@ namespace Pll
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAddCategory));
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@ namespace Pll
             this.buttonCancel.Text = "Odustani";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // FormCategory
+            // FormAddCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +101,8 @@ namespace Pll
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxName);
-            this.Name = "FormCategory";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormAddCategory";
             this.Text = "Nova kategorija";
             this.ResumeLayout(false);
             this.PerformLayout();
