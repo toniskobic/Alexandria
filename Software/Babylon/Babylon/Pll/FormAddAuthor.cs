@@ -33,5 +33,10 @@ namespace Pll
             _unitOfWork.Complete();
             this.Close();
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
