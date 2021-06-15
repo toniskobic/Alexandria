@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,10 +25,22 @@ namespace Dll.Model
         public List<Receipt> EmployeeReceipt { get; set; }
         public List<Loan> Loan { get; set; }
 
+        [NotMapped]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+
+        }
         public User()
         {
             RegistrationDate = DateTime.Now;
             Loan = new List<Loan>();
         }
+
+
+
     }
 }

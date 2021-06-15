@@ -21,5 +21,6 @@ namespace Bll.Repositories
         {
             return _dbContext.Users.Include(u => u.Role).FirstOrDefault(u => u.UserName == user && u.Password == password);
         }
+
     }
 }

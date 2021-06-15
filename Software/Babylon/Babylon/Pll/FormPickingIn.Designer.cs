@@ -30,6 +30,7 @@ namespace Pll
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPickingIn));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,12 +39,12 @@ namespace Pll
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPickingInItem = new System.Windows.Forms.DataGridView();
+            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pickingInItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAddLiterature = new System.Windows.Forms.Button();
             this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonSpremi = new System.Windows.Forms.Button();
-            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
@@ -106,7 +107,7 @@ namespace Pll
             this.groupBox1.Controls.Add(this.dataGridViewPickingInItem);
             this.groupBox1.Location = new System.Drawing.Point(26, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 293);
+            this.groupBox1.Size = new System.Drawing.Size(387, 293);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stavke primke:";
@@ -124,6 +125,15 @@ namespace Pll
             this.dataGridViewPickingInItem.RowTemplate.Height = 24;
             this.dataGridViewPickingInItem.Size = new System.Drawing.Size(243, 223);
             this.dataGridViewPickingInItem.TabIndex = 0;
+            // 
+            // literatureNameDataGridViewTextBoxColumn
+            // 
+            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
+            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "LiteratureName";
+            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
+            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // pickingInItemBindingSource1
             // 
@@ -161,7 +171,7 @@ namespace Pll
             // 
             // buttonSpremi
             // 
-            this.buttonSpremi.Location = new System.Drawing.Point(545, 83);
+            this.buttonSpremi.Location = new System.Drawing.Point(449, 17);
             this.buttonSpremi.Name = "buttonSpremi";
             this.buttonSpremi.Size = new System.Drawing.Size(140, 38);
             this.buttonSpremi.TabIndex = 7;
@@ -169,23 +179,15 @@ namespace Pll
             this.buttonSpremi.UseVisualStyleBackColor = true;
             this.buttonSpremi.Click += new System.EventHandler(this.buttonSpremi_Click);
             // 
-            // literatureNameDataGridViewTextBoxColumn
-            // 
-            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
-            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "LiteratureName";
-            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
-            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // FormPickingIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 497);
+            this.ClientSize = new System.Drawing.Size(608, 485);
             this.Controls.Add(this.buttonSpremi);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPickingIn";
             this.Text = "Primka";
             this.Load += new System.EventHandler(this.FormPickingIn_Load);

@@ -42,24 +42,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -74,27 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContextDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="ClanoviForm.cs">
+    <Compile Include="FormCreateMembership.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClanoviForm.Designer.cs">
-      <DependentUpon>ClanoviForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetReport.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetReport.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DodajClanForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DodajClanForm.Designer.cs">
-      <DependentUpon>DodajClanForm.cs</DependentUpon>
+    <Compile Include="FormCreateMembership.Designer.cs">
+      <DependentUpon>FormCreateMembership.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAddAuthor.cs">
       <SubType>Form</SubType>
@@ -114,47 +80,41 @@
     <Compile Include="FormPickingIn.Designer.cs">
       <DependentUpon>FormPickingIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="KnjiznaGradaForm.cs">
+    <Compile Include="FormLiteratures.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KnjiznaGradaForm.Designer.cs">
-      <DependentUpon>KnjiznaGradaForm.cs</DependentUpon>
+    <Compile Include="FormLiteratures.Designer.cs">
+      <DependentUpon>FormLiteratures.cs</DependentUpon>
     </Compile>
-    <Compile Include="KorisniciForm.cs">
+    <Compile Include="FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KorisniciForm.Designer.cs">
-      <DependentUpon>KorisniciForm.cs</DependentUpon>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="LateLoansListForm.cs">
+    <Compile Include="FormLateLoansList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LateLoansListForm.Designer.cs">
-      <DependentUpon>LateLoansListForm.cs</DependentUpon>
+    <Compile Include="FormLateLoansList.Designer.cs">
+      <DependentUpon>FormLateLoansList.cs</DependentUpon>
     </Compile>
-    <Compile Include="NovaKnjiznaForm.cs">
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NovaKnjiznaForm.Designer.cs">
-      <DependentUpon>NovaKnjiznaForm.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="PocetnaForm.cs">
+    <Compile Include="FormLoans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PocetnaForm.Designer.cs">
-      <DependentUpon>PocetnaForm.cs</DependentUpon>
+    <Compile Include="FormLoans.Designer.cs">
+      <DependentUpon>FormLoans.cs</DependentUpon>
     </Compile>
-    <Compile Include="PosudbeForm.cs">
+    <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PosudbeForm.Designer.cs">
-      <DependentUpon>PosudbeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrijavaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrijavaForm.Designer.cs">
-      <DependentUpon>PrijavaForm.cs</DependentUpon>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -164,30 +124,8 @@
     <Compile Include="FormCreateUser.Designer.cs">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="LiteratureReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LiteratureReportForm.Designer.cs">
-      <DependentUpon>LiteratureReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UserReportForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UserReportForm.Designer.cs">
-      <DependentUpon>UserReportForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ZaboravljenaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ZaboravljenaForm.Designer.cs">
-      <DependentUpon>ZaboravljenaForm.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="ClanoviForm.resx">
-      <DependentUpon>ClanoviForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DodajClanForm.resx">
-      <DependentUpon>DodajClanForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormCreateMembership.resx">
+      <DependentUpon>FormCreateMembership.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddAuthor.resx">
       <DependentUpon>FormAddAuthor.cs</DependentUpon>
@@ -198,26 +136,23 @@
     <EmbeddedResource Include="FormPickingIn.resx">
       <DependentUpon>FormPickingIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KnjiznaGradaForm.resx">
-      <DependentUpon>KnjiznaGradaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormLiteratures.resx">
+      <DependentUpon>FormLiteratures.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KorisniciForm.resx">
-      <DependentUpon>KorisniciForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LateLoansListForm.resx">
-      <DependentUpon>LateLoansListForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormLateLoansList.resx">
+      <DependentUpon>FormLateLoansList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NovaKnjiznaForm.resx">
-      <DependentUpon>NovaKnjiznaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PocetnaForm.resx">
-      <DependentUpon>PocetnaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormLoans.resx">
+      <DependentUpon>FormLoans.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PosudbeForm.resx">
-      <DependentUpon>PosudbeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrijavaForm.resx">
-      <DependentUpon>PrijavaForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -227,58 +162,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="FormCreateUser.resx">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LiteratureReport.rdlc" />
-    <EmbeddedResource Include="LiteratureReportForm.resx">
-      <DependentUpon>LiteratureReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportUsers.rdlc" />
-    <EmbeddedResource Include="UserReportForm.resx">
-      <DependentUpon>UserReportForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ZaboravljenaForm.resx">
-      <DependentUpon>ZaboravljenaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <None Include="AppContextDataSet.xsc">
-      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AppContextDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AppContextDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AppContextDataSet.xss">
-      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetReport.xsc">
-      <DependentUpon>DataSetReport.xsd</DependentUpon>
-    </None>
-    <None Include="DataSetReport.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSetReport.xss">
-      <DependentUpon>DataSetReport.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\Bll.Services.UnitOfWork.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.Author.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.Category.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.Literature.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Loan.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.LoanItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Membership.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.PickingIn.datasource" />
     <None Include="Properties\DataSources\Dll.Model.PickingInItem.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.PickingOut.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.PickingOutItem.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.Receipt.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.ReceiptItem.datasource" />
-    <None Include="Properties\DataSources\Dll.Model.Role.datasource" />
     <None Include="Properties\DataSources\Dll.Model.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -304,22 +196,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="Resources\smalllighthouse1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
