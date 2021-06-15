@@ -20,6 +20,7 @@ namespace Pll
             {
                 btnKorisnici.Enabled = false;
             }
+            
         }
 
         private void btnKorisnici_Click(object sender, EventArgs e)
