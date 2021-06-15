@@ -16,10 +16,10 @@ namespace Pll
         public PocetnaForm()
         {
             InitializeComponent();
-                //if (UserManager.LoggedUser.Role.RoleName == "user")
-                //{
-                //    btnKorisnici.Enabled = false;
-                //}
+            if (UserManager.LoggedUser.Role.RoleName == "user")
+            {
+                btnKorisnici.Enabled = false;
+            }
         }
 
         private void btnKorisnici_Click(object sender, EventArgs e)
@@ -57,18 +57,6 @@ namespace Pll
 
         private void PocetnaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-        }
-
-        private void btnStatistika_Click(object sender, EventArgs e)
-        {
-            LiteratureReportForm form = new LiteratureReportForm();
-            form.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UserReportForm form = new UserReportForm();
-            form.Show();
         }
     }
 }

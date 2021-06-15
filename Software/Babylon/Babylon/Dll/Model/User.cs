@@ -29,5 +29,8 @@ namespace Dll.Model
             RegistrationDate = DateTime.Now;
             Loan = new List<Loan>();
         }
+
+
+
     }
 }
