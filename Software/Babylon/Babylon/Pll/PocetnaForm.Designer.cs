@@ -38,8 +38,6 @@ namespace Pll
             this.btnOdjava = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +53,7 @@ namespace Pll
             // 
             // btnKnjizneGrade
             // 
-            this.btnKnjizneGrade.Location = new System.Drawing.Point(52, 21);
+            this.btnKnjizneGrade.Location = new System.Drawing.Point(113, 239);
             this.btnKnjizneGrade.Name = "btnKnjizneGrade";
             this.btnKnjizneGrade.Size = new System.Drawing.Size(97, 54);
             this.btnKnjizneGrade.TabIndex = 1;
@@ -65,7 +63,7 @@ namespace Pll
             // 
             // btnKorisnici
             // 
-            this.btnKorisnici.Location = new System.Drawing.Point(181, 21);
+            this.btnKorisnici.Location = new System.Drawing.Point(259, 239);
             this.btnKorisnici.Name = "btnKorisnici";
             this.btnKorisnici.Size = new System.Drawing.Size(97, 54);
             this.btnKorisnici.TabIndex = 2;
@@ -75,7 +73,7 @@ namespace Pll
             // 
             // btnPosudbe
             // 
-            this.btnPosudbe.Location = new System.Drawing.Point(52, 112);
+            this.btnPosudbe.Location = new System.Drawing.Point(113, 330);
             this.btnPosudbe.Name = "btnPosudbe";
             this.btnPosudbe.Size = new System.Drawing.Size(97, 54);
             this.btnPosudbe.TabIndex = 3;
@@ -85,13 +83,12 @@ namespace Pll
             // 
             // btnStatistika
             // 
-            this.btnStatistika.Location = new System.Drawing.Point(184, 112);
+            this.btnStatistika.Location = new System.Drawing.Point(259, 330);
             this.btnStatistika.Name = "btnStatistika";
             this.btnStatistika.Size = new System.Drawing.Size(97, 54);
             this.btnStatistika.TabIndex = 4;
-            this.btnStatistika.Text = "Statistika Knjiga";
+            this.btnStatistika.Text = "Statistika";
             this.btnStatistika.UseVisualStyleBackColor = true;
-            this.btnStatistika.Click += new System.EventHandler(this.btnStatistika_Click);
             // 
             // btnOdjava
             // 
@@ -105,14 +102,9 @@ namespace Pll
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.btnKnjizneGrade);
-            this.groupBox1.Controls.Add(this.btnPosudbe);
-            this.groupBox1.Controls.Add(this.btnStatistika);
-            this.groupBox1.Controls.Add(this.btnKorisnici);
-            this.groupBox1.Location = new System.Drawing.Point(12, 218);
+            this.groupBox1.Location = new System.Drawing.Point(95, 218);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 183);
+            this.groupBox1.Size = new System.Drawing.Size(294, 183);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
@@ -125,16 +117,6 @@ namespace Pll
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(310, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 54);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Statistika Članova";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // PocetnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,6 +124,10 @@ namespace Pll
             this.ClientSize = new System.Drawing.Size(477, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnOdjava);
+            this.Controls.Add(this.btnStatistika);
+            this.Controls.Add(this.btnPosudbe);
+            this.Controls.Add(this.btnKorisnici);
+            this.Controls.Add(this.btnKnjizneGrade);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -149,7 +135,6 @@ namespace Pll
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Početna stranica";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PocetnaForm_FormClosing);
-            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,6 +151,5 @@ namespace Pll
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
