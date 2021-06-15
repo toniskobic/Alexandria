@@ -27,17 +27,25 @@ namespace Pll
             this.Close();
         }
 
+        private void RefreshRoles()
+        {
+            comboBoxRoles.DataSource = _unitOfWork.Roles.GetAll();
+            comboBoxRoles.DisplayMember = "RoleName";
+        }
+
         private void btnRegistrirajSe_Click(object sender, EventArgs e)
         {
-            string username = this.textBoxName.Text;
+            string firstname = this.textBoxName.Text;
             string surname = this.textBoxSurname.Text;
+            string username = this.textBoxUserName.Text;
             string password = this.textBoxPassword.Text;
             string email = this.textBoxEmail.Text;
             string phoneNumber = this.textBoxPhoneNumber.Text;
             DateTime BirthDate = this.dateTimePickerBirthDate.Value;
+            Role role = comboBoxRoles.SelectedItem as Role;
 
             if(!ValidationService.AssertEmail(email) || !ValidationService.IsPhoneNumberValid(phoneNumber)
-                || !ValidationService.AssertStringLenght(username, 3) || !ValidationService.AssertStringLenght(surname, 3)
+                || !ValidationService.AssertStringLenght(firstname, 3) || !ValidationService.AssertStringLenght(surname, 3)
                 || !ValidationService.AssertStringLenght(password, 3))
             {
                 MessageBox.Show("Unesite ispravne podatke");
@@ -46,17 +54,24 @@ namespace Pll
 
             User newUser = new User
             {
-                FirstName = username,
+                FirstName = firstname,
                 LastName = surname,
+                UserName = username,
                 Password = password,
                 EMail = email,
                 PhoneNumber = phoneNumber,
-                DateOfBirth = BirthDate
+                DateOfBirth = BirthDate,
+                Role = role
             };
 
             _unitOfWork.Users.Add(newUser);
             _unitOfWork.Complete();
             this.Close();
+        }
+
+        private void FormCreateUser_Load(object sender, EventArgs e)
+        {
+            RefreshRoles();
         }
     }
 }

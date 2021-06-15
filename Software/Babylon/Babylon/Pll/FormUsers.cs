@@ -26,8 +26,10 @@ namespace Pll
 
         private void btnKreiraj_Click(object sender, EventArgs e)
         {
-            FormCreateUser registracijaForm = new FormCreateUser();
-            registracijaForm.ShowDialog();
+            FormCreateUser form = new FormCreateUser();
+            form.ShowDialog();
+            RefreshUsers();
+            RefreshMemberships();
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)
@@ -41,9 +43,9 @@ namespace Pll
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
-            FormLogin prijavaForm = new FormLogin();
+            FormLogin form = new FormLogin();
             this.Hide();
-            prijavaForm.ShowDialog();
+            form.ShowDialog();
             this.Close();
         }
 
@@ -53,6 +55,7 @@ namespace Pll
             this.Hide();
             newForm.ShowDialog();
             this.Show();
+            RefreshUsers();
             RefreshMemberships();
         }
 

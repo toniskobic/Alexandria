@@ -88,6 +88,7 @@ namespace Pll
             this.buttonCancel.TabIndex = 5;
             this.buttonCancel.Text = "Odustani";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FormAddAuthor
             // 
