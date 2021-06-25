@@ -20,7 +20,6 @@ namespace Bll.Services
         public MembershipRepository Memberships { get; set; }
         public PickingInItemRepository PickingInItems { get; set; }
         public PickingOutRepository PickingOuts { get; set; }
-        public PickingOutItemRepository PickingOutItems { get; set; }
         public ReceiptRepository Receipts { get; set; }
         public ReceiptItemRepository ReceiptItems { get; set; }
         public RoleRepository Roles { get; set; }
@@ -28,6 +27,7 @@ namespace Bll.Services
         public UnitOfWork(AppDbContext dbContext)
         {
             _appDbContext = dbContext;
+            Roles = new RoleRepository(_appDbContext);
             Users = new UserRepository(_appDbContext);
             PickingIns = new PickingInRepository(_appDbContext);
             Authors = new AuthorRepository(_appDbContext);
@@ -38,10 +38,8 @@ namespace Bll.Services
             Memberships = new MembershipRepository(_appDbContext);
             PickingInItems = new PickingInItemRepository(_appDbContext);
             PickingOuts = new PickingOutRepository(_appDbContext);
-            PickingOutItems = new PickingOutItemRepository(_appDbContext);
             Receipts = new ReceiptRepository(_appDbContext);
             ReceiptItems = new ReceiptItemRepository(_appDbContext);
-            Roles = new RoleRepository(_appDbContext);
         }
 
         public int Complete()

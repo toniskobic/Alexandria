@@ -15,9 +15,8 @@ namespace Bll
         public AppDbContext() : base("AppContext")
         {
         }
-
-        public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Membership> Memberships { get; set; }
         public DbSet<Receipt> Receipts { get; set; }
         public DbSet<Literature> Literatures { get; set; }
@@ -28,7 +27,6 @@ namespace Bll
         public DbSet<PickingIn> PickingsIn { get; set; }
         public DbSet<LoanItem> LoanItems { get; set; }
         public DbSet<PickingInItem> PickingInItems { get; set; }
-        public DbSet<PickingOutItem> PickingOutItems { get; set; }
         public DbSet<ReceiptItem> ReceiptItems { get; set; }
 
 
@@ -57,18 +55,6 @@ namespace Bll
             modelBuilder.Entity<PickingInItem>()
               .HasRequired(x => x.Literature)
               .WithMany(x => x.PickingInItem)
-              .HasForeignKey(x => x.Literature_Id)
-              .WillCascadeOnDelete(true);
-
-            modelBuilder.Entity<PickingOutItem>().HasKey(x => new { x.PickingOut_Id, x.Literature_Id });
-            modelBuilder.Entity<PickingOutItem>()
-              .HasRequired(x => x.PickingOut)
-              .WithMany(x => x.PickingOutItem)
-              .HasForeignKey(x => x.PickingOut_Id)
-              .WillCascadeOnDelete(true);
-            modelBuilder.Entity<PickingOutItem>()
-              .HasRequired(x => x.Literature)
-              .WithMany(x => x.PickingOutItem)
               .HasForeignKey(x => x.Literature_Id)
               .WillCascadeOnDelete(true);
 

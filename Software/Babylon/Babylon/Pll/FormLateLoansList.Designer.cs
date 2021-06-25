@@ -32,11 +32,13 @@ namespace Pll
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLateLoansList));
             this.dataGridViewLoans = new System.Windows.Forms.DataGridView();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonWarnUser = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonLogOut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -44,41 +46,19 @@ namespace Pll
             // dataGridViewLoans
             // 
             this.dataGridViewLoans.AutoGenerateColumns = false;
+            this.dataGridViewLoans.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewLoans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLoans.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateFromDataGridViewTextBoxColumn,
             this.dateToDataGridViewTextBoxColumn});
             this.dataGridViewLoans.DataSource = this.loanBindingSource;
-            this.dataGridViewLoans.Location = new System.Drawing.Point(45, 58);
+            this.dataGridViewLoans.Location = new System.Drawing.Point(56, 72);
+            this.dataGridViewLoans.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLoans.Name = "dataGridViewLoans";
             this.dataGridViewLoans.RowHeadersWidth = 51;
             this.dataGridViewLoans.RowTemplate.Height = 24;
-            this.dataGridViewLoans.Size = new System.Drawing.Size(462, 328);
+            this.dataGridViewLoans.Size = new System.Drawing.Size(578, 410);
             this.dataGridViewLoans.TabIndex = 0;
-            // 
-            // loanBindingSource
-            // 
-            this.loanBindingSource.DataSource = typeof(Dll.Model.Loan);
-            // 
-            // buttonWarnUser
-            // 
-            this.buttonWarnUser.Location = new System.Drawing.Point(575, 197);
-            this.buttonWarnUser.Name = "buttonWarnUser";
-            this.buttonWarnUser.Size = new System.Drawing.Size(157, 52);
-            this.buttonWarnUser.TabIndex = 1;
-            this.buttonWarnUser.Text = "Upozori korisnika";
-            this.buttonWarnUser.UseVisualStyleBackColor = true;
-            this.buttonWarnUser.Click += new System.EventHandler(this.buttonWarnUser_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Location = new System.Drawing.Point(12, 12);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(75, 26);
-            this.buttonClose.TabIndex = 3;
-            this.buttonClose.Text = "Natrag";
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // dateFromDataGridViewTextBoxColumn
             // 
@@ -96,15 +76,88 @@ namespace Pll
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
             this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
+            // loanBindingSource
+            // 
+            this.loanBindingSource.DataSource = typeof(Dll.Model.Loan);
+            // 
+            // buttonWarnUser
+            // 
+            this.buttonWarnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonWarnUser.FlatAppearance.BorderSize = 0;
+            this.buttonWarnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWarnUser.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonWarnUser.Location = new System.Drawing.Point(719, 246);
+            this.buttonWarnUser.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonWarnUser.Name = "buttonWarnUser";
+            this.buttonWarnUser.Size = new System.Drawing.Size(196, 65);
+            this.buttonWarnUser.TabIndex = 1;
+            this.buttonWarnUser.Text = "Upozori korisnika";
+            this.buttonWarnUser.UseVisualStyleBackColor = false;
+            this.buttonWarnUser.Click += new System.EventHandler(this.buttonWarnUser_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonClose.Location = new System.Drawing.Point(15, 15);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(94, 32);
+            this.buttonClose.TabIndex = 3;
+            this.buttonClose.Text = "Natrag";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // buttonHelp
+            // 
+            this.buttonHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonHelp.Cursor = System.Windows.Forms.Cursors.Help;
+            this.buttonHelp.FlatAppearance.BorderSize = 0;
+            this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonHelp.Location = new System.Drawing.Point(13, 529);
+            this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonHelp.Name = "buttonHelp";
+            this.buttonHelp.Size = new System.Drawing.Size(138, 51);
+            this.buttonHelp.TabIndex = 10;
+            this.buttonHelp.Text = "Pomoć";
+            this.buttonHelp.UseVisualStyleBackColor = false;
+            this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
+            // buttonLogOut
+            // 
+            this.buttonLogOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonLogOut.FlatAppearance.BorderSize = 0;
+            this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogOut.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonLogOut.Location = new System.Drawing.Point(906, 15);
+            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLogOut.Name = "buttonLogOut";
+            this.buttonLogOut.Size = new System.Drawing.Size(81, 45);
+            this.buttonLogOut.TabIndex = 11;
+            this.buttonLogOut.Text = "Odjava";
+            this.buttonLogOut.UseVisualStyleBackColor = false;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
+            // 
             // FormLateLoansList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.ClientSize = new System.Drawing.Size(1000, 593);
+            this.Controls.Add(this.buttonLogOut);
+            this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonWarnUser);
             this.Controls.Add(this.dataGridViewLoans);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1018, 640);
             this.Name = "FormLateLoansList";
             this.Text = "Zakasnine";
             this.Load += new System.EventHandler(this.LateLoansListForm_Load);
@@ -122,5 +175,7 @@ namespace Pll
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonLogOut;
     }
 }

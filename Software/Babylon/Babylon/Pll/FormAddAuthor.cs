@@ -38,5 +38,21 @@ namespace Pll
         {
             Close();
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#10-dodaj-autora-");
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#10-dodaj-autora-");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+     
     }
 }

@@ -22,19 +22,26 @@ namespace Pll
             InitializeComponent();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
+        private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            FormLogin prijavaForm = new FormLogin();
-            this.Hide();
-            prijavaForm.ShowDialog();
-            this.Close();
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+
+            }
         }
 
         private void btnNatrag_Click(object sender, EventArgs e)
         {
-            FormMain pocetnaForm = new FormMain();
-            this.Hide();
-            pocetnaForm.ShowDialog();
             this.Close();
         }
 
@@ -42,8 +49,8 @@ namespace Pll
         {
             dataGridViewLiterature.DataSource = null;
             dataGridViewLiterature.DataSource = _unitOfWork.Literatures.GetAll();
-            dataGridViewMembers.DataSource = null;
-            dataGridViewMembers.DataSource = _unitOfWork.Users.GetAll();
+            dataGridViewUsers.DataSource = null;
+            dataGridViewUsers.DataSource = _unitOfWork.Users.GetAll();
         }
 
         private void btnLoanBook_Click(object sender, EventArgs e)
@@ -71,9 +78,19 @@ namespace Pll
             this.Show();
         }
 
-        private void btnVrati_Click(object sender, EventArgs e)
+        private void buttonHelp_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#6-posudbe");
+        }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#6-posudbe");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Bll.Repositories
 
         public User FindEmployee(string user, string password)
         {
-            return _dbContext.Users.Include(u => u.Role).FirstOrDefault(u => u.UserName == user && u.Password == password);
+          return _dbContext.Users.Include(u => u.Role).FirstOrDefault(u => u.UserName == user && u.Password == password);
         }
 
     }

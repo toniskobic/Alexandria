@@ -34,6 +34,16 @@ namespace Dll.Model
             }
 
         }
+
+        [NotMapped]
+        public string RoleName
+        {
+            get
+            {
+                return Role.Name;
+            }
+        }
+
         public User()
         {
             RegistrationDate = DateTime.Now;

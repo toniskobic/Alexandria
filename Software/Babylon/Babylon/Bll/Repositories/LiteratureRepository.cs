@@ -13,6 +13,7 @@ namespace Bll.Repositories
         {
 
         }
+
         public bool IsLoaned(int id)
         {
             var loanItems = _appDbContext.Literatures.Include("LoanItem").FirstOrDefault(l => l.Id == id).LoanItem;

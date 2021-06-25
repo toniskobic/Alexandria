@@ -23,33 +23,48 @@ namespace Pll
             InitializeComponent();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
+        private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            FormLogin prijavaForm = new FormLogin();
-            this.Hide();
-            prijavaForm.ShowDialog();
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+
+            }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btnNatrag_Click(object sender, EventArgs e)
-        {
-            FormMain pocetnaForm = new FormMain();
-            this.Hide();
-            pocetnaForm.ShowDialog();
-            this.Close();
-        }
-
-        private void btnDodajKnjiznuGradu_Click(object sender, EventArgs e)
+        private void buttonPickingIn_Click(object sender, EventArgs e)
         {
             FormPickingIn form = new FormPickingIn();
             this.Hide();
             form.ShowDialog();
             this.Show();
+            RefreshLiteratures();
+
         }
 
-        private void KnjiznaGradaForm_Load(object sender, EventArgs e)
+        private void FormLiteratures_Load(object sender, EventArgs e)
         {
-            dgvKnjizneGrade.DataSource = _unitOfWork.Literatures.GetAll();
+            RefreshLiteratures();
+        }
+
+        private void RefreshLiteratures()
+        {
+            dataGridViewLiteratures.DataSource = null;
+            dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAll();
         }
 
         private void buttonAddCategory_Click(object sender, EventArgs e)
@@ -68,9 +83,9 @@ namespace Pll
             this.Show();
         }
 
-        private void btnRazduzi_Click(object sender, EventArgs e)
+        private void buttonPickingOut_Click(object sender, EventArgs e)
         {
-            Literature selectedLiterature = dgvKnjizneGrade.CurrentRow.DataBoundItem as Literature;
+            Literature selectedLiterature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
             if(_unitOfWork.Literatures.IsLoaned(selectedLiterature.Id))
             {
                 MessageBox.Show("Knjiga je posuđena!");
@@ -78,23 +93,32 @@ namespace Pll
             }
             if(selectedLiterature != null)
             {
-                PickingOutItem newPickingOutItem = new PickingOutItem {
-                    Literature = selectedLiterature
-                };
 
                 PickingOut newPickingOut = new PickingOut { 
-                    PickingOutItem = new List<PickingOutItem>{ newPickingOutItem }
+                    Description = $"Razdužena knjižna građa, ID = {selectedLiterature.Id}, Naslov = {selectedLiterature.Title}"
                 };
 
                 _unitOfWork.PickingOuts.Add(newPickingOut);
                 _unitOfWork.Literatures.Delete(selectedLiterature);
                 _unitOfWork.Complete();
 
-                dgvKnjizneGrade.DataSource = null;
-                dgvKnjizneGrade.DataSource = _unitOfWork.Literatures.GetAll();
-
+                RefreshLiteratures();
             }
         }
 
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#4-knji%C5%BEne-gra%C4%91e");
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#4-knji%C5%BEne-gra%C4%91e");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

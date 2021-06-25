@@ -1,4 +1,5 @@
 ﻿using Bll.Enums;
+using Bll;
 using Bll.Services;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace Pll
                     textBoxPassword.Clear();
                     MessageBox.Show("Prijava neuspješna!");
                 }
-                else if (UserManager.LoggedUser.Role.RoleName != "member")
+                else if (UserManager.LoggedUser.Role.Name != "member")
                 {
 
                     FormMain form = new FormMain()
@@ -64,5 +65,21 @@ namespace Pll
 
             }
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#2-prijava");
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#2-prijava");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
     }
 }

@@ -9,8 +9,8 @@ namespace Dll.Model
     public class PickingOut
     {
         public int Id { get; set; }
+        public string Description { get; set; }
         public DateTime Date { get; set; }
-        public List<PickingOutItem> PickingOutItem { get; set; }
 
         public PickingOut()
         {
