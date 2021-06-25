@@ -17,14 +17,13 @@ namespace Pll
     {
         private readonly UnitOfWork _unitOfWork;
 
-
         public FormUsers()
         {
             _unitOfWork = new UnitOfWork(new AppDbContext());
             InitializeComponent();
         }
 
-        private void btnKreiraj_Click(object sender, EventArgs e)
+        private void buttonCreate_Click(object sender, EventArgs e)
         {
             FormCreateUser form = new FormCreateUser();
             form.ShowDialog();
@@ -32,24 +31,12 @@ namespace Pll
             RefreshMemberships();
         }
 
-        private void btnNatrag_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
-            FormMain mainForm = new FormMain();
-            this.Hide();
-            mainForm.ShowDialog();
             this.Close();
         }
 
-
-        private void btnOdjava_Click(object sender, EventArgs e)
-        {
-            FormLogin form = new FormLogin();
-            this.Hide();
-            form.ShowDialog();
-            this.Close();
-        }
-
-        private void btnDodajClana_Click(object sender, EventArgs e)
+        private void buttonCreateMembership_Click(object sender, EventArgs e)
         {
             FormCreateMembership newForm= new FormCreateMembership();
             this.Hide();
@@ -77,7 +64,7 @@ namespace Pll
             dataGridViewMemberships.DataSource = _unitOfWork.Memberships.GetAll();
         }
 
-        private void btnAktDeakt_Click(object sender, EventArgs e)
+        private void buttonActivateDeactivate_Click(object sender, EventArgs e)
         {
             User selectedUser = dataGridViewUsers.CurrentRow.DataBoundItem as User;
             if (selectedUser.Locked == true)
@@ -102,6 +89,39 @@ namespace Pll
             _unitOfWork.Complete();
 
             RefreshUsers();
+        }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#7-korisnici");
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#7-korisnici");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+
+            }
         }
     }
 }

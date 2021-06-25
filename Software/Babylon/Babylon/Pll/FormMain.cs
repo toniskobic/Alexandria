@@ -16,48 +16,76 @@ namespace Pll
         public FormMain()
         {
             InitializeComponent();
-            if (UserManager.LoggedUser.Role.RoleName == "user")
+            if (UserManager.LoggedUser.Role.Name == "user")
             {
-                btnKorisnici.Enabled = false;
+                buttonUsers.Enabled = false;
             }
-            
+
         }
 
-        private void btnKorisnici_Click(object sender, EventArgs e)
+        private void buttonUsers_Click(object sender, EventArgs e)
         {
-            FormUsers korisniciForm = new FormUsers();
+            FormUsers newForm = new FormUsers();
             this.Hide();
-            korisniciForm.ShowDialog();
-            this.Close();
+            newForm.ShowDialog();
+            this.Show();
         }
 
-        private void btnOdjava_Click(object sender, EventArgs e)
+        private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            FormLogin prijavaForm = new FormLogin();
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+
+            }
+        }
+
+        private void buttonLiterature_Click(object sender, EventArgs e)
+        {
+            FormLiteratures newForm = new FormLiteratures();
             this.Hide();
-            prijavaForm.ShowDialog();
-            this.Close();
+            newForm.ShowDialog();
+            this.Show();
         }
 
-        private void btnKnjizneGrade_Click(object sender, EventArgs e)
+
+        private void buttonLoans_Click(object sender, EventArgs e)
         {
-            FormLiteratures knjiznaGradaForm = new FormLiteratures();
+            FormLoans newForm = new FormLoans();
             this.Hide();
-            knjiznaGradaForm.ShowDialog();
-            this.Close();
+            newForm.ShowDialog();
+            this.Show();
         }
 
-
-        private void btnPosudbe_Click(object sender, EventArgs e)
+        private void buttonHelp_Click(object sender, EventArgs e)
         {
-            FormLoans posudbeForm = new FormLoans();
-            this.Hide();
-            posudbeForm.ShowDialog();
-            this.Close();
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#3-po%C4%8Detna-stranica");
+
         }
 
-        private void PocetnaForm_FormClosing(object sender, FormClosingEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#3-po%C4%8Detna-stranica");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void buttonStatistics_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

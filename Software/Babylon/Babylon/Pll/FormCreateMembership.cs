@@ -62,5 +62,20 @@ namespace Pll
             comboBoxUsers.DisplayMember = "FullName";
 
         }
+
+        private void buttonHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#9-kreiraj-%C4%8Dlanarinu");
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.F1))
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#9-kreiraj-%C4%8Dlanarinu");
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 }

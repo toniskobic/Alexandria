@@ -60,6 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Enums\LoginResult.cs" />
     <Compile Include="Migrations\202106132227178_update.cs" />
@@ -78,6 +83,18 @@
     <Compile Include="Migrations\202106141915212_update3.designer.cs">
       <DependentUpon>202106141915212_update3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106232003561_test.cs" />
+    <Compile Include="Migrations\202106232003561_test.designer.cs">
+      <DependentUpon>202106232003561_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106241221254_update4.cs" />
+    <Compile Include="Migrations\202106241221254_update4.designer.cs">
+      <DependentUpon>202106241221254_update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106251644160_update5.cs" />
+    <Compile Include="Migrations\202106251644160_update5.designer.cs">
+      <DependentUpon>202106251644160_update5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AuthorRepository.cs" />
@@ -89,7 +106,6 @@
     <Compile Include="Repositories\MembershipRepository.cs" />
     <Compile Include="Repositories\PickingInItemRepository.cs" />
     <Compile Include="Repositories\PickingInRepository.cs" />
-    <Compile Include="Repositories\PickingOutItemRepository.cs" />
     <Compile Include="Repositories\PickingOutRepository.cs" />
     <Compile Include="Repositories\ReceiptItemRepository.cs" />
     <Compile Include="Repositories\ReceiptRepository.cs" />
@@ -98,6 +114,17 @@
     <Compile Include="Services\UnitOfWork.cs" />
     <Compile Include="Services\UserManager.cs" />
     <Compile Include="Services\ValidationService.cs" />
+    <None Include="AppContextDataSet.xsc">
+      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AppContextDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AppContextDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AppContextDataSet.xss">
+      <DependentUpon>AppContextDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -130,6 +157,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106141915212_update3.resx">
       <DependentUpon>202106141915212_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106232003561_test.resx">
+      <DependentUpon>202106232003561_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106241221254_update4.resx">
+      <DependentUpon>202106241221254_update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106251644160_update5.resx">
+      <DependentUpon>202106251644160_update5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
