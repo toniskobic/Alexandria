@@ -55,7 +55,7 @@ namespace Pll
         private void RefreshUsers()
         {
             dataGridViewUsers.DataSource = null;
-            dataGridViewUsers.DataSource = _unitOfWork.Users.GetAll();
+            dataGridViewUsers.DataSource = _unitOfWork.Users.GetAllUsers();
         }
 
         private void RefreshMemberships()

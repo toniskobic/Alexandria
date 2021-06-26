@@ -1,17 +1,25 @@
 ﻿using Dll.Model;
+using Bll.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Bll.Repositories
 {
     public class LoanRepository : GenericRepository<Loan>
     {
-        public LoanRepository(AppDbContext dbContext) : base(dbContext)
-        {
+        private AppDbContext _dbContext { get; set; }
 
+        public LoanRepository(AppDbContext appDbContext) : base(appDbContext)
+        {
+            _dbContext = _appDbContext;
+        }
+        public List<Loan> GetAllLoans()
+        {
+            return _dbContext.Loans.Include(x => x.User).ToList();
         }
     }
 }
