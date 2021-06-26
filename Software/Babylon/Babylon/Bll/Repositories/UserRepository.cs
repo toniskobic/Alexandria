@@ -12,9 +12,15 @@ namespace Bll.Repositories
     public class UserRepository : GenericRepository<User>
     {
         private AppDbContext _dbContext { get; set; }
+
         public UserRepository(AppDbContext appDbContext) : base(appDbContext)
         {
             _dbContext = _appDbContext;
+        }
+
+        public List<User> GetAllUsers()
+        {
+            return _dbContext.Users.Include(u => u.Role).ToList();
         }
 
         public User FindEmployee(string user, string password)

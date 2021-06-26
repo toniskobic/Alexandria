@@ -16,10 +16,16 @@ namespace Pll
     public partial class FormLoans : Form
     {
         private readonly UnitOfWork _unitOfWork;
+
         public FormLoans()
         {
             _unitOfWork = new UnitOfWork(new AppDbContext());
             InitializeComponent();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void buttonLogOut_Click(object sender, EventArgs e)
@@ -40,54 +46,37 @@ namespace Pll
             }
         }
 
-        private void btnNatrag_Click(object sender, EventArgs e)
+        private void FormLoans_Load(object sender, EventArgs e)
         {
-            this.Close();
+            RefreshLoans();
         }
 
-        private void PosudbeForm_Load(object sender, EventArgs e)
+        private void RefreshLoans()
         {
-            dataGridViewLiterature.DataSource = null;
-            dataGridViewLiterature.DataSource = _unitOfWork.Literatures.GetAll();
-            dataGridViewUsers.DataSource = null;
-            dataGridViewUsers.DataSource = _unitOfWork.Users.GetAll();
+            dataGridViewLoans.DataSource = null;
+            dataGridViewLoans.DataSource = _unitOfWork.Loans.GetAllLoans();
         }
 
-        private void btnLoanBook_Click(object sender, EventArgs e)
+        private void buttonNewLoan_Click(object sender, EventArgs e)
         {
-            User user = dataGridViewLiterature.CurrentRow.DataBoundItem as User;
-            var literature = dataGridViewLiterature.CurrentRow.DataBoundItem as Literature;
-            Loan loan = new Loan();
-            loan.User = user;
-            loan.DateFrom = DateTime.Now;
-            loan.DateTo = DateTime.Now.AddDays(30);
-
-            loan.LoanItem.Add(new LoanItem
-            {
-                Literature = literature,
-            });
-            _unitOfWork.Loans.Add(loan);
-            _unitOfWork.Complete();
-        }
-
-        private void buttonLateLoansList_Click(object sender, EventArgs e)
-        {
-            FormLateLoansList newForm = new FormLateLoansList();
+            FormNewLoan newForm = new FormNewLoan();
             this.Hide();
             newForm.ShowDialog();
             this.Show();
+            RefreshLoans();
         }
 
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#6-posudbe");
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#13-posudbe-");
+
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.F1))
             {
-                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#6-posudbe");
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#13-posudbe-");
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);

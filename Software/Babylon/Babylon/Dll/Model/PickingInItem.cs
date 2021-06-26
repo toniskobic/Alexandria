@@ -13,12 +13,20 @@ namespace Dll.Model
         public int Literature_Id { get; set; }
         public PickingIn PickingIn { get; set; }
         public Literature Literature { get; set; }
+
+        [NotMapped]
+        public string LiteratureName
+        {
+            get
+            {
+                return Literature.Title;
+            }
+        }
+
         public PickingInItem()
         {
         }
-        [NotMapped]
-        public string LiteratureName { get {
-                return Literature.Title;
-        } }
+
+        
     }
 }

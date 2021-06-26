@@ -1,17 +1,27 @@
 ﻿using Dll.Model;
+using Bll.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace Bll.Repositories
 {
     public class LiteratureRepository : GenericRepository<Literature>
     {
-        public LiteratureRepository(AppDbContext dbContext) : base(dbContext)
-        {
+        private AppDbContext _dbContext { get; set; }
 
+
+        public LiteratureRepository(AppDbContext appDbContext) : base(appDbContext)
+        {
+            _dbContext = _appDbContext;
+        }
+
+        public List<Literature> GetAllLiteratures()
+        {
+            return _dbContext.Literatures.Include(u => u.Author).Include(x => x.Category).ToList();
         }
 
         public bool IsLoaned(int id)

@@ -50,7 +50,5 @@ namespace Dll.Model
             Loan = new List<Loan>();
         }
 
-
-
     }
 }

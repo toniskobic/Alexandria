@@ -22,7 +22,7 @@ namespace Pll
             InitializeComponent();
         }
 
-        private void btnOdustani_Click(object sender, EventArgs e)
+        private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -33,7 +33,7 @@ namespace Pll
             comboBoxRoles.DisplayMember = "Name";
         }
 
-        private void btnRegistrirajSe_Click(object sender, EventArgs e)
+        private void buttonCreate_Click(object sender, EventArgs e)
         {
             string firstname = this.textBoxName.Text;
             string surname = this.textBoxSurname.Text;

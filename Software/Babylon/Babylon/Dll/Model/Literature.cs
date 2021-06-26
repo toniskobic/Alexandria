@@ -16,6 +16,24 @@ namespace Dll.Model
         public List<LoanItem> LoanItem { get; set; }
         public List<PickingInItem> PickingInItem { get; set; }
 
+        [NotMapped]
+        public string CategoryName
+        {
+            get
+            {
+                return Category.Name;
+            }
+        }
+
+        [NotMapped]
+        public string AuthorName
+        {
+            get
+            {
+                return Author.FullName;
+            }
+        }
+
         public Literature()
         {
 

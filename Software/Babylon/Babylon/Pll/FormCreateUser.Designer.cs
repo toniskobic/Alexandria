@@ -42,8 +42,8 @@ namespace Pll
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnRegistrirajSe = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxRoles = new System.Windows.Forms.ComboBox();
@@ -158,7 +158,7 @@ namespace Pll
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(249, 20);
-            this.textBoxEmail.TabIndex = 8;
+            this.textBoxEmail.TabIndex = 9;
             // 
             // textBoxPassword
             // 
@@ -170,7 +170,7 @@ namespace Pll
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(249, 20);
-            this.textBoxPassword.TabIndex = 9;
+            this.textBoxPassword.TabIndex = 10;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // textBoxPhoneNumber
@@ -183,7 +183,7 @@ namespace Pll
             this.textBoxPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(249, 20);
-            this.textBoxPhoneNumber.TabIndex = 11;
+            this.textBoxPhoneNumber.TabIndex = 12;
             // 
             // label7
             // 
@@ -198,35 +198,35 @@ namespace Pll
             this.label7.TabIndex = 12;
             this.label7.Text = "Kreiranje korisnika";
             // 
-            // btnRegistrirajSe
+            // buttonCreate
             // 
-            this.btnRegistrirajSe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrirajSe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnRegistrirajSe.FlatAppearance.BorderSize = 0;
-            this.btnRegistrirajSe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrirajSe.Location = new System.Drawing.Point(239, 502);
-            this.btnRegistrirajSe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnRegistrirajSe.Name = "btnRegistrirajSe";
-            this.btnRegistrirajSe.Size = new System.Drawing.Size(112, 54);
-            this.btnRegistrirajSe.TabIndex = 13;
-            this.btnRegistrirajSe.Text = "Registriraj";
-            this.btnRegistrirajSe.UseVisualStyleBackColor = false;
-            this.btnRegistrirajSe.Click += new System.EventHandler(this.btnRegistrirajSe_Click);
+            this.buttonCreate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonCreate.FlatAppearance.BorderSize = 0;
+            this.buttonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCreate.Location = new System.Drawing.Point(239, 502);
+            this.buttonCreate.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCreate.Name = "buttonCreate";
+            this.buttonCreate.Size = new System.Drawing.Size(112, 54);
+            this.buttonCreate.TabIndex = 14;
+            this.buttonCreate.Text = "Registriraj";
+            this.buttonCreate.UseVisualStyleBackColor = false;
+            this.buttonCreate.Click += new System.EventHandler(this.buttonCreate_Click);
             // 
-            // btnOdustani
+            // buttonClose
             // 
-            this.btnOdustani.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnOdustani.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnOdustani.FlatAppearance.BorderSize = 0;
-            this.btnOdustani.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOdustani.Location = new System.Drawing.Point(376, 502);
-            this.btnOdustani.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(112, 54);
-            this.btnOdustani.TabIndex = 14;
-            this.btnOdustani.Text = "Odustani";
-            this.btnOdustani.UseVisualStyleBackColor = false;
-            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            this.buttonClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Location = new System.Drawing.Point(376, 502);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(112, 54);
+            this.buttonClose.TabIndex = 15;
+            this.buttonClose.Text = "Odustani";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // textBoxUserName
             // 
@@ -238,7 +238,7 @@ namespace Pll
             this.textBoxUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxUserName.Name = "textBoxUserName";
             this.textBoxUserName.Size = new System.Drawing.Size(249, 20);
-            this.textBoxUserName.TabIndex = 17;
+            this.textBoxUserName.TabIndex = 8;
             // 
             // label8
             // 
@@ -262,7 +262,7 @@ namespace Pll
             this.comboBoxRoles.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxRoles.Name = "comboBoxRoles";
             this.comboBoxRoles.Size = new System.Drawing.Size(245, 28);
-            this.comboBoxRoles.TabIndex = 18;
+            this.comboBoxRoles.TabIndex = 13;
             // 
             // label9
             // 
@@ -287,7 +287,7 @@ namespace Pll
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(138, 51);
-            this.buttonHelp.TabIndex = 20;
+            this.buttonHelp.TabIndex = 16;
             this.buttonHelp.Text = "Pomoć";
             this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
@@ -297,7 +297,7 @@ namespace Pll
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(288, 351);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(242, 27);
-            this.dateTimePickerBirthDate.TabIndex = 21;
+            this.dateTimePickerBirthDate.TabIndex = 11;
             // 
             // FormCreateUser
             // 
@@ -311,8 +311,8 @@ namespace Pll
             this.Controls.Add(this.comboBoxRoles);
             this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.btnRegistrirajSe);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonCreate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.textBoxPassword);
@@ -353,8 +353,8 @@ namespace Pll
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnRegistrirajSe;
-        private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button buttonCreate;
+        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxRoles;

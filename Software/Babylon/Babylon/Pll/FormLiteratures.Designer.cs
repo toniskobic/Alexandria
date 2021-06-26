@@ -29,8 +29,14 @@ namespace Pll
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLiteratures));
             this.dataGridViewLiteratures = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.literatureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonPickingIn = new System.Windows.Forms.Button();
             this.buttonPickingOut = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,21 +45,69 @@ namespace Pll
             this.buttonAddCategory = new System.Windows.Forms.Button();
             this.buttonAddAuthor = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
+            this.buttonPickings = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewLiteratures
             // 
             this.dataGridViewLiteratures.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewLiteratures.AutoGenerateColumns = false;
             this.dataGridViewLiteratures.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewLiteratures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLiteratures.Location = new System.Drawing.Point(15, 154);
+            this.dataGridViewLiteratures.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.titleDataGridViewTextBoxColumn,
+            this.CategoryName,
+            this.AuthorName});
+            this.dataGridViewLiteratures.DataSource = this.literatureBindingSource;
+            this.dataGridViewLiteratures.Location = new System.Drawing.Point(19, 247);
             this.dataGridViewLiteratures.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLiteratures.Name = "dataGridViewLiteratures";
             this.dataGridViewLiteratures.RowHeadersWidth = 51;
             this.dataGridViewLiteratures.RowTemplate.Height = 24;
             this.dataGridViewLiteratures.Size = new System.Drawing.Size(770, 361);
             this.dataGridViewLiteratures.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Naslov";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "Kategorija";
+            this.CategoryName.MinimumWidth = 6;
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            this.CategoryName.Width = 125;
+            // 
+            // AuthorName
+            // 
+            this.AuthorName.DataPropertyName = "AuthorName";
+            this.AuthorName.HeaderText = "Autor";
+            this.AuthorName.MinimumWidth = 6;
+            this.AuthorName.Name = "AuthorName";
+            this.AuthorName.ReadOnly = true;
+            this.AuthorName.Width = 125;
+            // 
+            // literatureBindingSource
+            // 
+            this.literatureBindingSource.DataSource = typeof(Dll.Model.Literature);
             // 
             // buttonPickingIn
             // 
@@ -62,7 +116,7 @@ namespace Pll
             this.buttonPickingIn.FlatAppearance.BorderSize = 0;
             this.buttonPickingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPickingIn.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPickingIn.Location = new System.Drawing.Point(824, 154);
+            this.buttonPickingIn.Location = new System.Drawing.Point(828, 247);
             this.buttonPickingIn.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPickingIn.Name = "buttonPickingIn";
             this.buttonPickingIn.Size = new System.Drawing.Size(161, 79);
@@ -78,7 +132,7 @@ namespace Pll
             this.buttonPickingOut.FlatAppearance.BorderSize = 0;
             this.buttonPickingOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPickingOut.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPickingOut.Location = new System.Drawing.Point(825, 270);
+            this.buttonPickingOut.Location = new System.Drawing.Point(829, 363);
             this.buttonPickingOut.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPickingOut.Name = "buttonPickingOut";
             this.buttonPickingOut.Size = new System.Drawing.Size(160, 79);
@@ -92,7 +146,7 @@ namespace Pll
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(15, 118);
+            this.label1.Location = new System.Drawing.Point(19, 211);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 20);
@@ -137,7 +191,7 @@ namespace Pll
             this.buttonAddCategory.FlatAppearance.BorderSize = 0;
             this.buttonAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddCategory.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonAddCategory.Location = new System.Drawing.Point(312, 24);
+            this.buttonAddCategory.Location = new System.Drawing.Point(172, 117);
             this.buttonAddCategory.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddCategory.Name = "buttonAddCategory";
             this.buttonAddCategory.Size = new System.Drawing.Size(152, 69);
@@ -153,7 +207,7 @@ namespace Pll
             this.buttonAddAuthor.FlatAppearance.BorderSize = 0;
             this.buttonAddAuthor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddAuthor.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonAddAuthor.Location = new System.Drawing.Point(164, 24);
+            this.buttonAddAuthor.Location = new System.Drawing.Point(23, 117);
             this.buttonAddAuthor.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAddAuthor.Name = "buttonAddAuthor";
             this.buttonAddAuthor.Size = new System.Drawing.Size(126, 69);
@@ -170,7 +224,7 @@ namespace Pll
             this.buttonHelp.FlatAppearance.BorderSize = 0;
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHelp.Location = new System.Drawing.Point(19, 564);
+            this.buttonHelp.Location = new System.Drawing.Point(19, 661);
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(138, 51);
@@ -179,12 +233,43 @@ namespace Pll
             this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
             // 
+            // buttonPickings
+            // 
+            this.buttonPickings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonPickings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonPickings.FlatAppearance.BorderSize = 0;
+            this.buttonPickings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPickings.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonPickings.Location = new System.Drawing.Point(829, 472);
+            this.buttonPickings.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonPickings.Name = "buttonPickings";
+            this.buttonPickings.Size = new System.Drawing.Size(161, 79);
+            this.buttonPickings.TabIndex = 16;
+            this.buttonPickings.Text = "Primke i razdužnice";
+            this.buttonPickings.UseVisualStyleBackColor = false;
+            this.buttonPickings.Click += new System.EventHandler(this.buttonPickings_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(391, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 32);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Knjižna građa";
+            // 
             // FormLiteratures
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1000, 630);
+            this.ClientSize = new System.Drawing.Size(1000, 727);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.buttonPickings);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonAddAuthor);
             this.Controls.Add(this.buttonAddCategory);
@@ -203,6 +288,7 @@ namespace Pll
             this.Text = "Knjižna građa";
             this.Load += new System.EventHandler(this.FormLiteratures_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +305,12 @@ namespace Pll
         private System.Windows.Forms.Button buttonAddCategory;
         private System.Windows.Forms.Button buttonAddAuthor;
         private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.BindingSource literatureBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
+        private System.Windows.Forms.Button buttonPickings;
+        private System.Windows.Forms.Label label2;
     }
 }

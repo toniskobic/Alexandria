@@ -31,52 +31,88 @@ namespace Pll
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLoans));
-            this.dataGridViewLiterature = new System.Windows.Forms.DataGridView();
-            this.btnVrati = new System.Windows.Forms.Button();
-            this.buttonLogOut = new System.Windows.Forms.Button();
-            this.btnNatrag = new System.Windows.Forms.Button();
-            this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLoanBook = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewLoans = new System.Windows.Forms.DataGridView();
+            this.loanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonLateLoansList = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonLogOut = new System.Windows.Forms.Button();
+            this.buttonNewLoan = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiterature)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startedDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Finished = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridViewLiterature
+            // label4
             // 
-            this.dataGridViewLiterature.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridViewLiterature.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.dataGridViewLiterature.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewLiterature.Location = new System.Drawing.Point(15, 101);
-            this.dataGridViewLiterature.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewLiterature.Name = "dataGridViewLiterature";
-            this.dataGridViewLiterature.RowHeadersWidth = 51;
-            this.dataGridViewLiterature.RowTemplate.Height = 24;
-            this.dataGridViewLiterature.Size = new System.Drawing.Size(632, 468);
-            this.dataGridViewLiterature.TabIndex = 0;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.LightGray;
+            this.label4.Location = new System.Drawing.Point(514, 39);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 32);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Posudbe";
             // 
-            // btnVrati
+            // dataGridViewLoans
             // 
-            this.btnVrati.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVrati.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnVrati.FlatAppearance.BorderSize = 0;
-            this.btnVrati.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVrati.ForeColor = System.Drawing.Color.LightGray;
-            this.btnVrati.Location = new System.Drawing.Point(15, 615);
-            this.btnVrati.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVrati.Name = "btnVrati";
-            this.btnVrati.Size = new System.Drawing.Size(108, 49);
-            this.btnVrati.TabIndex = 1;
-            this.btnVrati.Text = "Vrati";
-            this.btnVrati.UseVisualStyleBackColor = false;
+            this.dataGridViewLoans.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewLoans.AutoGenerateColumns = false;
+            this.dataGridViewLoans.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.dataGridViewLoans.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLoans.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.Username,
+            this.startedDataGridViewCheckBoxColumn,
+            this.Finished,
+            this.dateFromDataGridViewTextBoxColumn,
+            this.dateToDataGridViewTextBoxColumn});
+            this.dataGridViewLoans.DataSource = this.loanBindingSource;
+            this.dataGridViewLoans.Location = new System.Drawing.Point(24, 151);
+            this.dataGridViewLoans.Margin = new System.Windows.Forms.Padding(5);
+            this.dataGridViewLoans.Name = "dataGridViewLoans";
+            this.dataGridViewLoans.RowHeadersWidth = 51;
+            this.dataGridViewLoans.RowTemplate.Height = 24;
+            this.dataGridViewLoans.Size = new System.Drawing.Size(843, 585);
+            this.dataGridViewLoans.TabIndex = 22;
+            // 
+            // loanBindingSource
+            // 
+            this.loanBindingSource.DataSource = typeof(Dll.Model.Loan);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(20, 106);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Posudbe:";
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonClose.Location = new System.Drawing.Point(13, 13);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(81, 45);
+            this.buttonClose.TabIndex = 24;
+            this.buttonClose.Text = "Natrag";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // buttonLogOut
             // 
@@ -85,126 +121,30 @@ namespace Pll
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonLogOut.Location = new System.Drawing.Point(1299, 15);
+            this.buttonLogOut.Location = new System.Drawing.Point(1184, 13);
             this.buttonLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(81, 45);
-            this.buttonLogOut.TabIndex = 6;
+            this.buttonLogOut.TabIndex = 25;
             this.buttonLogOut.Text = "Odjava";
             this.buttonLogOut.UseVisualStyleBackColor = false;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
-            // btnNatrag
+            // buttonNewLoan
             // 
-            this.btnNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnNatrag.FlatAppearance.BorderSize = 0;
-            this.btnNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNatrag.ForeColor = System.Drawing.Color.LightGray;
-            this.btnNatrag.Location = new System.Drawing.Point(15, 15);
-            this.btnNatrag.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNatrag.Name = "btnNatrag";
-            this.btnNatrag.Size = new System.Drawing.Size(81, 45);
-            this.btnNatrag.TabIndex = 11;
-            this.btnNatrag.Text = "Natrag";
-            this.btnNatrag.UseVisualStyleBackColor = false;
-            this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
-            // 
-            // dataGridViewUsers
-            // 
-            this.dataGridViewUsers.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridViewUsers.AutoGenerateColumns = false;
-            this.dataGridViewUsers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.dataGridViewUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.userNameDataGridViewTextBoxColumn});
-            this.dataGridViewUsers.DataSource = this.userBindingSource;
-            this.dataGridViewUsers.Location = new System.Drawing.Point(748, 101);
-            this.dataGridViewUsers.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewUsers.Name = "dataGridViewUsers";
-            this.dataGridViewUsers.RowHeadersWidth = 51;
-            this.dataGridViewUsers.RowTemplate.Height = 24;
-            this.dataGridViewUsers.Size = new System.Drawing.Size(632, 468);
-            this.dataGridViewUsers.TabIndex = 12;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Prezime";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(Dll.Model.User);
-            // 
-            // btnLoanBook
-            // 
-            this.btnLoanBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoanBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnLoanBook.FlatAppearance.BorderSize = 0;
-            this.btnLoanBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoanBook.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLoanBook.Location = new System.Drawing.Point(145, 615);
-            this.btnLoanBook.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLoanBook.Name = "btnLoanBook";
-            this.btnLoanBook.Size = new System.Drawing.Size(108, 49);
-            this.btnLoanBook.TabIndex = 13;
-            this.btnLoanBook.Text = "Posudi";
-            this.btnLoanBook.UseVisualStyleBackColor = false;
-            this.btnLoanBook.Click += new System.EventHandler(this.btnLoanBook_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 594);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 15;
-            // 
-            // buttonLateLoansList
-            // 
-            this.buttonLateLoansList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLateLoansList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.buttonLateLoansList.FlatAppearance.BorderSize = 0;
-            this.buttonLateLoansList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonLateLoansList.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonLateLoansList.Location = new System.Drawing.Point(288, 615);
-            this.buttonLateLoansList.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonLateLoansList.Name = "buttonLateLoansList";
-            this.buttonLateLoansList.Size = new System.Drawing.Size(116, 49);
-            this.buttonLateLoansList.TabIndex = 16;
-            this.buttonLateLoansList.Text = "Zakasnine";
-            this.buttonLateLoansList.UseVisualStyleBackColor = false;
-            this.buttonLateLoansList.Click += new System.EventHandler(this.buttonLateLoansList_Click);
+            this.buttonNewLoan.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonNewLoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonNewLoan.FlatAppearance.BorderSize = 0;
+            this.buttonNewLoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewLoan.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonNewLoan.Location = new System.Drawing.Point(887, 151);
+            this.buttonNewLoan.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonNewLoan.Name = "buttonNewLoan";
+            this.buttonNewLoan.Size = new System.Drawing.Size(138, 49);
+            this.buttonNewLoan.TabIndex = 26;
+            this.buttonNewLoan.Text = "Nova posudba";
+            this.buttonNewLoan.UseVisualStyleBackColor = false;
+            this.buttonNewLoan.Click += new System.EventHandler(this.buttonNewLoan_Click);
             // 
             // buttonHelp
             // 
@@ -214,41 +154,85 @@ namespace Pll
             this.buttonHelp.FlatAppearance.BorderSize = 0;
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHelp.Location = new System.Drawing.Point(15, 754);
+            this.buttonHelp.Location = new System.Drawing.Point(24, 791);
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(138, 51);
-            this.buttonHelp.TabIndex = 17;
+            this.buttonHelp.TabIndex = 27;
             this.buttonHelp.Text = "Pomoć";
             this.buttonHelp.UseVisualStyleBackColor = false;
             this.buttonHelp.Click += new System.EventHandler(this.buttonHelp_Click);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Username
+            // 
+            this.Username.DataPropertyName = "Username";
+            this.Username.HeaderText = "Korisničko ime";
+            this.Username.MinimumWidth = 6;
+            this.Username.Name = "Username";
+            this.Username.ReadOnly = true;
+            this.Username.Width = 125;
+            // 
+            // startedDataGridViewCheckBoxColumn
+            // 
+            this.startedDataGridViewCheckBoxColumn.DataPropertyName = "Started";
+            this.startedDataGridViewCheckBoxColumn.HeaderText = "Započeta";
+            this.startedDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.startedDataGridViewCheckBoxColumn.Name = "startedDataGridViewCheckBoxColumn";
+            this.startedDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // Finished
+            // 
+            this.Finished.DataPropertyName = "Finished";
+            this.Finished.HeaderText = "Završena";
+            this.Finished.MinimumWidth = 6;
+            this.Finished.Name = "Finished";
+            this.Finished.Width = 125;
+            // 
+            // dateFromDataGridViewTextBoxColumn
+            // 
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateToDataGridViewTextBoxColumn
+            // 
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum do";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormLoans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1395, 820);
+            this.ClientSize = new System.Drawing.Size(1278, 864);
             this.Controls.Add(this.buttonHelp);
-            this.Controls.Add(this.buttonLateLoansList);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLoanBook);
-            this.Controls.Add(this.dataGridViewUsers);
-            this.Controls.Add(this.btnNatrag);
+            this.Controls.Add(this.buttonNewLoan);
             this.Controls.Add(this.buttonLogOut);
-            this.Controls.Add(this.btnVrati);
-            this.Controls.Add(this.dataGridViewLiterature);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridViewLoans);
+            this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1413, 867);
             this.Name = "FormLoans";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Posudbe";
-            this.Load += new System.EventHandler(this.PosudbeForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiterature)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.FormLoans_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,19 +240,19 @@ namespace Pll
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridViewLiterature;
-        private System.Windows.Forms.Button btnVrati;
-        private System.Windows.Forms.Button buttonLogOut;
-        private System.Windows.Forms.Button btnNatrag;
-        private System.Windows.Forms.DataGridView dataGridViewUsers;
-        private System.Windows.Forms.Button btnLoanBook;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridViewLoans;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonLateLoansList;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonLogOut;
+        private System.Windows.Forms.BindingSource loanBindingSource;
+        private System.Windows.Forms.Button buttonNewLoan;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource userBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn startedDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Finished;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
     }
 }

@@ -64,7 +64,7 @@ namespace Pll
         private void RefreshLiteratures()
         {
             dataGridViewLiteratures.DataSource = null;
-            dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAll();
+            dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAllLiteratures();
         }
 
         private void buttonAddCategory_Click(object sender, EventArgs e)
@@ -119,6 +119,14 @@ namespace Pll
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void buttonPickings_Click(object sender, EventArgs e)
+        {
+            FormPickings form = new FormPickings();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

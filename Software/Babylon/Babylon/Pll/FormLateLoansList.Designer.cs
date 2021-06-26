@@ -39,6 +39,8 @@ namespace Pll
             this.buttonClose = new System.Windows.Forms.Button();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -52,12 +54,12 @@ namespace Pll
             this.dateFromDataGridViewTextBoxColumn,
             this.dateToDataGridViewTextBoxColumn});
             this.dataGridViewLoans.DataSource = this.loanBindingSource;
-            this.dataGridViewLoans.Location = new System.Drawing.Point(56, 72);
+            this.dataGridViewLoans.Location = new System.Drawing.Point(13, 106);
             this.dataGridViewLoans.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLoans.Name = "dataGridViewLoans";
             this.dataGridViewLoans.RowHeadersWidth = 51;
             this.dataGridViewLoans.RowTemplate.Height = 24;
-            this.dataGridViewLoans.Size = new System.Drawing.Size(578, 410);
+            this.dataGridViewLoans.Size = new System.Drawing.Size(493, 410);
             this.dataGridViewLoans.TabIndex = 0;
             // 
             // dateFromDataGridViewTextBoxColumn
@@ -86,7 +88,7 @@ namespace Pll
             this.buttonWarnUser.FlatAppearance.BorderSize = 0;
             this.buttonWarnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWarnUser.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonWarnUser.Location = new System.Drawing.Point(719, 246);
+            this.buttonWarnUser.Location = new System.Drawing.Point(314, 532);
             this.buttonWarnUser.Margin = new System.Windows.Forms.Padding(4);
             this.buttonWarnUser.Name = "buttonWarnUser";
             this.buttonWarnUser.Size = new System.Drawing.Size(196, 65);
@@ -118,7 +120,7 @@ namespace Pll
             this.buttonHelp.FlatAppearance.BorderSize = 0;
             this.buttonHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHelp.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonHelp.Location = new System.Drawing.Point(13, 529);
+            this.buttonHelp.Location = new System.Drawing.Point(13, 546);
             this.buttonHelp.Margin = new System.Windows.Forms.Padding(4);
             this.buttonHelp.Name = "buttonHelp";
             this.buttonHelp.Size = new System.Drawing.Size(138, 51);
@@ -134,7 +136,7 @@ namespace Pll
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonLogOut.Location = new System.Drawing.Point(906, 15);
+            this.buttonLogOut.Location = new System.Drawing.Point(425, 15);
             this.buttonLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(81, 45);
@@ -143,12 +145,38 @@ namespace Pll
             this.buttonLogOut.UseVisualStyleBackColor = false;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.LightGray;
+            this.label1.Location = new System.Drawing.Point(13, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Zakasnine:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.LightGray;
+            this.label2.Location = new System.Drawing.Point(180, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 32);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Zakasnine";
+            // 
             // FormLateLoansList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(1000, 593);
+            this.ClientSize = new System.Drawing.Size(519, 610);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonClose);
@@ -157,13 +185,13 @@ namespace Pll
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1018, 640);
             this.Name = "FormLateLoansList";
             this.Text = "Zakasnine";
             this.Load += new System.EventHandler(this.LateLoansListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -177,5 +205,7 @@ namespace Pll
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.Button buttonLogOut;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

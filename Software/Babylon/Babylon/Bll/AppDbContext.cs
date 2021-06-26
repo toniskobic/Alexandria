@@ -14,6 +14,8 @@ namespace Bll
     {
         public AppDbContext() : base("AppContext")
         {
+            this.Configuration.ProxyCreationEnabled = false;
+            this.Configuration.LazyLoadingEnabled = false;
         }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
