@@ -120,6 +120,7 @@ namespace Pll
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.dataGridViewPickingInItem);
             this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
             this.groupBox1.Location = new System.Drawing.Point(32, 221);
@@ -162,6 +163,7 @@ namespace Pll
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.buttonAddLiterature);
             this.groupBox2.Controls.Add(this.comboBoxAuthor);
             this.groupBox2.Controls.Add(this.label1);
@@ -196,11 +198,12 @@ namespace Pll
             // 
             // buttonCreate
             // 
+            this.buttonCreate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.buttonCreate.FlatAppearance.BorderSize = 0;
             this.buttonCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCreate.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonCreate.Location = new System.Drawing.Point(561, 104);
+            this.buttonCreate.Location = new System.Drawing.Point(556, 234);
             this.buttonCreate.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(175, 48);
@@ -211,11 +214,12 @@ namespace Pll
             // 
             // buttonClose
             // 
+            this.buttonClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonClose.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonClose.Location = new System.Drawing.Point(561, 25);
+            this.buttonClose.Location = new System.Drawing.Point(556, 306);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(175, 50);
@@ -251,7 +255,7 @@ namespace Pll
             this.buttonLogOut.FlatAppearance.BorderSize = 0;
             this.buttonLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLogOut.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonLogOut.Location = new System.Drawing.Point(842, 25);
+            this.buttonLogOut.Location = new System.Drawing.Point(650, 15);
             this.buttonLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(81, 45);
@@ -265,7 +269,7 @@ namespace Pll
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
-            this.ClientSize = new System.Drawing.Size(936, 707);
+            this.ClientSize = new System.Drawing.Size(744, 707);
             this.Controls.Add(this.buttonLogOut);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.buttonClose);
@@ -275,7 +279,7 @@ namespace Pll
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(954, 754);
+            this.MinimumSize = new System.Drawing.Size(762, 754);
             this.Name = "FormPickingIn";
             this.Text = "Primka";
             this.Load += new System.EventHandler(this.FormPickingIn_Load);
