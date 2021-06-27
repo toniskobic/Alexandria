@@ -10,13 +10,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AForge.Video.DirectShow;
+using ZXing;
 
 namespace Pll
 {
     public partial class FormNewLoan : Form
     {
         private readonly UnitOfWork _unitOfWork;
-
+        VideoCaptureDevice videoCaptureDevice;
+        FilterInfoCollection filterInfoCollection;
         public FormNewLoan()
         {
             _unitOfWork = new UnitOfWork(new AppDbContext());
@@ -70,23 +73,7 @@ namespace Pll
             User user = membership.User;
 
             var literature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
-            bool started = true;
-            if (_unitOfWork.Literatures.IsLoaned(literature.Id))
-            {
-                started = false;
-            }
-            Loan loan = new Loan(user, DateTime.Now, DateTime.Now.AddDays(30), started, false);
-            //loan.User = user;
-            //loan.DateFrom = DateTime.Now;
-            //loan.DateTo = DateTime.Now.AddDays(30);
-
-            loan.LoanItem.Add(new LoanItem
-            {
-                Literature = literature,
-            });
-            _unitOfWork.Loans.Add(loan);
-            _unitOfWork.Complete();
-
+            LoanABook(user, literature);
             this.Close();
         }
 
@@ -113,5 +100,54 @@ namespace Pll
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
+        private void btnScanMember_Click(object sender, EventArgs e)
+        {
+            TurnOnCamera();
+        }
+        public void TurnOnCamera()
+        {
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[0].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+        }
+        private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
+        {
+            int memberID = 0;
+            Membership member;
+            Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
+            BarcodeReader reader = new BarcodeReader();
+            var readerResult = reader.Decode(bitmap);
+            if (readerResult != null)
+            {
+                videoCaptureDevice.SignalToStop();
+                if (int.TryParse(readerResult.ToString(), out memberID))
+                {
+                    member = _unitOfWork.Memberships.GetById(memberID);
+                    
+                    User user = member.User;
+
+                    var literature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
+                    LoanABook(user, literature);
+                    MessageBox.Show("Iskaznica je skenirana");
+                }
+            }
+        }
+        private void LoanABook(User user, Literature literature) 
+        {
+            bool started = true;
+            if (_unitOfWork.Literatures.IsLoaned(literature.Id))
+            {
+                started = false;
+            }
+            Loan loan = new Loan(user, DateTime.Now, DateTime.Now.AddDays(30), started, false);
+
+            loan.LoanItem.Add(new LoanItem
+            {
+                Literature = literature,
+            });
+            _unitOfWork.Loans.Add(loan);
+            _unitOfWork.Complete();
+        }
     }
 }

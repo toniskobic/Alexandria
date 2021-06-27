@@ -21,7 +21,7 @@ namespace Dll.Model
         {
             get
             {
-                return Category.Name;
+                return "aa";//Category.Name;
             }
         }
 
@@ -30,7 +30,7 @@ namespace Dll.Model
         {
             get
             {
-                return Author.FullName;
+                return "bb";//Author.FullName;
             }
         }
 
