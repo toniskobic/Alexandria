@@ -1,6 +1,7 @@
 ﻿using Bll.Enums;
 using Bll;
 using Bll.Services;
+using Dll.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace Pll
         public FormLogin()
         {
             InitializeComponent();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
