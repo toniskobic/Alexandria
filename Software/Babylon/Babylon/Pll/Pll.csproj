@@ -98,6 +98,12 @@
     <Compile Include="FormPickings.Designer.cs">
       <DependentUpon>FormPickings.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReceipts.Designer.cs">
+      <DependentUpon>FormReceipts.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="FormPickings.resx">
       <DependentUpon>FormPickings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReceipts.resx">
+      <DependentUpon>FormReceipts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,10 +197,13 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dll.Model.Literature.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Loan.datasource" />
+    <None Include="Properties\DataSources\Dll.Model.LoanItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Membership.datasource" />
     <None Include="Properties\DataSources\Dll.Model.PickingIn.datasource" />
     <None Include="Properties\DataSources\Dll.Model.PickingInItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.PickingOut.datasource" />
+    <None Include="Properties\DataSources\Dll.Model.Receipt.datasource" />
+    <None Include="Properties\DataSources\Dll.Model.ReceiptItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

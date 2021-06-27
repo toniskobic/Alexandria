@@ -155,6 +155,7 @@ namespace Pll
             // 
             // dataGridViewPickingsIn
             // 
+            this.dataGridViewPickingsIn.AllowUserToAddRows = false;
             this.dataGridViewPickingsIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewPickingsIn.AutoGenerateColumns = false;
             this.dataGridViewPickingsIn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -194,6 +195,7 @@ namespace Pll
             // 
             // dataGridViewPickingsOut
             // 
+            this.dataGridViewPickingsOut.AllowUserToAddRows = false;
             this.dataGridViewPickingsOut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewPickingsOut.AutoGenerateColumns = false;
             this.dataGridViewPickingsOut.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -241,6 +243,7 @@ namespace Pll
             // 
             // dataGridViewPickingInItems
             // 
+            this.dataGridViewPickingInItems.AllowUserToAddRows = false;
             this.dataGridViewPickingInItems.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewPickingInItems.AutoGenerateColumns = false;
             this.dataGridViewPickingInItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -284,7 +287,7 @@ namespace Pll
             this.textBoxLiteratureTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.textBoxLiteratureTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLiteratureTitle.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxLiteratureTitle.Location = new System.Drawing.Point(750, 108);
+            this.textBoxLiteratureTitle.Location = new System.Drawing.Point(750, 104);
             this.textBoxLiteratureTitle.Multiline = true;
             this.textBoxLiteratureTitle.Name = "textBoxLiteratureTitle";
             this.textBoxLiteratureTitle.Size = new System.Drawing.Size(169, 30);

@@ -32,14 +32,14 @@ namespace Dll.Model
             LoanItem = new List<LoanItem>();
         }
 
-        public Loan(User user, DateTime dateFrom, DateTime dateTo, bool started = true)
+        public Loan(User user, DateTime dateFrom, DateTime dateTo, bool started = true, bool finished = false)
         {
             LoanItem = new List<LoanItem>();
             User = user;
             Started = started;
+            Finished = finished;
             DateFrom = dateFrom;
             DateTo = dateTo;
-            
         }
     }
 }

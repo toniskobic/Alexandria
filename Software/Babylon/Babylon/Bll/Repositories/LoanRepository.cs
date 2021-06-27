@@ -19,7 +19,12 @@ namespace Bll.Repositories
         }
         public List<Loan> GetAllLoans()
         {
-            return _dbContext.Loans.Include(x => x.User).ToList();
+            return _dbContext.Loans.Include(x => x.User).Include(y => y.LoanItem).ToList();
+        }
+
+        public List<LoanItem> GetAllLoanItems(Loan loan)
+        {
+            return _dbContext.Loans.Include(x => x.LoanItem).FirstOrDefault(x => x.Id == loan.Id).LoanItem;
         }
     }
 }
