@@ -49,26 +49,33 @@ namespace Pll
         private void FormLoans_Load(object sender, EventArgs e)
         {
             RefreshLiteratures();
-            RefreshUsers();
+            RefreshMemberships();
         }
 
-        private void RefreshUsers()
+        private void RefreshMemberships()
         {
-            dataGridViewUsers.DataSource = null;
-            dataGridViewUsers.DataSource = _unitOfWork.Users.GetAll();
+            dataGridViewMemberships.DataSource = null;
+            dataGridViewMemberships.DataSource = _unitOfWork.Memberships.GetAllMemberships().Where(x => (DateTime.Compare(x.DateTo, DateTime.Now) > 0)).ToList();
         }
 
         private void RefreshLiteratures()
         {
             dataGridViewLiteratures.DataSource = null;
-            dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAll();
+            dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAllLiteratures();
         }
 
         private void btnLoanBook_Click(object sender, EventArgs e)
         {
-            User user = dataGridViewUsers.CurrentRow.DataBoundItem as User;
+            Membership membership = dataGridViewMemberships.CurrentRow.DataBoundItem as Membership;
+            User user = membership.User;
+
             var literature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
-            Loan loan = new Loan(user, DateTime.Now, DateTime.Now.AddDays(30), true);
+            bool started = true;
+            if (_unitOfWork.Literatures.IsLoaned(literature.Id))
+            {
+                started = false;
+            }
+            Loan loan = new Loan(user, DateTime.Now, DateTime.Now.AddDays(30), started, false);
             //loan.User = user;
             //loan.DateFrom = DateTime.Now;
             //loan.DateTo = DateTime.Now.AddDays(30);

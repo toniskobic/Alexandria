@@ -14,5 +14,17 @@ namespace Dll.Model
         public Receipt Receipt { get; set; }
 
         public double Money{ get; set; }
+
+        public ReceiptItem()
+        {
+
+        }
+
+        public ReceiptItem(Loan loan, Receipt receipt, double money)
+        {
+            Loan = loan;
+            Receipt = receipt;
+            Money = money;
+        }
     }
 }

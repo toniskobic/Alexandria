@@ -27,8 +27,9 @@ namespace Pll
 
         private void LateLoansListForm_Load(object sender, EventArgs e)
         {
-            dataGridViewLoans.DataSource = _unitOfWork.Loans.GetAll().Where(l => DateTime.Compare(l.DateTo, DateTime.Now) <= 0).ToList();
+            dataGridViewLoans.DataSource = _unitOfWork.Loans.GetAllLoans().Where(l => (DateTime.Compare(l.DateTo, DateTime.Now) <= 0) && l.Finished != true).ToList();
         }
+
         private void buttonWarnUser_Click(object sender, EventArgs e)
         {
             Loan selectedLoan = dataGridViewLoans.CurrentRow.DataBoundItem as Loan;
@@ -42,10 +43,11 @@ namespace Pll
                     EnableSsl = true,
                 };
 
-                double dueAmount = (selectedLoan.DateTo - DateTime.Now).TotalDays * 15;
+                double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
 
+                smtpClient.Send("alexandria.knjiznica@gmail.com", selectedLoan.User.EMail, "Opomena Knjižnica Alexandria", $"Poštovani imate nepodmirena dugovanja. Cijena vaše zakasnine iznosi {dueAmount}");
 
-                smtpClient.Send("toni.skobic47@gmail.com", selectedLoan.User.EMail, "Opomena Knjižnica Alexandria", $"Poštovani imate nepodmirena dugovanja. Cijena vaše zakasnine iznosi {dueAmount}");
+                MessageBox.Show("Korisnik upozoren");
             }
 
         }

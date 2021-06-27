@@ -32,7 +32,7 @@ namespace Pll
             User selectedUser = comboBoxUsers.SelectedItem as User;
             Membership existingMembership = _unitOfWork.Memberships.Find(x => x.User.Id == selectedUser.Id);
 
-            if (existingMembership == null || (existingMembership != null && DateTime.Compare(existingMembership.DateFrom, DateTime.Now) > 0))
+            if (existingMembership == null || (existingMembership != null && (DateTime.Compare(existingMembership.DateTo, DateTime.Now) <= 0)))
             {
                 Membership newMembership = new Membership
                 {
@@ -40,6 +40,7 @@ namespace Pll
                 };
 
                 _unitOfWork.Memberships.Add(newMembership);
+
                 _unitOfWork.Complete();
             }
             else 

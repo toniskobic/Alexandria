@@ -20,8 +20,10 @@ namespace Bll.Repositories
 
         public List<User> GetAllUsers()
         {
-            return _dbContext.Users.Include(u => u.Role).ToList();
+            return _dbContext.Users.Include(u => u.Role).Include(x => x.Membership).ToList();
         }
+
+
 
         public User FindEmployee(string user, string password)
         {
