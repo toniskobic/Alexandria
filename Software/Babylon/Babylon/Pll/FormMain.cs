@@ -84,7 +84,10 @@ namespace Pll
 
         private void buttonStatistics_Click(object sender, EventArgs e)
         {
-
+            FormStatistics newForm = new FormStatistics();
+            this.Hide();
+            newForm.ShowDialog();
+            this.Show();
         }
 
     }
