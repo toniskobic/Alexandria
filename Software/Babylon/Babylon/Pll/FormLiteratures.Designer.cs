@@ -116,7 +116,7 @@ namespace Pll
             this.buttonPickingIn.FlatAppearance.BorderSize = 0;
             this.buttonPickingIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPickingIn.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPickingIn.Location = new System.Drawing.Point(828, 247);
+            this.buttonPickingIn.Location = new System.Drawing.Point(824, 247);
             this.buttonPickingIn.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPickingIn.Name = "buttonPickingIn";
             this.buttonPickingIn.Size = new System.Drawing.Size(161, 79);
@@ -132,7 +132,7 @@ namespace Pll
             this.buttonPickingOut.FlatAppearance.BorderSize = 0;
             this.buttonPickingOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPickingOut.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPickingOut.Location = new System.Drawing.Point(829, 363);
+            this.buttonPickingOut.Location = new System.Drawing.Point(824, 363);
             this.buttonPickingOut.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPickingOut.Name = "buttonPickingOut";
             this.buttonPickingOut.Size = new System.Drawing.Size(160, 79);
@@ -240,12 +240,12 @@ namespace Pll
             this.buttonPickings.FlatAppearance.BorderSize = 0;
             this.buttonPickings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPickings.ForeColor = System.Drawing.Color.LightGray;
-            this.buttonPickings.Location = new System.Drawing.Point(829, 472);
+            this.buttonPickings.Location = new System.Drawing.Point(823, 478);
             this.buttonPickings.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPickings.Name = "buttonPickings";
             this.buttonPickings.Size = new System.Drawing.Size(161, 79);
             this.buttonPickings.TabIndex = 16;
-            this.buttonPickings.Text = "Primke i razdužnice";
+            this.buttonPickings.Text = "Primke i otpremnice";
             this.buttonPickings.UseVisualStyleBackColor = false;
             this.buttonPickings.Click += new System.EventHandler(this.buttonPickings_Click);
             // 
