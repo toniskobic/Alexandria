@@ -39,6 +39,15 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -58,6 +67,12 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net48\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net48\zxing.presentation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppContextDataSet.Designer.cs">
@@ -67,53 +82,9 @@
     </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Enums\LoginResult.cs" />
-    <Compile Include="Migrations\202106132227178_update.cs" />
-    <Compile Include="Migrations\202106132227178_update.designer.cs">
-      <DependentUpon>202106132227178_update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106132238273_update1.cs" />
-    <Compile Include="Migrations\202106132238273_update1.designer.cs">
-      <DependentUpon>202106132238273_update1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106140055476_update2.cs" />
-    <Compile Include="Migrations\202106140055476_update2.designer.cs">
-      <DependentUpon>202106140055476_update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106141915212_update3.cs" />
-    <Compile Include="Migrations\202106141915212_update3.designer.cs">
-      <DependentUpon>202106141915212_update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106232003561_test.cs" />
-    <Compile Include="Migrations\202106232003561_test.designer.cs">
-      <DependentUpon>202106232003561_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106241221254_update4.cs" />
-    <Compile Include="Migrations\202106241221254_update4.designer.cs">
-      <DependentUpon>202106241221254_update4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106251644160_update5.cs" />
-    <Compile Include="Migrations\202106251644160_update5.designer.cs">
-      <DependentUpon>202106251644160_update5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106261359261_update6.cs" />
-    <Compile Include="Migrations\202106261359261_update6.designer.cs">
-      <DependentUpon>202106261359261_update6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106261441180_update7.cs" />
-    <Compile Include="Migrations\202106261441180_update7.designer.cs">
-      <DependentUpon>202106261441180_update7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106261445587_update8.cs" />
-    <Compile Include="Migrations\202106261445587_update8.designer.cs">
-      <DependentUpon>202106261445587_update8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106261449304_update9.cs" />
-    <Compile Include="Migrations\202106261449304_update9.designer.cs">
-      <DependentUpon>202106261449304_update9.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106261531455_update10.cs" />
-    <Compile Include="Migrations\202106261531455_update10.designer.cs">
-      <DependentUpon>202106261531455_update10.cs</DependentUpon>
+    <Compile Include="Migrations\202106271753251_db1.cs" />
+    <Compile Include="Migrations\202106271753251_db1.designer.cs">
+      <DependentUpon>202106271753251_db1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,41 +137,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106132227178_update.resx">
-      <DependentUpon>202106132227178_update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106132238273_update1.resx">
-      <DependentUpon>202106132238273_update1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106140055476_update2.resx">
-      <DependentUpon>202106140055476_update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106141915212_update3.resx">
-      <DependentUpon>202106141915212_update3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106232003561_test.resx">
-      <DependentUpon>202106232003561_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106241221254_update4.resx">
-      <DependentUpon>202106241221254_update4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106251644160_update5.resx">
-      <DependentUpon>202106251644160_update5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106261359261_update6.resx">
-      <DependentUpon>202106261359261_update6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106261441180_update7.resx">
-      <DependentUpon>202106261441180_update7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106261445587_update8.resx">
-      <DependentUpon>202106261445587_update8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106261449304_update9.resx">
-      <DependentUpon>202106261449304_update9.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106261531455_update10.resx">
-      <DependentUpon>202106261531455_update10.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106271753251_db1.resx">
+      <DependentUpon>202106271753251_db1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

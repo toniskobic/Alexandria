@@ -40,6 +40,10 @@ namespace Pll
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnLoanBook = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,15 +51,12 @@ namespace Pll
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnScanMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewLiteratures
@@ -166,6 +167,35 @@ namespace Pll
             this.dataGridViewMemberships.Size = new System.Drawing.Size(632, 468);
             this.dataGridViewMemberships.TabIndex = 12;
             // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateFromDataGridViewTextBoxColumn
+            // 
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateToDataGridViewTextBoxColumn
+            // 
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // membershipBindingSource
+            // 
+            this.membershipBindingSource.DataSource = typeof(Dll.Model.Membership);
+            // 
             // userBindingSource
             // 
             this.userBindingSource.DataSource = typeof(Dll.Model.User);
@@ -247,34 +277,21 @@ namespace Pll
             this.label4.TabIndex = 20;
             this.label4.Text = "Nova posudba";
             // 
-            // membershipBindingSource
+            // btnScanMember
             // 
-            this.membershipBindingSource.DataSource = typeof(Dll.Model.Membership);
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateFromDataGridViewTextBoxColumn
-            // 
-            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
-            this.dateFromDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateToDataGridViewTextBoxColumn
-            // 
-            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
-            this.dateToDataGridViewTextBoxColumn.Width = 125;
+            this.btnScanMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnScanMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.btnScanMember.FlatAppearance.BorderSize = 0;
+            this.btnScanMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnScanMember.ForeColor = System.Drawing.Color.LightGray;
+            this.btnScanMember.Location = new System.Drawing.Point(748, 625);
+            this.btnScanMember.Margin = new System.Windows.Forms.Padding(4);
+            this.btnScanMember.Name = "btnScanMember";
+            this.btnScanMember.Size = new System.Drawing.Size(81, 45);
+            this.btnScanMember.TabIndex = 21;
+            this.btnScanMember.Text = "Skeniraj";
+            this.btnScanMember.UseVisualStyleBackColor = false;
+            this.btnScanMember.Click += new System.EventHandler(this.btnScanMember_Click);
             // 
             // FormNewLoan
             // 
@@ -282,6 +299,7 @@ namespace Pll
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1395, 772);
+            this.Controls.Add(this.btnScanMember);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -303,8 +321,8 @@ namespace Pll
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membershipBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +350,6 @@ namespace Pll
         private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnScanMember;
     }
 }

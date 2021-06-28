@@ -132,9 +132,17 @@ namespace Pll
                 List<LoanItem> reservations = loanItems.Where(x => x.Loan.Started == false).ToList();
                 LoanItem reservationItems = null;
 
-                if(reservations != null)
+                if(reservations.Count > 0)
                 {
-                    DateTime lowestDateTime = reservations.Min(x => x.Loan.DateFrom);
+                    DateTime lowestDateTime;
+                    if(reservations.Count > 1)
+                    {
+                        lowestDateTime = reservations.Min(x => x.Loan.DateFrom);
+
+                    } else
+                    {
+                        lowestDateTime = reservations.First().Loan.DateFrom;
+                    }
                     reservationItems = reservations.Find(x => x.Loan.DateFrom == lowestDateTime);
                     reservation = reservationItems.Loan;
                 }
