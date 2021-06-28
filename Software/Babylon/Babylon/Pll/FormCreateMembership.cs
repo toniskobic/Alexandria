@@ -60,7 +60,7 @@ namespace Pll
             comboBoxUsers.DataSource = null;
             comboBoxUsers.DataSource = _unitOfWork.Users.GetAll();
 
-            comboBoxUsers.DisplayMember = "FullName";
+            comboBoxUsers.DisplayMember = "UserName";
 
         }
 

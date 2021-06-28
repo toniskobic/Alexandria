@@ -22,7 +22,7 @@ namespace Bll.Repositories
 
         public List<LoanItem> GetAllLoanItems()
         {
-            return _dbContext.LoanItems.Include(x => x.Loan).Include(x => x.Literature).ToList();
+            return _dbContext.LoanItems.Include(x => x.Loan).Include(x => x.Literature).Include(x => x.Literature.Author).ToList();
         }
 
     }

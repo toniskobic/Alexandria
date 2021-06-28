@@ -25,6 +25,7 @@ namespace Pll
 
         private void FormPickings_Load(object sender, EventArgs e)
         {
+            textBoxLiteratureTitle.ReadOnly = true;
             RefreshPickingsIn();
             RefreshPickingsOut();
         }
