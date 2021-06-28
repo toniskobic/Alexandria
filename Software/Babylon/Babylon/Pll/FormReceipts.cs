@@ -60,7 +60,7 @@ namespace Pll
         }
         private void buttonHelp_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#14-ra%C4%8Duni-");
+            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#15-ra%C4%8Duni-");
 
         }
 
@@ -68,7 +68,7 @@ namespace Pll
         {
             if (keyData == (Keys.F1))
             {
-                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#14-ra%C4%8Duni-");
+                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#15-ra%C4%8Duni-");
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
