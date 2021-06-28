@@ -50,6 +50,7 @@ namespace Pll
 
         private void FormLoans_Load(object sender, EventArgs e)
         {
+            textBoxLiteratureTitle.ReadOnly = true;
             RefreshLoans();
         }
 

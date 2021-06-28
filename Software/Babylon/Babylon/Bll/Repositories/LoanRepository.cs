@@ -27,15 +27,5 @@ namespace Bll.Repositories
             return _dbContext.Loans.Include(x => x.LoanItem).FirstOrDefault(x => x.Id == loan.Id).LoanItem;
         }
 
-        public IEnumerable<object> GetLoansCount()
-        {
-            return _dbContext.Loans.Include(x => x.User).GroupBy(a => a.User.Id).Select(g => new { ID = g.Key, Count = g.Count() });
-        }
-
-        //public IQueryable<object> Test()
-        //{
-        //    var data = from l in _dbContext.Loans.W 
-        //    return data ;
-        //}
     }
 }

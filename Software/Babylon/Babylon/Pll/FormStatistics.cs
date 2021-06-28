@@ -66,19 +66,45 @@ namespace Pll
 
         private void FormStatistics_Load(object sender, EventArgs e)
         {
-            RefreshData();
+            RefreshUsersLoansCount();
+            RefreshBooksLoansCount();
+            RefreshAuthorsLoansCount();
         }
 
-        private void RefreshData()
+        private void RefreshAuthorsLoansCount()
         {
-            var data = _unitOfWork.Loans.GetLoansCount();
-            dataGridView1.DataSource = data;
-            chartLoansCount.Series["Count"].Points.Clear();
-            chartLoansCount.DataSource = data;
-            //foreach (var item in data)
-            //{
-            //    chartLoansCount.Series["Kolicina"].Points.AddXY(item., item.Kolicina);
-            //}
+            var data = _unitOfWork.LoanItems.GetAllLoanItems().GroupBy(x => x.Literature.AuthorName).Select(x => new { ID = x.Key, Count = x.Count() }).ToList();
+            chartAuthorsLoansCount.Series["Posudbe"].Points.Clear();
+            chartAuthorsLoansCount.DataSource = data;
+            foreach (var item in data)
+            {
+                chartAuthorsLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+            }
+        }
+
+        private void RefreshBooksLoansCount()
+        {
+            var data = _unitOfWork.LoanItems.GetAllLoanItems().GroupBy(x => x.LiteratureTitle).Select(x => new { ID = x.Key, Count = x.Count() }).ToList();
+            chartBooksLoansCount.Series["Posudbe"].Points.Clear();
+            chartBooksLoansCount.DataSource = data;
+            foreach (var item in data)
+            {
+                chartBooksLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+            }
+        }
+
+        private void RefreshUsersLoansCount()
+        {
+            var data = _unitOfWork.Loans.GetAllLoans().GroupBy(x => x.Username).Select(x => new { ID = x.Key, Count = x.Count() }).ToList();
+            chartUsersLoansCount.Series["Posudbe"].Points.Clear();
+            chartUsersLoansCount.Series["Posudbe"]["PointWidth"] = "0.4";
+            chartUsersLoansCount.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineWidth = 0;
+            chartUsersLoansCount.Series["Posudbe"].IsValueShownAsLabel = true;
+            chartUsersLoansCount.DataSource = data;
+            foreach (var item in data)
+            {
+                chartUsersLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+            }
         }
     }
 }

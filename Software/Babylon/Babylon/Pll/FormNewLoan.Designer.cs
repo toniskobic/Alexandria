@@ -279,7 +279,7 @@ namespace Pll
             // 
             // btnScanMember
             // 
-            this.btnScanMember.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnScanMember.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnScanMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.btnScanMember.FlatAppearance.BorderSize = 0;
             this.btnScanMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
