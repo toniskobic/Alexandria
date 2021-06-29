@@ -2,13 +2,13 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bll.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="AppContextConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="PIServer" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AppContext;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=31.147.204.119\PISERVER,1433;Initial Catalog=PI21-10_DB;Persist Security Info=True;User ID=PI21-10_User;Password="QS2MX-1;"&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AppContext;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=31.147.204.119\PISERVER,1433;Initial Catalog=PI21-10_DB;Persist Security Info=True;User ID=PI21-10_User;Password="QS2MX-1;"</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="AppContextDataSet" targetNamespace="http://tempuri.org/AppContextDataSet.xsd" xmlns:mstns="http://tempuri.org/AppContextDataSet.xsd" xmlns="http://tempuri.org/AppContextDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_PI21_10_DBDataSet" targetNamespace="http://tempuri.org/_PI21_10_DBDataSet.xsd" xmlns:mstns="http://tempuri.org/_PI21_10_DBDataSet.xsd" xmlns="http://tempuri.org/_PI21_10_DBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="AppContextConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="AppContextConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bll.Properties.Settings.GlobalReference.Default.AppContextConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PIServer" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PIServer (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bll.Properties.Settings.GlobalReference.Default.PIServer" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="__MigrationHistoryTableAdapter" GeneratorDataComponentClassName="__MigrationHistoryTableAdapter" Name="__MigrationHistory" UserDataComponentName="__MigrationHistoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.__MigrationHistory" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[__MigrationHistory] WHERE (([MigrationId] = @Original_MigrationId) AND ([ContextKey] = @Original_ContextKey) AND ([ProductVersion] = @Original_ProductVersion))</CommandText>
@@ -65,7 +65,7 @@ SELECT MigrationId, ContextKey, Model, ProductVersion FROM __MigrationHistory WH
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AuthorTableAdapter" GeneratorDataComponentClassName="AuthorTableAdapter" Name="Author" UserDataComponentName="AuthorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Author" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Author" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Author] WHERE (([Id] = @Original_Id))</CommandText>
@@ -98,7 +98,7 @@ SELECT Id, FirstName, LastName FROM Author WHERE (Id = @Id)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Author" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Author" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -113,7 +113,7 @@ SELECT Id, FirstName, LastName FROM Author WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CategoryTableAdapter" GeneratorDataComponentClassName="CategoryTableAdapter" Name="Category" UserDataComponentName="CategoryTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Category" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Category" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Category] WHERE (([Id] = @Original_Id))</CommandText>
@@ -146,7 +146,7 @@ SELECT Id, Name, Description FROM Category WHERE (Id = @Id)</CommandText>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Category" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Category" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -161,7 +161,7 @@ SELECT Id, Name, Description FROM Category WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LiteratureTableAdapter" GeneratorDataComponentClassName="LiteratureTableAdapter" Name="Literature" UserDataComponentName="LiteratureTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Literature" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Literature" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Literature] WHERE (([Id] = @Original_Id) AND ((@IsNull_Author_Id = 1 AND [Author_Id] IS NULL) OR ([Author_Id] = @Original_Author_Id)) AND ((@IsNull_Category_Id = 1 AND [Category_Id] IS NULL) OR ([Category_Id] = @Original_Category_Id)))</CommandText>
@@ -204,7 +204,7 @@ SELECT Id, Title, Author_Id, Category_Id FROM Literature WHERE (Id = @Id)</Comma
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Author_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Author_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Category_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Category_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Category_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Category_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Literature" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Literature" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -220,13 +220,14 @@ SELECT Id, Title, Author_Id, Category_Id FROM Literature WHERE (Id = @Id)</Comma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LoanTableAdapter" GeneratorDataComponentClassName="LoanTableAdapter" Name="Loan" UserDataComponentName="LoanTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Loan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Loan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[Loan] WHERE (([Id] = @Original_Id) AND ([Started] = @Original_Started) AND ([DateFrom] = @Original_DateFrom) AND ([DateTo] = @Original_DateTo) AND ((@IsNull_User_Id = 1 AND [User_Id] IS NULL) OR ([User_Id] = @Original_User_Id)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[Loan] WHERE (([Id] = @Original_Id) AND ([Started] = @Original_Started) AND ([Finished] = @Original_Finished) AND ([DateFrom] = @Original_DateFrom) AND ([DateTo] = @Original_DateTo) AND ((@IsNull_User_Id = 1 AND [User_Id] IS NULL) OR ([User_Id] = @Original_User_Id)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Started" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Started" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Finished" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Finished" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateFrom" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateFrom" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTo" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTo" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -236,10 +237,11 @@ SELECT Id, Title, Author_Id, Category_Id FROM Literature WHERE (Id = @Id)</Comma
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Loan] ([Started], [DateFrom], [DateTo], [User_Id]) VALUES (@Started, @DateFrom, @DateTo, @User_Id);
-SELECT Id, Started, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Loan] ([Started], [Finished], [DateFrom], [DateTo], [User_Id]) VALUES (@Started, @Finished, @DateFrom, @DateTo, @User_Id);
+SELECT Id, Started, Finished, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Started" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Started" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Finished" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Finished" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateFrom" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateFrom" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTo" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -248,26 +250,28 @@ SELECT Id, Started, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = SCOPE_IDENTI
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Started, DateFrom, DateTo, User_Id FROM dbo.Loan</CommandText>
+                    <CommandText>SELECT Id, Started, Finished, DateFrom, DateTo, User_Id FROM dbo.Loan</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Loan] SET [Started] = @Started, [DateFrom] = @DateFrom, [DateTo] = @DateTo, [User_Id] = @User_Id WHERE (([Id] = @Original_Id) AND ([Started] = @Original_Started) AND ([DateFrom] = @Original_DateFrom) AND ([DateTo] = @Original_DateTo) AND ((@IsNull_User_Id = 1 AND [User_Id] IS NULL) OR ([User_Id] = @Original_User_Id)));
-SELECT Id, Started, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Loan] SET [Started] = @Started, [Finished] = @Finished, [DateFrom] = @DateFrom, [DateTo] = @DateTo, [User_Id] = @User_Id WHERE (([Id] = @Original_Id) AND ([Started] = @Original_Started) AND ([Finished] = @Original_Finished) AND ([DateFrom] = @Original_DateFrom) AND ([DateTo] = @Original_DateTo) AND ((@IsNull_User_Id = 1 AND [User_Id] IS NULL) OR ([User_Id] = @Original_User_Id)));
+SELECT Id, Started, Finished, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = @Id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Started" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Started" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Finished" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Finished" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateFrom" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateFrom" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateTo" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTo" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Started" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Started" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Finished" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Finished" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateFrom" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateFrom" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTo" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTo" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Loan" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Loan" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -276,6 +280,7 @@ SELECT Id, Started, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = @Id)</Comman
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="Started" DataSetColumn="Started" />
+              <Mapping SourceColumn="Finished" DataSetColumn="Finished" />
               <Mapping SourceColumn="DateFrom" DataSetColumn="DateFrom" />
               <Mapping SourceColumn="DateTo" DataSetColumn="DateTo" />
               <Mapping SourceColumn="User_Id" DataSetColumn="User_Id" />
@@ -284,44 +289,44 @@ SELECT Id, Started, DateFrom, DateTo, User_Id FROM Loan WHERE (Id = @Id)</Comman
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LoanItemTableAdapter" GeneratorDataComponentClassName="LoanItemTableAdapter" Name="LoanItem" UserDataComponentName="LoanItemTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.LoanItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.LoanItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[LoanItem] WHERE (([Id] = @Original_Id) AND ([LiteratureId] = @Original_LiteratureId) AND ([LoanId] = @Original_LoanId))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[LoanItem] WHERE (([Id] = @Original_Id) AND ([LoanId] = @Original_LoanId) AND ([LiteratureId] = @Original_LiteratureId))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LoanId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoanId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[LoanItem] ([LiteratureId], [LoanId]) VALUES (@LiteratureId, @LoanId);
-SELECT Id, LiteratureId, LoanId FROM LoanItem WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[LoanItem] ([LoanId], [LiteratureId]) VALUES (@LoanId, @LiteratureId);
+SELECT Id, LoanId, LiteratureId FROM LoanItem WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LoanId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoanId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, LiteratureId, LoanId FROM dbo.LoanItem</CommandText>
+                    <CommandText>SELECT Id, LoanId, LiteratureId FROM dbo.LoanItem</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[LoanItem] SET [LiteratureId] = @LiteratureId, [LoanId] = @LoanId WHERE (([Id] = @Original_Id) AND ([LiteratureId] = @Original_LiteratureId) AND ([LoanId] = @Original_LoanId));
-SELECT Id, LiteratureId, LoanId FROM LoanItem WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[LoanItem] SET [LoanId] = @LoanId, [LiteratureId] = @LiteratureId WHERE (([Id] = @Original_Id) AND ([LoanId] = @Original_LoanId) AND ([LiteratureId] = @Original_LiteratureId));
+SELECT Id, LoanId, LiteratureId FROM LoanItem WHERE (Id = @Id)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LoanId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoanId" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LoanId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LoanId" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.LoanItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_LiteratureId" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="LiteratureId" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.LoanItem" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -329,14 +334,14 @@ SELECT Id, LiteratureId, LoanId FROM LoanItem WHERE (Id = @Id)</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
-              <Mapping SourceColumn="LiteratureId" DataSetColumn="LiteratureId" />
               <Mapping SourceColumn="LoanId" DataSetColumn="LoanId" />
+              <Mapping SourceColumn="LiteratureId" DataSetColumn="LiteratureId" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MembershipTableAdapter" GeneratorDataComponentClassName="MembershipTableAdapter" Name="Membership" UserDataComponentName="MembershipTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Membership" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Membership" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Membership] WHERE (([Id] = @Original_Id) AND ([DateFrom] = @Original_DateFrom) AND ([DateTo] = @Original_DateTo) AND ((@IsNull_User_Id = 1 AND [User_Id] IS NULL) OR ([User_Id] = @Original_User_Id)))</CommandText>
@@ -379,7 +384,7 @@ SELECT Id, DateFrom, DateTo, User_Id FROM Membership WHERE (Id = @Id)</CommandTe
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateTo" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateTo" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Membership" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Membership" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -395,7 +400,7 @@ SELECT Id, DateFrom, DateTo, User_Id FROM Membership WHERE (Id = @Id)</CommandTe
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PickingInTableAdapter" GeneratorDataComponentClassName="PickingInTableAdapter" Name="PickingIn" UserDataComponentName="PickingInTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.PickingIn" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.PickingIn" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[PickingIn] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date))</CommandText>
@@ -428,7 +433,7 @@ SELECT Id, Date FROM PickingIn WHERE (Id = @Id)</CommandText>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.PickingIn" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.PickingIn" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -442,7 +447,7 @@ SELECT Id, Date FROM PickingIn WHERE (Id = @Id)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PickingInItemTableAdapter" GeneratorDataComponentClassName="PickingInItemTableAdapter" Name="PickingInItem" UserDataComponentName="PickingInItemTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.PickingInItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.PickingInItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[PickingInItem] WHERE (([PickingIn_Id] = @Original_PickingIn_Id) AND ([Literature_Id] = @Original_Literature_Id))</CommandText>
@@ -490,7 +495,7 @@ SELECT PickingIn_Id, Literature_Id FROM PickingInItem WHERE (Literature_Id = @Li
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PickingOutTableAdapter" GeneratorDataComponentClassName="PickingOutTableAdapter" Name="PickingOut" UserDataComponentName="PickingOutTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.PickingOut" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.PickingOut" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[PickingOut] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date))</CommandText>
@@ -502,28 +507,30 @@ SELECT PickingIn_Id, Literature_Id FROM PickingInItem WHERE (Literature_Id = @Li
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[PickingOut] ([Date]) VALUES (@Date);
-SELECT Id, Date FROM PickingOut WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[PickingOut] ([Description], [Date]) VALUES (@Description, @Date);
+SELECT Id, Description, Date FROM PickingOut WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, Date FROM dbo.PickingOut</CommandText>
+                    <CommandText>SELECT Id, Description, Date FROM dbo.PickingOut</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[PickingOut] SET [Date] = @Date WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date));
-SELECT Id, Date FROM PickingOut WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[PickingOut] SET [Description] = @Description, [Date] = @Date WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date));
+SELECT Id, Description, Date FROM PickingOut WHERE (Id = @Id)</CommandText>
                     <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Description" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Description" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_Date" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="Date" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.PickingOut" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.PickingOut" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -531,61 +538,14 @@ SELECT Id, Date FROM PickingOut WHERE (Id = @Id)</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
               <Mapping SourceColumn="Date" DataSetColumn="Date" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PickingOutItemTableAdapter" GeneratorDataComponentClassName="PickingOutItemTableAdapter" Name="PickingOutItem" UserDataComponentName="PickingOutItemTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.PickingOutItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <DeleteCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[PickingOutItem] WHERE (([PickingOut_Id] = @Original_PickingOut_Id) AND ([Literature_Id] = @Original_Literature_Id))</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PickingOut_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PickingOut_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Literature_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Literature_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </DeleteCommand>
-                <InsertCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[PickingOutItem] ([PickingOut_Id], [Literature_Id]) VALUES (@PickingOut_Id, @Literature_Id);
-SELECT PickingOut_Id, Literature_Id FROM PickingOutItem WHERE (Literature_Id = @Literature_Id) AND (PickingOut_Id = @PickingOut_Id)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PickingOut_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PickingOut_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Literature_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Literature_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                    </Parameters>
-                  </DbCommand>
-                </InsertCommand>
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT PickingOut_Id, Literature_Id FROM dbo.PickingOutItem</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-                <UpdateCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[PickingOutItem] SET [PickingOut_Id] = @PickingOut_Id, [Literature_Id] = @Literature_Id WHERE (([PickingOut_Id] = @Original_PickingOut_Id) AND ([Literature_Id] = @Original_Literature_Id));
-SELECT PickingOut_Id, Literature_Id FROM PickingOutItem WHERE (Literature_Id = @Literature_Id) AND (PickingOut_Id = @PickingOut_Id)</CommandText>
-                    <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@PickingOut_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PickingOut_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Literature_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Literature_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_PickingOut_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PickingOut_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Literature_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Literature_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                    </Parameters>
-                  </DbCommand>
-                </UpdateCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="PickingOut_Id" DataSetColumn="PickingOut_Id" />
-              <Mapping SourceColumn="Literature_Id" DataSetColumn="Literature_Id" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReceiptTableAdapter" GeneratorDataComponentClassName="ReceiptTableAdapter" Name="Receipt" UserDataComponentName="ReceiptTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Receipt" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Receipt" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Receipt] WHERE (([Id] = @Original_Id) AND ([DateOfIssue] = @Original_DateOfIssue) AND ([User_Id] = @Original_User_Id) AND ([Employee_Id] = @Original_Employee_Id))</CommandText>
@@ -626,7 +586,7 @@ SELECT Id, DateOfIssue, User_Id, Employee_Id FROM Receipt WHERE (Id = @Id)</Comm
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateOfIssue" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateOfIssue" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_User_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="User_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Employee_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Employee_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Receipt" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Receipt" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -642,7 +602,7 @@ SELECT Id, DateOfIssue, User_Id, Employee_Id FROM Receipt WHERE (Id = @Id)</Comm
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReceiptItemTableAdapter" GeneratorDataComponentClassName="ReceiptItemTableAdapter" Name="ReceiptItem" UserDataComponentName="ReceiptItemTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.ReceiptItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.ReceiptItem" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[ReceiptItem] WHERE (([Receipt_Id] = @Original_Receipt_Id) AND ([Loan_Id] = @Original_Loan_Id) AND ([Money] = @Original_Money))</CommandText>
@@ -695,7 +655,7 @@ SELECT Receipt_Id, Loan_Id, Money FROM ReceiptItem WHERE (Loan_Id = @Loan_Id) AN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RoleTableAdapter" GeneratorDataComponentClassName="RoleTableAdapter" Name="Role" UserDataComponentName="RoleTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.Role" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.Role" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Role] WHERE (([Id] = @Original_Id) AND ([AuthorisationLevel] = @Original_AuthorisationLevel))</CommandText>
@@ -707,30 +667,30 @@ SELECT Receipt_Id, Loan_Id, Money FROM ReceiptItem WHERE (Loan_Id = @Loan_Id) AN
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[Role] ([RoleName], [AuthorisationLevel]) VALUES (@RoleName, @AuthorisationLevel);
-SELECT Id, RoleName, AuthorisationLevel FROM Role WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[Role] ([Name], [AuthorisationLevel]) VALUES (@Name, @AuthorisationLevel);
+SELECT Id, Name, AuthorisationLevel FROM Role WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RoleName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RoleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AuthorisationLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AuthorisationLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, RoleName, AuthorisationLevel FROM dbo.Role</CommandText>
+                    <CommandText>SELECT Id, Name, AuthorisationLevel FROM dbo.Role</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[Role] SET [RoleName] = @RoleName, [AuthorisationLevel] = @AuthorisationLevel WHERE (([Id] = @Original_Id) AND ([AuthorisationLevel] = @Original_AuthorisationLevel));
-SELECT Id, RoleName, AuthorisationLevel FROM Role WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[Role] SET [Name] = @Name, [AuthorisationLevel] = @AuthorisationLevel WHERE (([Id] = @Original_Id) AND ([AuthorisationLevel] = @Original_AuthorisationLevel));
+SELECT Id, Name, AuthorisationLevel FROM Role WHERE (Id = @Id)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@RoleName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="RoleName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@AuthorisationLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AuthorisationLevel" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_AuthorisationLevel" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="AuthorisationLevel" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.Role" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.Role" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -738,14 +698,14 @@ SELECT Id, RoleName, AuthorisationLevel FROM Role WHERE (Id = @Id)</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
-              <Mapping SourceColumn="RoleName" DataSetColumn="RoleName" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
               <Mapping SourceColumn="AuthorisationLevel" DataSetColumn="AuthorisationLevel" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UserTableAdapter" GeneratorDataComponentClassName="UserTableAdapter" Name="User" UserDataComponentName="UserTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="AppContextConnectionString (Settings)" DbObjectName="AppContext.dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="PIServer (Settings)" DbObjectName="[PI21-10_DB].dbo.[User]" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[User] WHERE (([Id] = @Original_Id) AND ([DateOfBirth] = @Original_DateOfBirth) AND ([RegistrationDate] = @Original_RegistrationDate) AND ([Locked] = @Original_Locked) AND ((@IsNull_Role_Id = 1 AND [Role_Id] IS NULL) OR ([Role_Id] = @Original_Role_Id)))</CommandText>
@@ -761,11 +721,12 @@ SELECT Id, RoleName, AuthorisationLevel FROM Role WHERE (Id = @Id)</CommandText>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[User] ([FirstName], [LastName], [EMail], [Password], [DateOfBirth], [RegistrationDate], [PhoneNumber], [Locked], [Role_Id], [UserName]) VALUES (@FirstName, @LastName, @EMail, @Password, @DateOfBirth, @RegistrationDate, @PhoneNumber, @Locked, @Role_Id, @UserName);
-SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id, UserName FROM [User] WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <CommandText>INSERT INTO [dbo].[User] ([FirstName], [LastName], [UserName], [EMail], [Password], [DateOfBirth], [RegistrationDate], [PhoneNumber], [Locked], [Role_Id]) VALUES (@FirstName, @LastName, @UserName, @EMail, @Password, @DateOfBirth, @RegistrationDate, @PhoneNumber, @Locked, @Role_Id);
+SELECT Id, FirstName, LastName, UserName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id FROM [User] WHERE (Id = SCOPE_IDENTITY())</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EMail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EMail" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateOfBirth" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateOfBirth" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -773,23 +734,23 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PhoneNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PhoneNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Locked" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Locked" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Role_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Role_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id, UserName FROM dbo.[User]</CommandText>
+                    <CommandText>SELECT Id, FirstName, LastName, UserName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id FROM dbo.[User]</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[User] SET [FirstName] = @FirstName, [LastName] = @LastName, [EMail] = @EMail, [Password] = @Password, [DateOfBirth] = @DateOfBirth, [RegistrationDate] = @RegistrationDate, [PhoneNumber] = @PhoneNumber, [Locked] = @Locked, [Role_Id] = @Role_Id, [UserName] = @UserName WHERE (([Id] = @Original_Id) AND ([DateOfBirth] = @Original_DateOfBirth) AND ([RegistrationDate] = @Original_RegistrationDate) AND ([Locked] = @Original_Locked) AND ((@IsNull_Role_Id = 1 AND [Role_Id] IS NULL) OR ([Role_Id] = @Original_Role_Id)));
-SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id, UserName FROM [User] WHERE (Id = @Id)</CommandText>
+                    <CommandText>UPDATE [dbo].[User] SET [FirstName] = @FirstName, [LastName] = @LastName, [UserName] = @UserName, [EMail] = @EMail, [Password] = @Password, [DateOfBirth] = @DateOfBirth, [RegistrationDate] = @RegistrationDate, [PhoneNumber] = @PhoneNumber, [Locked] = @Locked, [Role_Id] = @Role_Id WHERE (([Id] = @Original_Id) AND ([DateOfBirth] = @Original_DateOfBirth) AND ([RegistrationDate] = @Original_RegistrationDate) AND ([Locked] = @Original_Locked) AND ((@IsNull_Role_Id = 1 AND [Role_Id] IS NULL) OR ([Role_Id] = @Original_Role_Id)));
+SELECT Id, FirstName, LastName, UserName, EMail, Password, DateOfBirth, RegistrationDate, PhoneNumber, Locked, Role_Id FROM [User] WHERE (Id = @Id)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@FirstName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="FirstName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@LastName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="LastName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@EMail" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="EMail" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Password" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Password" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@DateOfBirth" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateOfBirth" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -797,14 +758,13 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PhoneNumber" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PhoneNumber" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Locked" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Locked" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Role_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Role_Id" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UserName" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UserName" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_DateOfBirth" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="DateOfBirth" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_RegistrationDate" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="RegistrationDate" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_Locked" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="Locked" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Role_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Role_Id" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Role_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Role_Id" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="AppContext.dbo.[User]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[PI21-10_DB].dbo.[User]" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -814,6 +774,7 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
               <Mapping SourceColumn="Id" DataSetColumn="Id" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
               <Mapping SourceColumn="EMail" DataSetColumn="EMail" />
               <Mapping SourceColumn="Password" DataSetColumn="Password" />
               <Mapping SourceColumn="DateOfBirth" DataSetColumn="DateOfBirth" />
@@ -821,7 +782,6 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
               <Mapping SourceColumn="PhoneNumber" DataSetColumn="PhoneNumber" />
               <Mapping SourceColumn="Locked" DataSetColumn="Locked" />
               <Mapping SourceColumn="Role_Id" DataSetColumn="Role_Id" />
-              <Mapping SourceColumn="UserName" DataSetColumn="UserName" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -830,7 +790,7 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="AppContextDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="AppContextDataSet" msprop:Generator_UserDSName="AppContextDataSet">
+  <xs:element name="_PI21_10_DBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_PI21_10_DBDataSet" msprop:Generator_UserDSName="_PI21_10_DBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="__MigrationHistory" msprop:Generator_TableClassName="__MigrationHistoryDataTable" msprop:Generator_TableVarName="table__MigrationHistory" msprop:Generator_TablePropName="__MigrationHistory" msprop:Generator_RowDeletingName="__MigrationHistoryRowDeleting" msprop:Generator_RowChangingName="__MigrationHistoryRowChanging" msprop:Generator_RowEvHandlerName="__MigrationHistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="__MigrationHistoryRowDeleted" msprop:Generator_UserTableName="__MigrationHistory" msprop:Generator_RowChangedName="__MigrationHistoryRowChanged" msprop:Generator_RowEvArgName="__MigrationHistoryRowChangeEvent" msprop:Generator_RowClassName="__MigrationHistoryRow">
@@ -924,6 +884,7 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="Started" msprop:Generator_ColumnVarNameInTable="columnStarted" msprop:Generator_ColumnPropNameInRow="Started" msprop:Generator_ColumnPropNameInTable="StartedColumn" msprop:Generator_UserColumnName="Started" type="xs:boolean" />
+              <xs:element name="Finished" msprop:Generator_ColumnVarNameInTable="columnFinished" msprop:Generator_ColumnPropNameInRow="Finished" msprop:Generator_ColumnPropNameInTable="FinishedColumn" msprop:Generator_UserColumnName="Finished" type="xs:boolean" />
               <xs:element name="DateFrom" msprop:Generator_ColumnVarNameInTable="columnDateFrom" msprop:Generator_ColumnPropNameInRow="DateFrom" msprop:Generator_ColumnPropNameInTable="DateFromColumn" msprop:Generator_UserColumnName="DateFrom" type="xs:dateTime" />
               <xs:element name="DateTo" msprop:Generator_ColumnVarNameInTable="columnDateTo" msprop:Generator_ColumnPropNameInRow="DateTo" msprop:Generator_ColumnPropNameInTable="DateToColumn" msprop:Generator_UserColumnName="DateTo" type="xs:dateTime" />
               <xs:element name="User_Id" msprop:Generator_ColumnVarNameInTable="columnUser_Id" msprop:Generator_ColumnPropNameInRow="User_Id" msprop:Generator_ColumnPropNameInTable="User_IdColumn" msprop:Generator_UserColumnName="User_Id" type="xs:int" minOccurs="0" />
@@ -934,8 +895,8 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="LiteratureId" msprop:Generator_ColumnVarNameInTable="columnLiteratureId" msprop:Generator_ColumnPropNameInRow="LiteratureId" msprop:Generator_ColumnPropNameInTable="LiteratureIdColumn" msprop:Generator_UserColumnName="LiteratureId" type="xs:int" />
               <xs:element name="LoanId" msprop:Generator_ColumnVarNameInTable="columnLoanId" msprop:Generator_ColumnPropNameInRow="LoanId" msprop:Generator_ColumnPropNameInTable="LoanIdColumn" msprop:Generator_UserColumnName="LoanId" type="xs:int" />
+              <xs:element name="LiteratureId" msprop:Generator_ColumnVarNameInTable="columnLiteratureId" msprop:Generator_ColumnPropNameInRow="LiteratureId" msprop:Generator_ColumnPropNameInTable="LiteratureIdColumn" msprop:Generator_UserColumnName="LiteratureId" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -969,15 +930,14 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="PickingOutItem" msprop:Generator_TableClassName="PickingOutItemDataTable" msprop:Generator_TableVarName="tablePickingOutItem" msprop:Generator_TablePropName="PickingOutItem" msprop:Generator_RowDeletingName="PickingOutItemRowDeleting" msprop:Generator_RowChangingName="PickingOutItemRowChanging" msprop:Generator_RowEvHandlerName="PickingOutItemRowChangeEventHandler" msprop:Generator_RowDeletedName="PickingOutItemRowDeleted" msprop:Generator_UserTableName="PickingOutItem" msprop:Generator_RowChangedName="PickingOutItemRowChanged" msprop:Generator_RowEvArgName="PickingOutItemRowChangeEvent" msprop:Generator_RowClassName="PickingOutItemRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="PickingOut_Id" msprop:Generator_ColumnVarNameInTable="columnPickingOut_Id" msprop:Generator_ColumnPropNameInRow="PickingOut_Id" msprop:Generator_ColumnPropNameInTable="PickingOut_IdColumn" msprop:Generator_UserColumnName="PickingOut_Id" type="xs:int" />
-              <xs:element name="Literature_Id" msprop:Generator_ColumnVarNameInTable="columnLiterature_Id" msprop:Generator_ColumnPropNameInRow="Literature_Id" msprop:Generator_ColumnPropNameInTable="Literature_IdColumn" msprop:Generator_UserColumnName="Literature_Id" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1004,7 +964,7 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
-              <xs:element name="RoleName" msprop:Generator_ColumnVarNameInTable="columnRoleName" msprop:Generator_ColumnPropNameInRow="RoleName" msprop:Generator_ColumnPropNameInTable="RoleNameColumn" msprop:Generator_UserColumnName="RoleName" minOccurs="0">
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -1027,6 +987,13 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
                 </xs:simpleType>
               </xs:element>
               <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
@@ -1058,13 +1025,6 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
               </xs:element>
               <xs:element name="Locked" msprop:Generator_ColumnVarNameInTable="columnLocked" msprop:Generator_ColumnPropNameInRow="Locked" msprop:Generator_ColumnPropNameInTable="LockedColumn" msprop:Generator_UserColumnName="Locked" type="xs:boolean" />
               <xs:element name="Role_Id" msprop:Generator_ColumnVarNameInTable="columnRole_Id" msprop:Generator_ColumnPropNameInRow="Role_Id" msprop:Generator_ColumnPropNameInTable="Role_IdColumn" msprop:Generator_UserColumnName="Role_Id" type="xs:int" minOccurs="0" />
-              <xs:element name="UserName" msprop:Generator_ColumnVarNameInTable="columnUserName" msprop:Generator_ColumnPropNameInRow="UserName" msprop:Generator_ColumnPropNameInTable="UserNameColumn" msprop:Generator_UserColumnName="UserName" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="2147483647" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1112,11 +1072,6 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
       <xs:selector xpath=".//mstns:PickingOut" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
-    <xs:unique name="PickingOutItem_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:PickingOutItem" />
-      <xs:field xpath="mstns:PickingOut_Id" />
-      <xs:field xpath="mstns:Literature_Id" />
-    </xs:unique>
     <xs:unique name="Receipt_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Receipt" />
       <xs:field xpath="mstns:Id" />
@@ -1143,10 +1098,8 @@ SELECT Id, FirstName, LastName, EMail, Password, DateOfBirth, RegistrationDate, 
       <msdata:Relationship name="FK_dbo.LoanItem_dbo.Literature_LiteratureId" msdata:parent="Literature" msdata:child="LoanItem" msdata:parentkey="Id" msdata:childkey="LiteratureId" msprop:Generator_UserChildTable="LoanItem" msprop:Generator_ChildPropName="GetLoanItemRows" msprop:Generator_UserRelationName="FK_dbo.LoanItem_dbo.Literature_LiteratureId" msprop:Generator_ParentPropName="LiteratureRow" msprop:Generator_RelationVarName="_relationFK_dbo_LoanItem_dbo_Literature_LiteratureId" msprop:Generator_UserParentTable="Literature" />
       <msdata:Relationship name="FK_dbo.LoanItem_dbo.Loan_LoanId" msdata:parent="Loan" msdata:child="LoanItem" msdata:parentkey="Id" msdata:childkey="LoanId" msprop:Generator_UserChildTable="LoanItem" msprop:Generator_ChildPropName="GetLoanItemRows" msprop:Generator_UserRelationName="FK_dbo.LoanItem_dbo.Loan_LoanId" msprop:Generator_ParentPropName="LoanRow" msprop:Generator_RelationVarName="_relationFK_dbo_LoanItem_dbo_Loan_LoanId" msprop:Generator_UserParentTable="Loan" />
       <msdata:Relationship name="FK_dbo.Membership_dbo.User_User_Id" msdata:parent="User" msdata:child="Membership" msdata:parentkey="Id" msdata:childkey="User_Id" msprop:Generator_UserChildTable="Membership" msprop:Generator_ChildPropName="GetMembershipRows" msprop:Generator_UserRelationName="FK_dbo.Membership_dbo.User_User_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Membership_dbo_User_User_Id" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="UserRow" />
-      <msdata:Relationship name="FK_dbo.PickingInItem_dbo.Literature_Literaure_Id" msdata:parent="Literature" msdata:child="PickingInItem" msdata:parentkey="Id" msdata:childkey="Literature_Id" msprop:Generator_UserChildTable="PickingInItem" msprop:Generator_ChildPropName="GetPickingInItemRows" msprop:Generator_UserRelationName="FK_dbo.PickingInItem_dbo.Literature_Literaure_Id" msprop:Generator_ParentPropName="LiteratureRow" msprop:Generator_RelationVarName="_relationFK_dbo_PickingInItem_dbo_Literature_Literaure_Id" msprop:Generator_UserParentTable="Literature" />
+      <msdata:Relationship name="FK_dbo.PickingInItem_dbo.Literature_Literature_Id" msdata:parent="Literature" msdata:child="PickingInItem" msdata:parentkey="Id" msdata:childkey="Literature_Id" msprop:Generator_UserChildTable="PickingInItem" msprop:Generator_ChildPropName="GetPickingInItemRows" msprop:Generator_UserRelationName="FK_dbo.PickingInItem_dbo.Literature_Literature_Id" msprop:Generator_ParentPropName="LiteratureRow" msprop:Generator_RelationVarName="_relationFK_dbo_PickingInItem_dbo_Literature_Literature_Id" msprop:Generator_UserParentTable="Literature" />
       <msdata:Relationship name="FK_dbo.PickingInItem_dbo.PickingIn_PickingIn_Id" msdata:parent="PickingIn" msdata:child="PickingInItem" msdata:parentkey="Id" msdata:childkey="PickingIn_Id" msprop:Generator_UserChildTable="PickingInItem" msprop:Generator_ChildPropName="GetPickingInItemRows" msprop:Generator_UserRelationName="FK_dbo.PickingInItem_dbo.PickingIn_PickingIn_Id" msprop:Generator_ParentPropName="PickingInRow" msprop:Generator_RelationVarName="_relationFK_dbo_PickingInItem_dbo_PickingIn_PickingIn_Id" msprop:Generator_UserParentTable="PickingIn" />
-      <msdata:Relationship name="FK_dbo.PickingOutItem_dbo.Literature_Literaure_Id" msdata:parent="Literature" msdata:child="PickingOutItem" msdata:parentkey="Id" msdata:childkey="Literature_Id" msprop:Generator_UserChildTable="PickingOutItem" msprop:Generator_ChildPropName="GetPickingOutItemRows" msprop:Generator_UserRelationName="FK_dbo.PickingOutItem_dbo.Literature_Literaure_Id" msprop:Generator_ParentPropName="LiteratureRow" msprop:Generator_RelationVarName="_relationFK_dbo_PickingOutItem_dbo_Literature_Literaure_Id" msprop:Generator_UserParentTable="Literature" />
-      <msdata:Relationship name="FK_dbo.PickingOutItem_dbo.PickingOut_PickingOut_Id" msdata:parent="PickingOut" msdata:child="PickingOutItem" msdata:parentkey="Id" msdata:childkey="PickingOut_Id" msprop:Generator_UserChildTable="PickingOutItem" msprop:Generator_ChildPropName="GetPickingOutItemRows" msprop:Generator_UserRelationName="FK_dbo.PickingOutItem_dbo.PickingOut_PickingOut_Id" msprop:Generator_ParentPropName="PickingOutRow" msprop:Generator_RelationVarName="_relationFK_dbo_PickingOutItem_dbo_PickingOut_PickingOut_Id" msprop:Generator_UserParentTable="PickingOut" />
       <msdata:Relationship name="FK_dbo.Receipt_dbo.User_Employee_Id" msdata:parent="User" msdata:child="Receipt" msdata:parentkey="Id" msdata:childkey="Employee_Id" msprop:Generator_UserChildTable="Receipt" msprop:Generator_ChildPropName="_GetReceiptRowsByFK_dbo_Receipt_dbo_User_Employee_Id" msprop:Generator_UserRelationName="FK_dbo.Receipt_dbo.User_Employee_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Receipt_dbo_User_Employee_Id" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="_UserRowByFK_dbo_Receipt_dbo_User_Employee_Id" />
       <msdata:Relationship name="FK_dbo.Receipt_dbo.User_User_Id" msdata:parent="User" msdata:child="Receipt" msdata:parentkey="Id" msdata:childkey="User_Id" msprop:Generator_UserChildTable="Receipt" msprop:Generator_ChildPropName="_GetReceiptRowsByFK_dbo_Receipt_dbo_User_User_Id" msprop:Generator_UserRelationName="FK_dbo.Receipt_dbo.User_User_Id" msprop:Generator_RelationVarName="_relationFK_dbo_Receipt_dbo_User_User_Id" msprop:Generator_UserParentTable="User" msprop:Generator_ParentPropName="_UserRowByFK_dbo_Receipt_dbo_User_User_Id" />
       <msdata:Relationship name="FK_dbo.ReceiptItem_dbo.Loan_Loan_Id" msdata:parent="Loan" msdata:child="ReceiptItem" msdata:parentkey="Id" msdata:childkey="Loan_Id" msprop:Generator_UserChildTable="ReceiptItem" msprop:Generator_ChildPropName="GetReceiptItemRows" msprop:Generator_UserRelationName="FK_dbo.ReceiptItem_dbo.Loan_Loan_Id" msprop:Generator_ParentPropName="LoanRow" msprop:Generator_RelationVarName="_relationFK_dbo_ReceiptItem_dbo_Loan_Loan_Id" msprop:Generator_UserParentTable="Loan" />

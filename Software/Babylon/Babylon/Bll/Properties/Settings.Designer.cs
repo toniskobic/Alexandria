@@ -26,11 +26,11 @@ namespace Bll.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=AppContext;Integrated Security" +
-            "=True")]
-        public string AppContextConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=PI21-10_DB;Persist Secur" +
+            "ity Info=True;User ID=PI21-10_User;Password=\"QS2MX-1;\"")]
+        public string PIServer {
             get {
-                return ((string)(this["AppContextConnectionString"]));
+                return ((string)(this["PIServer"]));
             }
         }
     }
