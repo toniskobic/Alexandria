@@ -12,7 +12,7 @@ namespace Bll
 {
     public partial class AppDbContext : DbContext
     {
-        public AppDbContext() : base("AppContext")
+        public AppDbContext() : base("PIServer")
         {
             this.Configuration.ProxyCreationEnabled = false;
             this.Configuration.LazyLoadingEnabled = false;

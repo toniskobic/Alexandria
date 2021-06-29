@@ -45,7 +45,7 @@ namespace Pll
 
                 double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
 
-                smtpClient.Send("alexandria.knjiznica@gmail.com", selectedLoan.User.EMail, "Opomena Knjižnica Alexandria", $"Poštovani imate nepodmirena dugovanja. Cijena vaše zakasnine iznosi {dueAmount}");
+                smtpClient.Send("alexandria.knjiznica@gmail.com", selectedLoan.User.EMail, "Opomena Knjižnica Alexandria", $"Poštovani imate nepodmirena dugovanja. Cijena vaše zakasnine iznosi {dueAmount} HRK.");
 
                 MessageBox.Show("Korisnik upozoren");
             }
