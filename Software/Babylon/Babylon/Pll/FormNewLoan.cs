@@ -102,7 +102,10 @@ namespace Pll
 
         private void buttonScanMember_Click(object sender, EventArgs e)
         {
-            TurnOnCamera();
+            if (videoCaptureDevice == null || !videoCaptureDevice.IsRunning)
+            {
+                TurnOnCamera();
+            }
         }
         public void TurnOnCamera()
         {
