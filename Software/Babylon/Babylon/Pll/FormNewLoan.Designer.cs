@@ -317,6 +317,7 @@ namespace Pll
             this.Name = "FormNewLoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nova posudba";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormNewLoan_FormClosing);
             this.Load += new System.EventHandler(this.FormLoans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).EndInit();

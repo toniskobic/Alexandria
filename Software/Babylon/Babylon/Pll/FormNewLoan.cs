@@ -46,6 +46,7 @@ namespace Pll
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            videoCaptureDevice.SignalToStop();
             this.Close();
         }
 
@@ -127,12 +128,15 @@ namespace Pll
                 if (int.TryParse(readerResult.ToString(), out memberID))
                 {
                     member = _unitOfWork.Memberships.GetById(memberID);
-                    
-                    User user = member.User;
 
-                    var literature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
-                    LoanABook(user, literature);
-                    MessageBox.Show("Iskaznica je skenirana");
+                    if(member != null)
+                    {
+                        User user = member.User;
+
+                        var literature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
+                        LoanABook(user, literature);
+                        MessageBox.Show("Iskaznica je skenirana");
+                    }
                 }
             }
         }
@@ -151,6 +155,14 @@ namespace Pll
             });
             _unitOfWork.Loans.Add(loan);
             _unitOfWork.Complete();
+        }
+
+        private void FormNewLoan_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(videoCaptureDevice.IsRunning)
+            {
+                videoCaptureDevice.SignalToStop();
+            }
         }
     }
 }
