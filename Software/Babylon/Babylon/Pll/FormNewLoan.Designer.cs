@@ -45,13 +45,13 @@ namespace Pll
             this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnLoanBook = new System.Windows.Forms.Button();
+            this.buttonLoanBook = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnScanMember = new System.Windows.Forms.Button();
+            this.buttonScanMember = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).BeginInit();
@@ -200,21 +200,21 @@ namespace Pll
             // 
             this.userBindingSource.DataSource = typeof(Dll.Model.User);
             // 
-            // btnLoanBook
+            // buttonLoanBook
             // 
-            this.btnLoanBook.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoanBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnLoanBook.FlatAppearance.BorderSize = 0;
-            this.btnLoanBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoanBook.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLoanBook.Location = new System.Drawing.Point(16, 625);
-            this.btnLoanBook.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLoanBook.Name = "btnLoanBook";
-            this.btnLoanBook.Size = new System.Drawing.Size(108, 49);
-            this.btnLoanBook.TabIndex = 13;
-            this.btnLoanBook.Text = "Posudi";
-            this.btnLoanBook.UseVisualStyleBackColor = false;
-            this.btnLoanBook.Click += new System.EventHandler(this.btnLoanBook_Click);
+            this.buttonLoanBook.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLoanBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonLoanBook.FlatAppearance.BorderSize = 0;
+            this.buttonLoanBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLoanBook.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonLoanBook.Location = new System.Drawing.Point(16, 625);
+            this.buttonLoanBook.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLoanBook.Name = "buttonLoanBook";
+            this.buttonLoanBook.Size = new System.Drawing.Size(108, 49);
+            this.buttonLoanBook.TabIndex = 13;
+            this.buttonLoanBook.Text = "Posudi";
+            this.buttonLoanBook.UseVisualStyleBackColor = false;
+            this.buttonLoanBook.Click += new System.EventHandler(this.buttonLoanBook_Click);
             // 
             // label1
             // 
@@ -277,21 +277,21 @@ namespace Pll
             this.label4.TabIndex = 20;
             this.label4.Text = "Nova posudba";
             // 
-            // btnScanMember
+            // buttonScanMember
             // 
-            this.btnScanMember.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnScanMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnScanMember.FlatAppearance.BorderSize = 0;
-            this.btnScanMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScanMember.ForeColor = System.Drawing.Color.LightGray;
-            this.btnScanMember.Location = new System.Drawing.Point(748, 625);
-            this.btnScanMember.Margin = new System.Windows.Forms.Padding(4);
-            this.btnScanMember.Name = "btnScanMember";
-            this.btnScanMember.Size = new System.Drawing.Size(81, 45);
-            this.btnScanMember.TabIndex = 21;
-            this.btnScanMember.Text = "Skeniraj";
-            this.btnScanMember.UseVisualStyleBackColor = false;
-            this.btnScanMember.Click += new System.EventHandler(this.btnScanMember_Click);
+            this.buttonScanMember.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonScanMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonScanMember.FlatAppearance.BorderSize = 0;
+            this.buttonScanMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonScanMember.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonScanMember.Location = new System.Drawing.Point(748, 625);
+            this.buttonScanMember.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonScanMember.Name = "buttonScanMember";
+            this.buttonScanMember.Size = new System.Drawing.Size(81, 45);
+            this.buttonScanMember.TabIndex = 21;
+            this.buttonScanMember.Text = "Skeniraj";
+            this.buttonScanMember.UseVisualStyleBackColor = false;
+            this.buttonScanMember.Click += new System.EventHandler(this.buttonScanMember_Click);
             // 
             // FormNewLoan
             // 
@@ -299,13 +299,13 @@ namespace Pll
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(1395, 772);
-            this.Controls.Add(this.btnScanMember);
+            this.Controls.Add(this.buttonScanMember);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnLoanBook);
+            this.Controls.Add(this.buttonLoanBook);
             this.Controls.Add(this.dataGridViewMemberships);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonLogOut);
@@ -334,7 +334,7 @@ namespace Pll
         private System.Windows.Forms.Button buttonLogOut;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.DataGridView dataGridViewMemberships;
-        private System.Windows.Forms.Button btnLoanBook;
+        private System.Windows.Forms.Button buttonLoanBook;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.BindingSource userBindingSource;
@@ -350,6 +350,6 @@ namespace Pll
         private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnScanMember;
+        private System.Windows.Forms.Button buttonScanMember;
     }
 }

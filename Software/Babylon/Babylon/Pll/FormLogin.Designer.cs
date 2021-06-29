@@ -35,7 +35,7 @@ namespace Pll
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.btnPrijava = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonHelp = new System.Windows.Forms.Button();
@@ -104,21 +104,21 @@ namespace Pll
             this.textBoxPassword.TabIndex = 5;
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
-            // btnPrijava
+            // buttonLogin
             // 
-            this.btnPrijava.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrijava.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.btnPrijava.FlatAppearance.BorderSize = 0;
-            this.btnPrijava.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrijava.ForeColor = System.Drawing.Color.LightGray;
-            this.btnPrijava.Location = new System.Drawing.Point(302, 484);
-            this.btnPrijava.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrijava.Name = "btnPrijava";
-            this.btnPrijava.Size = new System.Drawing.Size(138, 51);
-            this.btnPrijava.TabIndex = 6;
-            this.btnPrijava.Text = "Prijavi se";
-            this.btnPrijava.UseVisualStyleBackColor = false;
-            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
+            this.buttonLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.buttonLogin.FlatAppearance.BorderSize = 0;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.ForeColor = System.Drawing.Color.LightGray;
+            this.buttonLogin.Location = new System.Drawing.Point(302, 484);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(138, 51);
+            this.buttonLogin.TabIndex = 6;
+            this.buttonLogin.Text = "Prijavi se";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // pictureBox1
             // 
@@ -172,7 +172,7 @@ namespace Pll
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnPrijava);
+            this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUsername);
             this.Controls.Add(this.label3);
@@ -185,7 +185,6 @@ namespace Pll
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,7 +198,7 @@ namespace Pll
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private System.Windows.Forms.Button btnPrijava;
+        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonHelp;

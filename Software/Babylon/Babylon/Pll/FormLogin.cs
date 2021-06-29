@@ -22,11 +22,7 @@ namespace Pll
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnPrijava_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             var result = LoginResult.Null;
             string username = textBoxUsername.Text;

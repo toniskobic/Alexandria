@@ -67,7 +67,7 @@ namespace Pll
             dataGridViewLiteratures.DataSource = _unitOfWork.Literatures.GetAllLiteratures();
         }
 
-        private void btnLoanBook_Click(object sender, EventArgs e)
+        private void buttonLoanBook_Click(object sender, EventArgs e)
         {
             Membership membership = dataGridViewMemberships.CurrentRow.DataBoundItem as Membership;
             User user = membership.User;
@@ -100,7 +100,7 @@ namespace Pll
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void btnScanMember_Click(object sender, EventArgs e)
+        private void buttonScanMember_Click(object sender, EventArgs e)
         {
             TurnOnCamera();
         }
