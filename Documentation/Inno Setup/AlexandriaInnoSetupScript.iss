@@ -10,7 +10,7 @@
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{E1264C52-75E0-480E-81F0-96BAC1C84F64}
+AppId={{B618D617-8E48-4A61-9857-32127F0329FB}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
@@ -38,31 +38,41 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 [Files]
 Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Pll.exe.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Bll.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.Video.DirectShow.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.Video.DirectShow.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.Video.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.Video.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\AForge.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Bll.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Bll.dll.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Bll.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Dll.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Dll.dll.config"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\Dll.pdb"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\EntityFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\EntityFramework.SqlServer.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\EntityFramework.SqlServer.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\EntityFramework.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\zxing.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\zxing.presentation.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\zxing.presentation.xml"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Bll\bin\Release\zxing.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Controls.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Controls.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Imaging.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Imaging.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Math.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Math.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Video.DirectShow.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Video.DirectShow.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Video.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.Video.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\AForge.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Bll.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Bll.dll.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Bll.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Dll.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Dll.dll.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Dll.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\EntityFramework.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\EntityFramework.SqlServer.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\EntityFramework.SqlServer.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\EntityFramework.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Pll.application"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Pll.exe.config"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Pll.exe.manifest"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\Pll.pdb"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\zxing.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\zxing.presentation.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\zxing.presentation.xml"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Korisnik\pi21-tskobic-lbojka-piljeg\Software\Babylon\Babylon\Pll\bin\Release\zxing.xml"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
 Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]

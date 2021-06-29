@@ -46,7 +46,6 @@ namespace Pll
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice.SignalToStop();
             this.Close();
         }
 
@@ -159,7 +158,7 @@ namespace Pll
 
         private void FormNewLoan_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(videoCaptureDevice.IsRunning)
+            if(videoCaptureDevice != null && videoCaptureDevice.IsRunning)
             {
                 videoCaptureDevice.SignalToStop();
             }
