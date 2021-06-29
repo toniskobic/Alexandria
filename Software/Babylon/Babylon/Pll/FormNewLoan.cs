@@ -107,9 +107,12 @@ namespace Pll
         public void TurnOnCamera()
         {
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[0].MonikerString);
-            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
+            if (filterInfoCollection.Count > 0)
+            {
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[0].MonikerString);
+                videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+                videoCaptureDevice.Start();
+            }
         }
         private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
