@@ -40,9 +40,6 @@ namespace Pll
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonLoanBook = new System.Windows.Forms.Button();
@@ -52,6 +49,10 @@ namespace Pll
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonScanMember = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).BeginInit();
@@ -155,6 +156,7 @@ namespace Pll
             this.dataGridViewMemberships.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewMemberships.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMemberships.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.userNameDataGridViewTextBoxColumn,
             this.dateFromDataGridViewTextBoxColumn,
             this.dateToDataGridViewTextBoxColumn});
@@ -166,31 +168,6 @@ namespace Pll
             this.dataGridViewMemberships.RowTemplate.Height = 24;
             this.dataGridViewMemberships.Size = new System.Drawing.Size(632, 468);
             this.dataGridViewMemberships.TabIndex = 12;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateFromDataGridViewTextBoxColumn
-            // 
-            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
-            this.dateFromDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateToDataGridViewTextBoxColumn
-            // 
-            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
-            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // membershipBindingSource
             // 
@@ -293,6 +270,39 @@ namespace Pll
             this.buttonScanMember.UseVisualStyleBackColor = false;
             this.buttonScanMember.Click += new System.EventHandler(this.buttonScanMember_Click);
             // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateFromDataGridViewTextBoxColumn
+            // 
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateToDataGridViewTextBoxColumn
+            // 
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FormNewLoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -348,9 +358,10 @@ namespace Pll
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource membershipBindingSource;
+        private System.Windows.Forms.Button buttonScanMember;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonScanMember;
     }
 }
