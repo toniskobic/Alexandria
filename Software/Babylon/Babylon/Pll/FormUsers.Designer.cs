@@ -32,23 +32,6 @@ namespace Pll
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsers));
             this.dataGridViewUsers = new System.Windows.Forms.DataGridView();
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.buttonActivateDeactivate = new System.Windows.Forms.Button();
-            this.buttonCreate = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.membershipBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonDeleteUser = new System.Windows.Forms.Button();
-            this.buttonCreateMembership = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.buttonHelp = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonLogOut = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +43,24 @@ namespace Pll
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfBirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.registrationDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonActivateDeactivate = new System.Windows.Forms.Button();
+            this.buttonCreate = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
+            this.membershipBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonDeleteUser = new System.Windows.Forms.Button();
+            this.buttonCreateMembership = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonHelp = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonLogOut = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).BeginInit();
@@ -93,6 +94,95 @@ namespace Pll
             this.dataGridViewUsers.RowTemplate.Height = 24;
             this.dataGridViewUsers.Size = new System.Drawing.Size(1460, 245);
             this.dataGridViewUsers.TabIndex = 7;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Ime";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Prezime";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
+            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // RoleName
+            // 
+            this.RoleName.DataPropertyName = "RoleName";
+            this.RoleName.HeaderText = "Uloga";
+            this.RoleName.MinimumWidth = 6;
+            this.RoleName.Name = "RoleName";
+            this.RoleName.ReadOnly = true;
+            this.RoleName.Width = 125;
+            // 
+            // lockedDataGridViewCheckBoxColumn
+            // 
+            this.lockedDataGridViewCheckBoxColumn.DataPropertyName = "Locked";
+            this.lockedDataGridViewCheckBoxColumn.HeaderText = "Deaktiviran";
+            this.lockedDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.lockedDataGridViewCheckBoxColumn.Name = "lockedDataGridViewCheckBoxColumn";
+            this.lockedDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // eMailDataGridViewTextBoxColumn
+            // 
+            this.eMailDataGridViewTextBoxColumn.DataPropertyName = "EMail";
+            this.eMailDataGridViewTextBoxColumn.HeaderText = "E-pošta";
+            this.eMailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.eMailDataGridViewTextBoxColumn.Name = "eMailDataGridViewTextBoxColumn";
+            this.eMailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Kontakt broj";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Lozinka";
+            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateOfBirthDataGridViewTextBoxColumn
+            // 
+            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
+            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Datum rođenja";
+            this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
+            this.dateOfBirthDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // registrationDateDataGridViewTextBoxColumn
+            // 
+            this.registrationDateDataGridViewTextBoxColumn.DataPropertyName = "RegistrationDate";
+            this.registrationDateDataGridViewTextBoxColumn.HeaderText = "Datum registracije";
+            this.registrationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.registrationDateDataGridViewTextBoxColumn.Name = "registrationDateDataGridViewTextBoxColumn";
+            this.registrationDateDataGridViewTextBoxColumn.Width = 125;
             // 
             // userBindingSource
             // 
@@ -152,6 +242,7 @@ namespace Pll
             this.dataGridViewMemberships.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewMemberships.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMemberships.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.UserName,
             this.dateFromDataGridViewTextBoxColumn,
             this.dateToDataGridViewTextBoxColumn});
@@ -163,31 +254,6 @@ namespace Pll
             this.dataGridViewMemberships.RowTemplate.Height = 24;
             this.dataGridViewMemberships.Size = new System.Drawing.Size(856, 212);
             this.dataGridViewMemberships.TabIndex = 11;
-            // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "Korisničko ime";
-            this.UserName.MinimumWidth = 6;
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            this.UserName.Width = 125;
-            // 
-            // dateFromDataGridViewTextBoxColumn
-            // 
-            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
-            this.dateFromDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateToDataGridViewTextBoxColumn
-            // 
-            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum do";
-            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
-            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // membershipBindingSource3
             // 
@@ -308,94 +374,38 @@ namespace Pll
             this.buttonLogOut.UseVisualStyleBackColor = false;
             this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
-            // idDataGridViewTextBoxColumn
+            // Id
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
             // 
-            // firstNameDataGridViewTextBoxColumn
+            // UserName
             // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Ime";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "Korisničko ime";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Width = 125;
             // 
-            // lastNameDataGridViewTextBoxColumn
+            // dateFromDataGridViewTextBoxColumn
             // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Prezime";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
             // 
-            // userNameDataGridViewTextBoxColumn
+            // dateToDataGridViewTextBoxColumn
             // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // RoleName
-            // 
-            this.RoleName.DataPropertyName = "RoleName";
-            this.RoleName.HeaderText = "Uloga";
-            this.RoleName.MinimumWidth = 6;
-            this.RoleName.Name = "RoleName";
-            this.RoleName.ReadOnly = true;
-            this.RoleName.Width = 125;
-            // 
-            // lockedDataGridViewCheckBoxColumn
-            // 
-            this.lockedDataGridViewCheckBoxColumn.DataPropertyName = "Locked";
-            this.lockedDataGridViewCheckBoxColumn.HeaderText = "Deaktiviran";
-            this.lockedDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.lockedDataGridViewCheckBoxColumn.Name = "lockedDataGridViewCheckBoxColumn";
-            this.lockedDataGridViewCheckBoxColumn.Width = 125;
-            // 
-            // eMailDataGridViewTextBoxColumn
-            // 
-            this.eMailDataGridViewTextBoxColumn.DataPropertyName = "EMail";
-            this.eMailDataGridViewTextBoxColumn.HeaderText = "E-pošta";
-            this.eMailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.eMailDataGridViewTextBoxColumn.Name = "eMailDataGridViewTextBoxColumn";
-            this.eMailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "Kontakt broj";
-            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Lozinka";
-            this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateOfBirthDataGridViewTextBoxColumn
-            // 
-            this.dateOfBirthDataGridViewTextBoxColumn.DataPropertyName = "DateOfBirth";
-            this.dateOfBirthDataGridViewTextBoxColumn.HeaderText = "Datum rođenja";
-            this.dateOfBirthDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateOfBirthDataGridViewTextBoxColumn.Name = "dateOfBirthDataGridViewTextBoxColumn";
-            this.dateOfBirthDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // registrationDateDataGridViewTextBoxColumn
-            // 
-            this.registrationDateDataGridViewTextBoxColumn.DataPropertyName = "RegistrationDate";
-            this.registrationDateDataGridViewTextBoxColumn.HeaderText = "Datum registracije";
-            this.registrationDateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.registrationDateDataGridViewTextBoxColumn.Name = "registrationDateDataGridViewTextBoxColumn";
-            this.registrationDateDataGridViewTextBoxColumn.Width = 125;
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum do";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormUsers
             // 
@@ -445,9 +455,6 @@ namespace Pll
         private System.Windows.Forms.Button buttonDeleteUser;
         private System.Windows.Forms.Button buttonCreateMembership;
         private System.Windows.Forms.BindingSource membershipBindingSource3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonHelp;
@@ -464,5 +471,9 @@ namespace Pll
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfBirthDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn registrationDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
     }
 }
