@@ -10,7 +10,7 @@ Petar Šiljeg | psiljeg@foi.hr | 0016133650 | piljeg
 
 ## Opis domene
 
-Rad u knjižnjici je jako kompliciran bez prikladnog softvera. Zaposlenici nemaju jednostavan način za praćenje količine, posudbi i članstva korisnika. Funkcionalnosti ove aplikacije će uvelike olakšavati prethodno navedenu problematiku.
+Rad u knjižnici je jako kompliciran bez prikladnog softvera. Zaposlenici nemaju jednostavan način za praćenje količine, posudbi i članstva korisnika. Funkcionalnosti ove aplikacije će uvelike olakšavati prethodno navedenu problematiku.
 
 ## Specifikacija projekta
 
