@@ -56,7 +56,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -110,100 +111,143 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCreateMembership.cs">
+    <Compile Include="Forms\FormCreateMembership.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreateMembership.Designer.cs">
+    <Compile Include="Forms\FormCreateMembership.Designer.cs">
       <DependentUpon>FormCreateMembership.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddAuthor.cs">
+    <Compile Include="Forms\FormAddAuthor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddAuthor.Designer.cs">
+    <Compile Include="Forms\FormAddAuthor.Designer.cs">
       <DependentUpon>FormAddAuthor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddCategory.cs">
+    <Compile Include="Forms\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddCategory.Designer.cs">
+    <Compile Include="Forms\FormAddCategory.Designer.cs">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLoans.cs">
+    <Compile Include="Forms\FormLoans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLoans.Designer.cs">
+    <Compile Include="Forms\FormLoans.Designer.cs">
       <DependentUpon>FormLoans.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPickingIn.cs">
+    <Compile Include="Forms\FormPickingIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPickingIn.Designer.cs">
+    <Compile Include="Forms\FormPickingIn.Designer.cs">
       <DependentUpon>FormPickingIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLiteratures.cs">
+    <Compile Include="Forms\FormLiteratures.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLiteratures.Designer.cs">
+    <Compile Include="Forms\FormLiteratures.Designer.cs">
       <DependentUpon>FormLiteratures.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPickings.cs">
+    <Compile Include="Forms\FormPickings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPickings.Designer.cs">
+    <Compile Include="Forms\FormPickings.Designer.cs">
       <DependentUpon>FormPickings.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReceipts.cs">
+    <Compile Include="Forms\FormReceipts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormReceipts.Designer.cs">
+    <Compile Include="Forms\FormReceipts.Designer.cs">
       <DependentUpon>FormReceipts.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStatistics.cs">
+    <Compile Include="Forms\FormStatistics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStatistics.Designer.cs">
+    <Compile Include="Forms\FormStatistics.Designer.cs">
       <DependentUpon>FormStatistics.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsers.cs">
+    <Compile Include="Forms\FormUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsers.Designer.cs">
+    <Compile Include="Forms\FormUsers.Designer.cs">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLateLoansList.cs">
+    <Compile Include="Forms\FormLateLoansList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLateLoansList.Designer.cs">
+    <Compile Include="Forms\FormLateLoansList.Designer.cs">
       <DependentUpon>FormLateLoansList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormNewLoan.cs">
+    <Compile Include="Forms\FormNewLoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormNewLoan.Designer.cs">
+    <Compile Include="Forms\FormNewLoan.Designer.cs">
       <DependentUpon>FormNewLoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="Forms\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormCreateUser.cs">
+    <Compile Include="Forms\FormCreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCreateUser.Designer.cs">
+    <Compile Include="Forms\FormCreateUser.Designer.cs">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAddAuthor.resx">
+    <EmbeddedResource Include="Forms\FormAddAuthor.resx">
       <DependentUpon>FormAddAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCreateMembership.resx">
+      <DependentUpon>FormCreateMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCreateUser.resx">
+      <DependentUpon>FormCreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLateLoansList.resx">
+      <DependentUpon>FormLateLoansList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLiteratures.resx">
+      <DependentUpon>FormLiteratures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLoans.resx">
+      <DependentUpon>FormLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNewLoan.resx">
+      <DependentUpon>FormNewLoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPickingIn.resx">
+      <DependentUpon>FormPickingIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPickings.resx">
+      <DependentUpon>FormPickings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormReceipts.resx">
+      <DependentUpon>FormReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStatistics.resx">
+      <DependentUpon>FormStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -240,8 +284,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logo.ico" />
-    <None Include="Resources\smalllighthouse.png" />
+    <None Include="Resources\books.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
@@ -264,6 +307,10 @@
       <Project>{4aa6c8dc-39e1-44ac-9462-f9806c3f837a}</Project>
       <Name>Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Assets\logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

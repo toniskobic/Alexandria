@@ -20,7 +20,7 @@
             }
             else
             {
-                return parsedNumber >= 0 ? true : false;
+                return parsedNumber >= 0;
             }
         }
 
@@ -32,11 +32,11 @@
             }
             else
             {
-                return parsedNumber >= min ? true : false;
+                return parsedNumber >= min;
             }
         }
 
-        public static bool AssertStringLenght(string input, int lenght)
+        public static bool AssertStringLength(string input, int lenght)
         {
             return input.Length >= lenght;
         }
@@ -55,7 +55,7 @@
 
         public static bool IsNotEmpty(string input)
         {
-            return input != "" ? true : false;
+            return input != "";
         }
 
         public static bool IsOIBValid(string number)

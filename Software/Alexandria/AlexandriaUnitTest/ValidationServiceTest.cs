@@ -1,7 +1,7 @@
 ﻿using Business.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace AlexandriaUnitTest
+namespace Tests
 {
     [TestClass]
     public class ValidationServiceTest
@@ -10,9 +10,7 @@ namespace AlexandriaUnitTest
         [TestMethod]
         public void ParseNumberTest()
         {
-            int parsedNum = 0;
-
-            ValidationService.ParseNumber("1", out parsedNum);
+            ValidationService.ParseNumber("1", out int parsedNum);
 
             Assert.IsTrue(parsedNum == 1);
         }
@@ -20,9 +18,7 @@ namespace AlexandriaUnitTest
         [TestMethod]
         public void AssertPositiveTest()
         {
-            bool parsed = false;
-
-            parsed = ValidationService.AssertPositive("1");
+            bool parsed = ValidationService.AssertPositive("1");
 
             Assert.IsTrue(parsed);
         }
@@ -30,9 +26,7 @@ namespace AlexandriaUnitTest
         [TestMethod]
         public void AssertEmailTest()
         {
-            bool isEmail = true;
-
-            isEmail = ValidationService.AssertEmail("toni.skobicgmail.com");
+            bool isEmail = ValidationService.AssertEmail("toni.skobicgmail.com");
 
             Assert.IsFalse(isEmail);
         }
@@ -40,9 +34,7 @@ namespace AlexandriaUnitTest
         [TestMethod]
         public void CheckPhoneNumTest()
         {
-            bool isPhone = true;
-
-            isPhone = ValidationService.IsPhoneNumberValid("51252151242144214");
+            bool isPhone = ValidationService.IsPhoneNumberValid("51252151242144214");
 
             Assert.IsFalse(isPhone);
         }
@@ -50,8 +42,8 @@ namespace AlexandriaUnitTest
         [TestMethod]
         public void AssertStringLengthTest()
         {
-            bool stringLength = false;
-            stringLength = ValidationService.AssertStringLenght("alexandria", 10);
+            bool stringLength = ValidationService.AssertStringLength("alexandria", 10);
+
             Assert.IsTrue(stringLength);
         }
     }

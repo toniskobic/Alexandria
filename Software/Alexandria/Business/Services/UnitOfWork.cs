@@ -1,45 +1,85 @@
-﻿using Business.Repositories;
+﻿using Business.Interfaces;
+using Data;
+using Data.Entities;
+using Data.Interfaces;
+using Data.Repositories;
+using System;
+using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace Business.Services
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
-        protected AppDbContext _appDbContext { get; set; }
-        public UserRepository Users { get; set; }
-        public PickingInRepository PickingIns { get; set; }
-        public AuthorRepository Authors { get; set; }
-        public CategoryRepository Categories { get; set; }
-        public LiteratureRepository Literatures { get; set; }
-        public LoanRepository Loans { get; set; }
-        public LoanItemRepository LoanItems { get; set; }
-        public MembershipRepository Memberships { get; set; }
-        public PickingInItemRepository PickingInItems { get; set; }
-        public PickingOutRepository PickingOuts { get; set; }
-        public ReceiptRepository Receipts { get; set; }
-        public ReceiptItemRepository ReceiptItems { get; set; }
-        public RoleRepository Roles { get; set; }
+        protected AppDbContext AppDbContext { get; set; }
+
+        public IGenericRepository<User> Users { get; set; }
+
+        public IGenericRepository<PickingIn> PickingIns { get; set; }
+
+        public IGenericRepository<Author> Authors { get; set; }
+
+        public IGenericRepository<Category> Categories { get; set; }
+
+        public IGenericRepository<Literature> Literatures { get; set; }
+
+        public IGenericRepository<Loan> Loans { get; set; }
+
+        public IGenericRepository<LoanItem> LoanItems { get; set; }
+
+        public IGenericRepository<Membership> Memberships { get; set; }
+
+        public IGenericRepository<PickingInItem> PickingInItems { get; set; }
+
+        public IGenericRepository<PickingOut> PickingOuts { get; set; }
+
+        public IGenericRepository<Receipt> Receipts { get; set; }
+
+        public IGenericRepository<ReceiptItem> ReceiptItems { get; set; }
+
+        public IGenericRepository<Role> Roles { get; set; }
+
+        public IDatabaseScope DatabaseScope { get; set; }
 
         public UnitOfWork(AppDbContext dbContext)
         {
-            _appDbContext = dbContext;
-            Roles = new RoleRepository(_appDbContext);
-            Users = new UserRepository(_appDbContext);
-            PickingIns = new PickingInRepository(_appDbContext);
-            Authors = new AuthorRepository(_appDbContext);
-            Categories = new CategoryRepository(_appDbContext);
-            Literatures = new LiteratureRepository(_appDbContext);
-            Loans = new LoanRepository(_appDbContext);
-            LoanItems = new LoanItemRepository(_appDbContext);
-            Memberships = new MembershipRepository(_appDbContext);
-            PickingInItems = new PickingInItemRepository(_appDbContext);
-            PickingOuts = new PickingOutRepository(_appDbContext);
-            Receipts = new ReceiptRepository(_appDbContext);
-            ReceiptItems = new ReceiptItemRepository(_appDbContext);
+            AppDbContext = dbContext;
+            Roles = new RoleRepository(AppDbContext);
+            Users = new UserRepository(AppDbContext);
+            PickingIns = new PickingInRepository(AppDbContext);
+            Authors = new AuthorRepository(AppDbContext);
+            Categories = new CategoryRepository(AppDbContext);
+            Literatures = new LiteratureRepository(AppDbContext);
+            Loans = new LoanRepository(AppDbContext);
+            LoanItems = new LoanItemRepository(AppDbContext);
+            Memberships = new MembershipRepository(AppDbContext);
+            PickingInItems = new PickingInItemRepository(AppDbContext);
+            PickingOuts = new PickingOutRepository(AppDbContext);
+            Receipts = new ReceiptRepository(AppDbContext);
+            ReceiptItems = new ReceiptItemRepository(AppDbContext);
+            DatabaseScope = new DatabaseScope(AppDbContext);
         }
 
-        public int Complete()
+        public async Task<bool> IsLoanedAsync(int id)
         {
-            return _appDbContext.SaveChanges();
+            var loanItems = (await Literatures.GetAll()
+                .Include(l => l.LoanItem)
+                .FirstOrDefaultAsync(l => l.Id == id)).LoanItem;
+            bool isLoaned = false;
+
+            foreach (var loanItem in loanItems)
+            {
+                var newLoanItem = await LoanItems.GetAll()
+                    .Include(l => l.Loan)
+                    .FirstOrDefaultAsync(li => li.Id == loanItem.Id);
+                if (loanItem.Loan.DateTo >= DateTime.Now)
+                {
+                    isLoaned = true;
+                    break;
+                }
+            }
+
+            return isLoaned;
         }
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Business.Enums;
-using Data.Model;
+using Data;
+using Data.Entities;
+using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace Business.Services
 {
@@ -9,9 +12,11 @@ namespace Business.Services
 
         public static User LoggedUser { get; private set; }
 
-        public static LoginResult LogInUser(string username, string password)
+        public async static Task<LoginResult> LogInUserAsync(string username, string password)
         {
-            var user = UnitOfWork.Users.FindEmployee(username, password);
+            var user = await UnitOfWork.Users.GetAll()
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
 
             if (user == null)
             {

@@ -63,9 +63,9 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap smalllighthouse {
+        internal static System.Drawing.Bitmap books {
             get {
-                object obj = ResourceManager.GetObject("smalllighthouse", resourceCulture);
+                object obj = ResourceManager.GetObject("books", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
