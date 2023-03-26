@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Data
 {
-    public partial class AppDbContext : DbContext
+    public partial class AlexandriaContext : DbContext
     {
         public DbSet<Role> Roles { get; set; }
 
@@ -32,7 +32,7 @@ namespace Data
 
         public DbSet<ReceiptItem> ReceiptItems { get; set; }
 
-        public AppDbContext() : base("Alexandria")
+        public AlexandriaContext() : base("Alexandria")
         {
             this.Configuration.ProxyCreationEnabled = false;
             this.Configuration.LazyLoadingEnabled = false;

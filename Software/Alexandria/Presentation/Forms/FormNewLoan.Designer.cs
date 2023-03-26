@@ -32,18 +32,10 @@ namespace Presentation.Forms
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewLoan));
             this.dataGridViewLiteratures = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.literatureBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.dataGridViewMemberships = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.membershipBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonLoanBook = new System.Windows.Forms.Button();
@@ -53,6 +45,14 @@ namespace Presentation.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.buttonScanMember = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateFromDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateToDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMemberships)).BeginInit();
@@ -79,40 +79,6 @@ namespace Presentation.Forms
             this.dataGridViewLiteratures.RowTemplate.Height = 24;
             this.dataGridViewLiteratures.Size = new System.Drawing.Size(632, 468);
             this.dataGridViewLiteratures.TabIndex = 0;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Naslov";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryNameDataGridViewTextBoxColumn
-            // 
-            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
-            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "Kategorija";
-            this.categoryNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
-            this.categoryNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categoryNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // authorNameDataGridViewTextBoxColumn
-            // 
-            this.authorNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorName";
-            this.authorNameDataGridViewTextBoxColumn.HeaderText = "Autor";
-            this.authorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.authorNameDataGridViewTextBoxColumn.Name = "authorNameDataGridViewTextBoxColumn";
-            this.authorNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.authorNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // literatureBindingSource
             // 
@@ -169,39 +135,6 @@ namespace Presentation.Forms
             this.dataGridViewMemberships.Size = new System.Drawing.Size(632, 468);
             this.dataGridViewMemberships.TabIndex = 12;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // userNameDataGridViewTextBoxColumn
-            // 
-            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
-            this.userNameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
-            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.userNameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateFromDataGridViewTextBoxColumn
-            // 
-            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
-            this.dateFromDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateToDataGridViewTextBoxColumn
-            // 
-            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum od";
-            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
-            this.dateToDataGridViewTextBoxColumn.Width = 125;
-            // 
             // membershipBindingSource
             // 
             this.membershipBindingSource.DataSource = typeof(Data.Entities.Membership);
@@ -222,7 +155,7 @@ namespace Presentation.Forms
             this.buttonLoanBook.Name = "buttonLoanBook";
             this.buttonLoanBook.Size = new System.Drawing.Size(108, 49);
             this.buttonLoanBook.TabIndex = 13;
-            this.buttonLoanBook.Text = "Posudi";
+            this.buttonLoanBook.Text = "Loan";
             this.buttonLoanBook.UseVisualStyleBackColor = false;
             this.buttonLoanBook.Click += new System.EventHandler(this.ButtonLoanBook_Click);
             // 
@@ -259,9 +192,9 @@ namespace Presentation.Forms
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(744, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Članovi:";
+            this.label2.Text = "Members";
             // 
             // label3
             // 
@@ -270,9 +203,9 @@ namespace Presentation.Forms
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(12, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 20);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Knjižna građa:";
+            this.label3.Text = "Literatures:";
             // 
             // label4
             // 
@@ -283,9 +216,9 @@ namespace Presentation.Forms
             this.label4.Location = new System.Drawing.Point(618, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 32);
+            this.label4.Size = new System.Drawing.Size(140, 32);
             this.label4.TabIndex = 20;
-            this.label4.Text = "Nova posudba";
+            this.label4.Text = "New loan";
             // 
             // buttonScanMember
             // 
@@ -299,9 +232,76 @@ namespace Presentation.Forms
             this.buttonScanMember.Name = "buttonScanMember";
             this.buttonScanMember.Size = new System.Drawing.Size(81, 45);
             this.buttonScanMember.TabIndex = 21;
-            this.buttonScanMember.Text = "Skeniraj";
+            this.buttonScanMember.Text = "Scan";
             this.buttonScanMember.UseVisualStyleBackColor = false;
             this.buttonScanMember.Click += new System.EventHandler(this.ButtonScanMember_Click);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categoryNameDataGridViewTextBoxColumn
+            // 
+            this.categoryNameDataGridViewTextBoxColumn.DataPropertyName = "CategoryName";
+            this.categoryNameDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.categoryNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categoryNameDataGridViewTextBoxColumn.Name = "categoryNameDataGridViewTextBoxColumn";
+            this.categoryNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categoryNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // authorNameDataGridViewTextBoxColumn
+            // 
+            this.authorNameDataGridViewTextBoxColumn.DataPropertyName = "AuthorName";
+            this.authorNameDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.authorNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.authorNameDataGridViewTextBoxColumn.Name = "authorNameDataGridViewTextBoxColumn";
+            this.authorNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.authorNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
+            // 
+            // userNameDataGridViewTextBoxColumn
+            // 
+            this.userNameDataGridViewTextBoxColumn.DataPropertyName = "UserName";
+            this.userNameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.userNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.userNameDataGridViewTextBoxColumn.Name = "userNameDataGridViewTextBoxColumn";
+            this.userNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateFromDataGridViewTextBoxColumn
+            // 
+            this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
+            this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateToDataGridViewTextBoxColumn
+            // 
+            this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
+            this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormNewLoan
             // 
@@ -353,12 +353,12 @@ namespace Presentation.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.BindingSource literatureBindingSource;
+        private System.Windows.Forms.BindingSource membershipBindingSource;
+        private System.Windows.Forms.Button buttonScanMember;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource membershipBindingSource;
-        private System.Windows.Forms.Button buttonScanMember;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;

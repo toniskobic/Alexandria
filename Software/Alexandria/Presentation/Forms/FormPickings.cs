@@ -16,7 +16,7 @@ namespace Presentation.Forms
 
         public FormPickings()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 

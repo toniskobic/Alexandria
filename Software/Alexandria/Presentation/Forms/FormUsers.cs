@@ -15,7 +15,7 @@ namespace Presentation.Forms
 
         public FormUsers()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 

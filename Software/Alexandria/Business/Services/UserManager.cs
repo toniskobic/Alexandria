@@ -1,14 +1,15 @@
-﻿using Business.Enums;
+﻿using System.Data.Entity;
+using System.Threading.Tasks;
+using Business.Enums;
+using Business.Interfaces;
 using Data;
 using Data.Entities;
-using System.Data.Entity;
-using System.Threading.Tasks;
 
 namespace Business.Services
 {
     public static class UserManager
     {
-        private static readonly UnitOfWork UnitOfWork = new UnitOfWork(new AppDbContext());
+        private static readonly IUnitOfWork UnitOfWork = new UnitOfWork(new AlexandriaContext());
 
         public static User LoggedUser { get; private set; }
 

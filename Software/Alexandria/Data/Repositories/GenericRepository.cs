@@ -9,9 +9,9 @@ namespace Data.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        protected AppDbContext AppDbContext { get; set; }
+        protected AlexandriaContext AppDbContext { get; set; }
 
-        public GenericRepository(AppDbContext appDbContext)
+        public GenericRepository(AlexandriaContext appDbContext)
         {
             AppDbContext = appDbContext;
         }

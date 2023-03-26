@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class PickingInItemRepository : GenericRepository<PickingInItem>
     {
-        public PickingInItemRepository(AppDbContext appDbContext) : base(appDbContext)
+        public PickingInItemRepository(AlexandriaContext appDbContext) : base(appDbContext)
         {
 
         }

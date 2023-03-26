@@ -1,15 +1,15 @@
-﻿using Data.Interfaces;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Data.Interfaces;
 
 namespace Data
 {
     public class DatabaseScope : IDatabaseScope
     {
-        private readonly AppDbContext _appDbContext;
+        private readonly AlexandriaContext _appDbContext;
 
-        public DatabaseScope(AppDbContext ekoshipContext)
+        public DatabaseScope(AlexandriaContext appDbContext)
         {
-            _appDbContext = ekoshipContext;
+            _appDbContext = appDbContext;
         }
 
         public Task<int> SaveAsync()

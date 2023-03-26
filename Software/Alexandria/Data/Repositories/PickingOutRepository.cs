@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class PickingOutRepository : GenericRepository<PickingOut>
     {
-        public PickingOutRepository(AppDbContext dbContext) : base(dbContext)
+        public PickingOutRepository(AlexandriaContext dbContext) : base(dbContext)
         {
         }
     }

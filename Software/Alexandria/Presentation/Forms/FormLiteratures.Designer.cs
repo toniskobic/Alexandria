@@ -82,7 +82,7 @@ namespace Presentation.Forms
             // titleDataGridViewTextBoxColumn
             // 
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "Naslov";
+            this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
             this.titleDataGridViewTextBoxColumn.Width = 125;
@@ -90,7 +90,7 @@ namespace Presentation.Forms
             // CategoryName
             // 
             this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "Kategorija";
+            this.CategoryName.HeaderText = "Category";
             this.CategoryName.MinimumWidth = 6;
             this.CategoryName.Name = "CategoryName";
             this.CategoryName.ReadOnly = true;
@@ -99,7 +99,7 @@ namespace Presentation.Forms
             // AuthorName
             // 
             this.AuthorName.DataPropertyName = "AuthorName";
-            this.AuthorName.HeaderText = "Autor";
+            this.AuthorName.HeaderText = "Author";
             this.AuthorName.MinimumWidth = 6;
             this.AuthorName.Name = "AuthorName";
             this.AuthorName.ReadOnly = true;
@@ -121,7 +121,7 @@ namespace Presentation.Forms
             this.buttonPickingIn.Name = "buttonPickingIn";
             this.buttonPickingIn.Size = new System.Drawing.Size(161, 79);
             this.buttonPickingIn.TabIndex = 1;
-            this.buttonPickingIn.Text = "Dodaj knjižnu građu";
+            this.buttonPickingIn.Text = "Add literature";
             this.buttonPickingIn.UseVisualStyleBackColor = false;
             this.buttonPickingIn.Click += new System.EventHandler(this.ButtonPickingIn_Click);
             // 
@@ -137,7 +137,7 @@ namespace Presentation.Forms
             this.buttonPickingOut.Name = "buttonPickingOut";
             this.buttonPickingOut.Size = new System.Drawing.Size(160, 79);
             this.buttonPickingOut.TabIndex = 2;
-            this.buttonPickingOut.Text = "Razduži knjižnu građu";
+            this.buttonPickingOut.Text = "Return literature";
             this.buttonPickingOut.UseVisualStyleBackColor = false;
             this.buttonPickingOut.Click += new System.EventHandler(this.ButtonPickingOut_Click);
             // 
@@ -149,9 +149,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(19, 211);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Popis knjižne građe:";
+            this.label1.Text = "List of literatures:";
             // 
             // buttonLogOut
             // 
@@ -196,7 +196,7 @@ namespace Presentation.Forms
             this.buttonAddCategory.Name = "buttonAddCategory";
             this.buttonAddCategory.Size = new System.Drawing.Size(152, 69);
             this.buttonAddCategory.TabIndex = 13;
-            this.buttonAddCategory.Text = "Dodaj kategoriju";
+            this.buttonAddCategory.Text = "Add category";
             this.buttonAddCategory.UseVisualStyleBackColor = false;
             this.buttonAddCategory.Click += new System.EventHandler(this.ButtonAddCategory_Click);
             // 
@@ -212,7 +212,7 @@ namespace Presentation.Forms
             this.buttonAddAuthor.Name = "buttonAddAuthor";
             this.buttonAddAuthor.Size = new System.Drawing.Size(126, 69);
             this.buttonAddAuthor.TabIndex = 14;
-            this.buttonAddAuthor.Text = "Dodaj autora";
+            this.buttonAddAuthor.Text = "Add author";
             this.buttonAddAuthor.UseVisualStyleBackColor = false;
             this.buttonAddAuthor.Click += new System.EventHandler(this.ButtonAddAuthor_Click);
             // 
@@ -245,7 +245,7 @@ namespace Presentation.Forms
             this.buttonPickings.Name = "buttonPickings";
             this.buttonPickings.Size = new System.Drawing.Size(161, 79);
             this.buttonPickings.TabIndex = 16;
-            this.buttonPickings.Text = "Primke i otpremnice";
+            this.buttonPickings.Text = "Pickings";
             this.buttonPickings.UseVisualStyleBackColor = false;
             this.buttonPickings.Click += new System.EventHandler(this.ButtonPickings_Click);
             // 
@@ -258,9 +258,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(391, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 32);
+            this.label2.Size = new System.Drawing.Size(160, 32);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Knjižna građa";
+            this.label2.Text = "Literatures";
             // 
             // FormLiteratures
             // 
@@ -285,7 +285,7 @@ namespace Presentation.Forms
             this.MinimumSize = new System.Drawing.Size(1018, 677);
             this.Name = "FormLiteratures";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Knjižna građa";
+            this.Text = "Literatures";
             this.Load += new System.EventHandler(this.FormLiteratures_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLiteratures)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.literatureBindingSource)).EndInit();
@@ -306,11 +306,11 @@ namespace Presentation.Forms
         private System.Windows.Forms.Button buttonAddAuthor;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.BindingSource literatureBindingSource;
+        private System.Windows.Forms.Button buttonPickings;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn AuthorName;
-        private System.Windows.Forms.Button buttonPickings;
-        private System.Windows.Forms.Label label2;
     }
 }

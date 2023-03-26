@@ -19,7 +19,7 @@ namespace Presentation.Forms
 
         public FormLoans()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 
@@ -181,7 +181,7 @@ namespace Presentation.Forms
                 .FirstOrDefault(x => x.Id == loan.Id).LoanItem;
         }
 
-        private async void DataGridViewLoanItems_SelectionChanged(object sender, EventArgs e)
+        private void DataGridViewLoanItems_SelectionChanged(object sender, EventArgs e)
         {
             int literatureId = 0;
             if (dataGridViewLoanItems.Rows.Count > 0)
@@ -190,7 +190,8 @@ namespace Presentation.Forms
             }
             if (literatureId != 0)
             {
-                textBoxLiteratureTitle.Text = (await _unitOfWork.Literatures.GetAsync(literatureId)).Title;
+                var literatureTask = _unitOfWork.Literatures.GetAsync(literatureId);
+                textBoxLiteratureTitle.Text = literatureTask.Result.Title;
             }
         }
 

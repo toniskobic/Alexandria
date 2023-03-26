@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class CategoryRepository : GenericRepository<Category>
     {
-        public CategoryRepository(AppDbContext appDbContext) : base(appDbContext)
+        public CategoryRepository(AlexandriaContext appDbContext) : base(appDbContext)
         {
         }
     }

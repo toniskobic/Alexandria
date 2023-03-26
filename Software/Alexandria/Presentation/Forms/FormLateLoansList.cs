@@ -18,7 +18,7 @@ namespace Presentation.Forms
 
         public FormLateLoansList()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 

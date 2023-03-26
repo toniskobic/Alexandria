@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class ReceiptRepository : GenericRepository<Receipt>
     {
-        public ReceiptRepository(AppDbContext appDbContext) : base(appDbContext)
+        public ReceiptRepository(AlexandriaContext appDbContext) : base(appDbContext)
         {
         }
     }

@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class AuthorRepository : GenericRepository<Author>
     {
-        public AuthorRepository(AppDbContext appDbContext) : base(appDbContext)
+        public AuthorRepository(AlexandriaContext appDbContext) : base(appDbContext)
         {
         }
     }

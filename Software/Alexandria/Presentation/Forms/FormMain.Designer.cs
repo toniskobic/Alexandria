@@ -94,9 +94,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(269, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 32);
+            this.label2.Size = new System.Drawing.Size(161, 32);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Početna stranica";
+            this.label2.Text = "Homepage";
             // 
             // buttonHelp
             // 
@@ -127,7 +127,7 @@ namespace Presentation.Forms
             this.buttonUsers.Name = "buttonUsers";
             this.buttonUsers.Size = new System.Drawing.Size(158, 62);
             this.buttonUsers.TabIndex = 2;
-            this.buttonUsers.Text = "Korisnici";
+            this.buttonUsers.Text = "Users";
             this.buttonUsers.UseVisualStyleBackColor = false;
             this.buttonUsers.Click += new System.EventHandler(this.ButtonUsers_Click);
             // 
@@ -143,7 +143,7 @@ namespace Presentation.Forms
             this.buttonLiterature.Name = "buttonLiterature";
             this.buttonLiterature.Size = new System.Drawing.Size(156, 62);
             this.buttonLiterature.TabIndex = 1;
-            this.buttonLiterature.Text = "Knjižna građa";
+            this.buttonLiterature.Text = "Literatures";
             this.buttonLiterature.UseVisualStyleBackColor = false;
             this.buttonLiterature.Click += new System.EventHandler(this.ButtonLiterature_Click);
             // 
@@ -159,7 +159,7 @@ namespace Presentation.Forms
             this.buttonLoans.Name = "buttonLoans";
             this.buttonLoans.Size = new System.Drawing.Size(156, 62);
             this.buttonLoans.TabIndex = 3;
-            this.buttonLoans.Text = "Posudbe";
+            this.buttonLoans.Text = "Loans";
             this.buttonLoans.UseVisualStyleBackColor = false;
             this.buttonLoans.Click += new System.EventHandler(this.ButtonLoans_Click);
             // 
@@ -175,7 +175,7 @@ namespace Presentation.Forms
             this.buttonStatistics.Name = "buttonStatistics";
             this.buttonStatistics.Size = new System.Drawing.Size(158, 62);
             this.buttonStatistics.TabIndex = 4;
-            this.buttonStatistics.Text = "Statistika";
+            this.buttonStatistics.Text = "Statistics";
             this.buttonStatistics.UseVisualStyleBackColor = false;
             this.buttonStatistics.Click += new System.EventHandler(this.ButtonStatistics_Click);
             // 
@@ -211,7 +211,7 @@ namespace Presentation.Forms
             this.MinimumSize = new System.Drawing.Size(762, 775);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Početna stranica";
+            this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

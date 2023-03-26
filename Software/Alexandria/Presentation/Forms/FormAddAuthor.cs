@@ -13,7 +13,7 @@ namespace Presentation.Forms
 
         public FormAddAuthor()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 

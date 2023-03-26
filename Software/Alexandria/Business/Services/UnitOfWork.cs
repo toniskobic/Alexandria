@@ -1,17 +1,17 @@
-﻿using Business.Interfaces;
+﻿using System;
+using System.Data.Entity;
+using System.Threading.Tasks;
+using Business.Interfaces;
 using Data;
 using Data.Entities;
 using Data.Interfaces;
 using Data.Repositories;
-using System;
-using System.Data.Entity;
-using System.Threading.Tasks;
 
 namespace Business.Services
 {
     public class UnitOfWork : IUnitOfWork
     {
-        protected AppDbContext AppDbContext { get; set; }
+        protected AlexandriaContext AppDbContext { get; set; }
 
         public IGenericRepository<User> Users { get; set; }
 
@@ -41,7 +41,7 @@ namespace Business.Services
 
         public IDatabaseScope DatabaseScope { get; set; }
 
-        public UnitOfWork(AppDbContext dbContext)
+        public UnitOfWork(AlexandriaContext dbContext)
         {
             AppDbContext = dbContext;
             Roles = new RoleRepository(AppDbContext);

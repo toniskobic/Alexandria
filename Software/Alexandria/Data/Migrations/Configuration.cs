@@ -2,14 +2,14 @@
 
 namespace Data.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<AppDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AlexandriaContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(AppDbContext context)
+        protected override void Seed(AlexandriaContext context)
         {
             //  This method will be called after migrating to the latest version.
 

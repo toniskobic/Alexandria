@@ -4,7 +4,7 @@ namespace Data.Repositories
 {
     public class LoanRepository : GenericRepository<Loan>
     {
-        public LoanRepository(AppDbContext appDbContext) : base(appDbContext)
+        public LoanRepository(AlexandriaContext appDbContext) : base(appDbContext)
         {
         }
     }

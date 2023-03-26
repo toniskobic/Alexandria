@@ -15,7 +15,7 @@ namespace Presentation.Forms
 
         public FormLiteratures()
         {
-            _unitOfWork = new UnitOfWork(new AppDbContext());
+            _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
         }
 
