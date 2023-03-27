@@ -17,6 +17,8 @@ namespace Presentation.Forms
     {
         private readonly IUnitOfWork _unitOfWork;
 
+        private FormWindowState LastWindowState { get; set; } = FormWindowState.Minimized;
+
         public FormLoans()
         {
             _unitOfWork = new UnitOfWork(new AlexandriaContext());
@@ -28,27 +30,8 @@ namespace Presentation.Forms
             this.Close();
         }
 
-        private void ButtonLogOut_Click(object sender, EventArgs e)
-        {
-            UserManager.LogOut();
-
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                if (Application.OpenForms[i].Name != "FormLogin")
-                {
-                    Application.OpenForms[i].Close();
-                }
-                else
-                {
-                    Application.OpenForms[i].Show();
-                }
-
-            }
-        }
-
         private void FormLoans_Load(object sender, EventArgs e)
         {
-            textBoxLiteratureTitle.ReadOnly = true;
             RefreshLoans();
         }
 
@@ -72,7 +55,6 @@ namespace Presentation.Forms
         private void ButtonHelp_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#12-posudbe-");
-
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -120,11 +102,11 @@ namespace Presentation.Forms
 
                     _unitOfWork.Receipts.Add(receipt);
 
-                    MessageBox.Show("Knjižna građa vraćena i račun izdan.");
+                    MessageBox.Show("Literature returned and receipt issued.");
                 }
                 else
                 {
-                    MessageBox.Show("Knjižna građa vraćena.");
+                    MessageBox.Show("Literature returned.");
                 }
 
                 await _unitOfWork.DatabaseScope.SaveAsync();
@@ -156,17 +138,28 @@ namespace Presentation.Forms
                     reservation = reservationItems.Loan;
                 }
 
-                if (reservation != null)
+                if (CheckIfSmtpSettingsAreLoaded() && reservation != null)
                 {
-                    var smtpClient = new SmtpClient("***REMOVED***")
+                    var smtpClient = new SmtpClient(Properties.Settings.Default.SmtpClient)
                     {
-                        Port = 587,
-                        Credentials = new NetworkCredential("***REMOVED***", "***REMOVED***"),
-                        EnableSsl = true,
+                        Port = Properties.Settings.Default.Port,
+                        Credentials = new NetworkCredential(Properties.Settings.Default.Username, Properties.Settings.Default.Password),
+                        EnableSsl = Properties.Settings.Default.EnableSsl,
                     };
 
-                    smtpClient.Send("***REMOVED***", reservation.User.EMail, "Rezervacija Knjižnica Alexandria", $"Poštovani rezervirana knjiga {reservationItems.Literature.Title} je slobodna za posudbu.");
-                    MessageBox.Show($"Član {reservation.User.UserName} obaviješten o slobodnoj knjižnoj građi");
+                    try
+                    {
+                        smtpClient.Send(Properties.Settings.Default.Username, reservation.User.EMail,
+                            "Alexandria Library Reservation",
+                            $"Dear {selectedLoan.User.FullName}," +
+                            $"\n\nReserved literature {reservationItems.Literature.Title} is available for loan." +
+                            $"\n\nSincerely,\n\nAlexandria Library");
+                        MessageBox.Show($"User {reservation.User.UserName} was notified about available literature.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show($"User {reservation.User.UserName} was not notified about available literature.");
+                    }
                 }
 
                 RefreshLoans();
@@ -177,22 +170,8 @@ namespace Presentation.Forms
         {
             var loan = loanBindingSource.Current as Loan;
             loanItemBindingSource.DataSource = _unitOfWork.Loans.GetAll()
-                .Include(x => x.LoanItem)
+                .Include(x => x.LoanItem.Select(lt => lt.Literature))
                 .FirstOrDefault(x => x.Id == loan.Id).LoanItem;
-        }
-
-        private void DataGridViewLoanItems_SelectionChanged(object sender, EventArgs e)
-        {
-            int literatureId = 0;
-            if (dataGridViewLoanItems.Rows.Count > 0)
-            {
-                literatureId = (int)dataGridViewLoanItems.CurrentRow.Cells[2].Value;
-            }
-            if (literatureId != 0)
-            {
-                var literatureTask = _unitOfWork.Literatures.GetAsync(literatureId);
-                textBoxLiteratureTitle.Text = literatureTask.Result.Title;
-            }
         }
 
         private void ButtonReceipts_Click(object sender, EventArgs e)
@@ -201,6 +180,33 @@ namespace Presentation.Forms
             this.Hide();
             newForm.ShowDialog();
             this.Show();
+        }
+
+        private bool CheckIfSmtpSettingsAreLoaded()
+        {
+            return !string.IsNullOrEmpty(Properties.Settings.Default.SmtpClient)
+                && !string.IsNullOrEmpty(Properties.Settings.Default.Username)
+                && !string.IsNullOrEmpty(Properties.Settings.Default.Password)
+                && Properties.Settings.Default.Port > 0
+                && Properties.Settings.Default.Port < 65535;
+        }
+
+        private void ButtonLogOut_Click(object sender, EventArgs e)
+        {
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+
+            }
         }
     }
 }

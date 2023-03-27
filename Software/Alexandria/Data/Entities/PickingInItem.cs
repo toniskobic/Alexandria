@@ -13,7 +13,7 @@ namespace Data.Entities
         public Literature Literature { get; set; }
 
         [NotMapped]
-        public string LiteratureName
+        public string LiteratureTitle
         {
             get
             {

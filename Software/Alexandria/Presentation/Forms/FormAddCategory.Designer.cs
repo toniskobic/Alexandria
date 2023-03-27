@@ -60,9 +60,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(139, 128);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Naziv:";
+            this.label1.Text = "Name:";
             // 
             // label2
             // 
@@ -72,9 +72,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(139, 175);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Opis:";
+            this.label2.Text = "Description:";
             // 
             // richTextBoxDescription
             // 
@@ -101,7 +101,7 @@ namespace Presentation.Forms
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(131, 40);
             this.buttonAdd.TabIndex = 5;
-            this.buttonAdd.Text = "Dodaj";
+            this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
@@ -117,7 +117,7 @@ namespace Presentation.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(131, 40);
             this.buttonCancel.TabIndex = 6;
-            this.buttonCancel.Text = "Odustani";
+            this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
@@ -130,9 +130,9 @@ namespace Presentation.Forms
             this.label3.Location = new System.Drawing.Point(219, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 32);
+            this.label3.Size = new System.Drawing.Size(198, 32);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Nova kategorija";
+            this.label3.Text = "New category";
             // 
             // buttonHelp
             // 
@@ -170,7 +170,7 @@ namespace Presentation.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(670, 598);
             this.Name = "FormAddCategory";
-            this.Text = "Nova kategorija";
+            this.Text = "New Category";
             this.ResumeLayout(false);
             this.PerformLayout();
 

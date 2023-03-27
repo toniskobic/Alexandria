@@ -111,9 +111,9 @@ namespace Presentation.Forms
             this.label4.Location = new System.Drawing.Point(684, 38);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 32);
+            this.label4.Size = new System.Drawing.Size(139, 32);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Statistika";
+            this.label4.Text = "Statistics";
             // 
             // chartUsersLoansCount
             // 
@@ -182,9 +182,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(13, 125);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 20);
+            this.label1.Size = new System.Drawing.Size(232, 20);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Broj posudbi po članovima:";
+            this.label1.Text = "Number of loans per member:";
             // 
             // label2
             // 
@@ -194,9 +194,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(491, 125);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(202, 20);
+            this.label2.Size = new System.Drawing.Size(237, 20);
             this.label2.TabIndex = 31;
-            this.label2.Text = "Broj posudbi po knjigama:";
+            this.label2.Text = "Number of loans per literature:";
             // 
             // label3
             // 
@@ -206,9 +206,9 @@ namespace Presentation.Forms
             this.label3.Location = new System.Drawing.Point(973, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 20);
+            this.label3.Size = new System.Drawing.Size(220, 20);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Broj posudbi po autorima:";
+            this.label3.Text = "Number of loans by authors:";
             // 
             // FormStatistics
             // 
@@ -231,7 +231,7 @@ namespace Presentation.Forms
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MinimumSize = new System.Drawing.Size(1436, 665);
             this.Name = "FormStatistics";
-            this.Text = "Statistika";
+            this.Text = "Statistics";
             this.Load += new System.EventHandler(this.FormStatistics_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartUsersLoansCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBooksLoansCount)).EndInit();

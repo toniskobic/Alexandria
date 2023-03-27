@@ -48,9 +48,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(189, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 20);
+            this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Ime:";
+            this.label1.Text = "First name:";
             // 
             // label2
             // 
@@ -60,9 +60,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(189, 175);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 20);
+            this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Prezime:";
+            this.label2.Text = "Last name:";
             // 
             // textBoxFirstName
             // 
@@ -100,7 +100,7 @@ namespace Presentation.Forms
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(114, 42);
             this.buttonAdd.TabIndex = 4;
-            this.buttonAdd.Text = "Dodaj";
+            this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = false;
             this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
             // 
@@ -116,7 +116,7 @@ namespace Presentation.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(114, 42);
             this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Odustani";
+            this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
@@ -146,9 +146,9 @@ namespace Presentation.Forms
             this.label3.Location = new System.Drawing.Point(229, 57);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 32);
+            this.label3.Size = new System.Drawing.Size(163, 32);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Dodaj autora";
+            this.label3.Text = "Add author";
             // 
             // FormAddAuthor
             // 
@@ -169,7 +169,7 @@ namespace Presentation.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(680, 455);
             this.Name = "FormAddAuthor";
-            this.Text = "Dodaj autora";
+            this.Text = "Add Author";
             this.ResumeLayout(false);
             this.PerformLayout();
 

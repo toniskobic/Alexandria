@@ -22,7 +22,6 @@ namespace Presentation.Forms
 
         private async void FormPickings_Load(object sender, EventArgs e)
         {
-            textBoxLiteratureTitle.ReadOnly = true;
             await RefreshPickingsInAsync();
             await RefreshPickingsOutAsync();
         }
@@ -59,7 +58,6 @@ namespace Presentation.Forms
                 {
                     Application.OpenForms[i].Show();
                 }
-
             }
         }
 
@@ -75,6 +73,7 @@ namespace Presentation.Forms
                 System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#8-primke-i-otpremnice-");
                 return true;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
@@ -82,22 +81,9 @@ namespace Presentation.Forms
         {
             var pickingIn = pickingInBindingSource.Current as PickingIn;
             var pickingInItem = _unitOfWork.PickingIns.GetAll()
-                .Include(u => u.PickingInItem)
+                .Include(u => u.PickingInItem.Select(pi => pi.Literature))
                 .FirstOrDefault(p => p.Id == pickingIn.Id).PickingInItem;
             pickingInItemBindingSource.DataSource = pickingInItem;
-        }
-
-        private async void DataGridViewPickingInItems_SelectionChanged(object sender, EventArgs e)
-        {
-            int literatureId = 0;
-            if (dataGridViewPickingInItems.Rows.Count > 0)
-            {
-                literatureId = (int)dataGridViewPickingInItems.CurrentRow.Cells[1].Value;
-            }
-            if (literatureId != 0)
-            {
-                textBoxLiteratureTitle.Text = (await _unitOfWork.Literatures.GetAsync(literatureId)).Title;
-            }
         }
     }
 }

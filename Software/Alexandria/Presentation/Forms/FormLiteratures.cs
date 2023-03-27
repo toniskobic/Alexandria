@@ -85,14 +85,14 @@ namespace Presentation.Forms
             Literature selectedLiterature = dataGridViewLiteratures.CurrentRow.DataBoundItem as Literature;
             if(await _unitOfWork.IsLoanedAsync(selectedLiterature.Id))
             {
-                MessageBox.Show("Knjiga je posuđena!");
+                MessageBox.Show("Literature is loaned!");
                 return;
             }
             if(selectedLiterature != null)
             {
 
                 PickingOut newPickingOut = new PickingOut { 
-                    Description = $"Razdužena knjižna građa, ID = {selectedLiterature.Id}, Naslov = {selectedLiterature.Title}"
+                    Description = $"Returned, ID = {selectedLiterature.Id}, Title = {selectedLiterature.Title}"
                 };
 
                 _unitOfWork.PickingOuts.Add(newPickingOut);

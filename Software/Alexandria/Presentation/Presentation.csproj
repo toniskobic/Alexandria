@@ -204,6 +204,7 @@
     <Compile Include="Forms\FormCreateUser.Designer.cs">
       <DependentUpon>FormCreateUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\FormAddAuthor.resx">
       <DependentUpon>FormAddAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,7 +272,7 @@
     <None Include="Properties\DataSources\Dll.Model.ReceiptItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.User.datasource" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <Compile Include="Properties\Settings.Designer.cs">

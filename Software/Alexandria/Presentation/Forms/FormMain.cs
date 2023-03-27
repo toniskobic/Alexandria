@@ -48,7 +48,6 @@ namespace Presentation.Forms
             this.Show();
         }
 
-
         private void ButtonLoans_Click(object sender, EventArgs e)
         {
             FormLoans newForm = new FormLoans();
@@ -69,6 +68,7 @@ namespace Presentation.Forms
                 System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#3-po%C4%8Detna-stranica");
                 return true;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
 

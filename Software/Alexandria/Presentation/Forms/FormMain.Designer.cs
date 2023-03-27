@@ -39,9 +39,9 @@ namespace Presentation.Forms
             this.buttonLiterature = new System.Windows.Forms.Button();
             this.buttonLoans = new System.Windows.Forms.Button();
             this.buttonStatistics = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMainControls = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxMainControls.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +91,7 @@ namespace Presentation.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(269, 31);
+            this.label2.Location = new System.Drawing.Point(302, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 32);
@@ -179,19 +179,19 @@ namespace Presentation.Forms
             this.buttonStatistics.UseVisualStyleBackColor = false;
             this.buttonStatistics.Click += new System.EventHandler(this.ButtonStatistics_Click);
             // 
-            // groupBox1
+            // groupBoxMainControls
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.buttonUsers);
-            this.groupBox1.Controls.Add(this.buttonLoans);
-            this.groupBox1.Controls.Add(this.buttonStatistics);
-            this.groupBox1.Controls.Add(this.buttonLiterature);
-            this.groupBox1.ForeColor = System.Drawing.Color.LightGray;
-            this.groupBox1.Location = new System.Drawing.Point(143, 303);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(464, 269);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
+            this.groupBoxMainControls.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBoxMainControls.Controls.Add(this.buttonUsers);
+            this.groupBoxMainControls.Controls.Add(this.buttonLoans);
+            this.groupBoxMainControls.Controls.Add(this.buttonStatistics);
+            this.groupBoxMainControls.Controls.Add(this.buttonLiterature);
+            this.groupBoxMainControls.ForeColor = System.Drawing.Color.LightGray;
+            this.groupBoxMainControls.Location = new System.Drawing.Point(143, 303);
+            this.groupBoxMainControls.Name = "groupBoxMainControls";
+            this.groupBoxMainControls.Size = new System.Drawing.Size(464, 269);
+            this.groupBoxMainControls.TabIndex = 11;
+            this.groupBoxMainControls.TabStop = false;
             // 
             // FormMain
             // 
@@ -199,7 +199,7 @@ namespace Presentation.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(744, 728);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxMainControls);
             this.Controls.Add(this.buttonHelp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
@@ -213,7 +213,7 @@ namespace Presentation.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Homepage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
+            this.groupBoxMainControls.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,6 +230,6 @@ namespace Presentation.Forms
         private System.Windows.Forms.Button buttonLiterature;
         private System.Windows.Forms.Button buttonLoans;
         private System.Windows.Forms.Button buttonStatistics;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxMainControls;
     }
 }

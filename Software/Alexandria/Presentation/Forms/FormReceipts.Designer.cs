@@ -37,17 +37,16 @@ namespace Presentation.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewReceipts = new System.Windows.Forms.DataGridView();
+            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewLoanItems = new System.Windows.Forms.DataGridView();
+            this.receiptItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfIssueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewLoanItems = new System.Windows.Forms.DataGridView();
-            this.receiptIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loanIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.receiptItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReceipts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanItems)).BeginInit();
@@ -111,9 +110,9 @@ namespace Presentation.Forms
             this.label4.Location = new System.Drawing.Point(390, 39);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 32);
+            this.label4.Size = new System.Drawing.Size(133, 32);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Računi";
+            this.label4.Text = "Receipts";
             // 
             // label1
             // 
@@ -123,9 +122,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(13, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 31;
-            this.label1.Text = "Računi:";
+            this.label1.Text = "Receipts:";
             // 
             // dataGridViewReceipts
             // 
@@ -148,40 +147,6 @@ namespace Presentation.Forms
             this.dataGridViewReceipts.Size = new System.Drawing.Size(838, 257);
             this.dataGridViewReceipts.TabIndex = 30;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateOfIssueDataGridViewTextBoxColumn
-            // 
-            this.dateOfIssueDataGridViewTextBoxColumn.DataPropertyName = "DateOfIssue";
-            this.dateOfIssueDataGridViewTextBoxColumn.HeaderText = "Datum";
-            this.dateOfIssueDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateOfIssueDataGridViewTextBoxColumn.Name = "dateOfIssueDataGridViewTextBoxColumn";
-            this.dateOfIssueDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Korisničko ime";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // employeeNameDataGridViewTextBoxColumn
-            // 
-            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
-            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
-            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
-            this.employeeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeNameDataGridViewTextBoxColumn.Width = 125;
-            // 
             // receiptBindingSource
             // 
             this.receiptBindingSource.DataSource = typeof(Data.Entities.Receipt);
@@ -195,9 +160,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(9, 416);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 20);
+            this.label2.Size = new System.Drawing.Size(97, 20);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Stavke posudbe:";
+            this.label2.Text = "Loan items:";
             // 
             // dataGridViewLoanItems
             // 
@@ -207,7 +172,6 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewLoanItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLoanItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.receiptIdDataGridViewTextBoxColumn,
             this.loanIdDataGridViewTextBoxColumn,
             this.moneyDataGridViewTextBoxColumn});
             this.dataGridViewLoanItems.DataSource = this.receiptItemBindingSource;
@@ -219,18 +183,48 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.Size = new System.Drawing.Size(838, 198);
             this.dataGridViewLoanItems.TabIndex = 32;
             // 
-            // receiptIdDataGridViewTextBoxColumn
+            // receiptItemBindingSource
             // 
-            this.receiptIdDataGridViewTextBoxColumn.DataPropertyName = "Receipt_Id";
-            this.receiptIdDataGridViewTextBoxColumn.HeaderText = "ID računa";
-            this.receiptIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.receiptIdDataGridViewTextBoxColumn.Name = "receiptIdDataGridViewTextBoxColumn";
-            this.receiptIdDataGridViewTextBoxColumn.Width = 125;
+            this.receiptItemBindingSource.DataSource = typeof(Data.Entities.ReceiptItem);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateOfIssueDataGridViewTextBoxColumn
+            // 
+            this.dateOfIssueDataGridViewTextBoxColumn.DataPropertyName = "DateOfIssue";
+            this.dateOfIssueDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateOfIssueDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateOfIssueDataGridViewTextBoxColumn.Name = "dateOfIssueDataGridViewTextBoxColumn";
+            this.dateOfIssueDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeeNameDataGridViewTextBoxColumn
+            // 
+            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
+            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee";
+            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
+            this.employeeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanIdDataGridViewTextBoxColumn
             // 
             this.loanIdDataGridViewTextBoxColumn.DataPropertyName = "Loan_Id";
-            this.loanIdDataGridViewTextBoxColumn.HeaderText = "ID posudbe";
+            this.loanIdDataGridViewTextBoxColumn.HeaderText = "Loan ID";
             this.loanIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.loanIdDataGridViewTextBoxColumn.Name = "loanIdDataGridViewTextBoxColumn";
             this.loanIdDataGridViewTextBoxColumn.Width = 125;
@@ -238,14 +232,10 @@ namespace Presentation.Forms
             // moneyDataGridViewTextBoxColumn
             // 
             this.moneyDataGridViewTextBoxColumn.DataPropertyName = "Money";
-            this.moneyDataGridViewTextBoxColumn.HeaderText = "Iznos zakasnine";
+            this.moneyDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.moneyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
             this.moneyDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // receiptItemBindingSource
-            // 
-            this.receiptItemBindingSource.DataSource = typeof(Data.Entities.ReceiptItem);
             // 
             // FormReceipts
             // 
@@ -265,7 +255,7 @@ namespace Presentation.Forms
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormReceipts";
-            this.Text = "Računi";
+            this.Text = "Receipts";
             this.Load += new System.EventHandler(this.FormReceipts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReceipts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).EndInit();
@@ -286,14 +276,13 @@ namespace Presentation.Forms
         private System.Windows.Forms.DataGridView dataGridViewReceipts;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridViewLoanItems;
+        private System.Windows.Forms.BindingSource receiptBindingSource;
+        private System.Windows.Forms.BindingSource receiptItemBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateOfIssueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn employeeNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource receiptBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn receiptIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loanIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moneyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource receiptItemBindingSource;
     }
 }

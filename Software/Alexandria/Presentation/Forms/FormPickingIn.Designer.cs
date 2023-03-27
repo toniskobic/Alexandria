@@ -39,15 +39,15 @@ namespace Presentation.Forms
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPickingInItem = new System.Windows.Forms.DataGridView();
-            this.literatureNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pickingInItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAddLiterature = new System.Windows.Forms.Button();
             this.buttonCreate = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
+            this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.literatureTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
@@ -61,9 +61,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(22, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Naslov:";
+            this.label1.Text = "Title:";
             // 
             // label2
             // 
@@ -71,7 +71,7 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(22, 92);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Author:";
             // 
@@ -81,7 +81,7 @@ namespace Presentation.Forms
             this.label3.Location = new System.Drawing.Point(22, 144);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Category:";
             // 
@@ -130,7 +130,7 @@ namespace Presentation.Forms
             this.groupBox1.Size = new System.Drawing.Size(484, 366);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Stavke primke:";
+            this.groupBox1.Text = "Picking in items:";
             // 
             // dataGridViewPickingInItem
             // 
@@ -138,7 +138,7 @@ namespace Presentation.Forms
             this.dataGridViewPickingInItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewPickingInItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPickingInItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.literatureNameDataGridViewTextBoxColumn});
+            this.literatureTitleDataGridViewTextBoxColumn});
             this.dataGridViewPickingInItem.DataSource = this.pickingInItemBindingSource1;
             this.dataGridViewPickingInItem.Location = new System.Drawing.Point(26, 69);
             this.dataGridViewPickingInItem.Margin = new System.Windows.Forms.Padding(4);
@@ -147,15 +147,6 @@ namespace Presentation.Forms
             this.dataGridViewPickingInItem.RowTemplate.Height = 24;
             this.dataGridViewPickingInItem.Size = new System.Drawing.Size(304, 279);
             this.dataGridViewPickingInItem.TabIndex = 0;
-            // 
-            // literatureNameDataGridViewTextBoxColumn
-            // 
-            this.literatureNameDataGridViewTextBoxColumn.DataPropertyName = "LiteratureName";
-            this.literatureNameDataGridViewTextBoxColumn.HeaderText = "Naslov";
-            this.literatureNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.literatureNameDataGridViewTextBoxColumn.Name = "literatureNameDataGridViewTextBoxColumn";
-            this.literatureNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.literatureNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // pickingInItemBindingSource1
             // 
@@ -179,7 +170,7 @@ namespace Presentation.Forms
             this.groupBox2.Size = new System.Drawing.Size(484, 199);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nova knjižna građa:";
+            this.groupBox2.Text = "New literature:";
             // 
             // buttonAddLiterature
             // 
@@ -192,7 +183,7 @@ namespace Presentation.Forms
             this.buttonAddLiterature.Name = "buttonAddLiterature";
             this.buttonAddLiterature.Size = new System.Drawing.Size(100, 48);
             this.buttonAddLiterature.TabIndex = 6;
-            this.buttonAddLiterature.Text = "Dodaj";
+            this.buttonAddLiterature.Text = "Add";
             this.buttonAddLiterature.UseVisualStyleBackColor = false;
             this.buttonAddLiterature.Click += new System.EventHandler(this.ButtonAddLiterature_Click);
             // 
@@ -208,7 +199,7 @@ namespace Presentation.Forms
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(175, 48);
             this.buttonCreate.TabIndex = 7;
-            this.buttonCreate.Text = "Spremi";
+            this.buttonCreate.Text = "Create";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
             // 
@@ -227,10 +218,6 @@ namespace Presentation.Forms
             this.buttonClose.Text = "Back";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.ButtonClose_Click);
-            // 
-            // pickingInItemBindingSource
-            // 
-            this.pickingInItemBindingSource.DataSource = typeof(Data.Entities.PickingInItem);
             // 
             // buttonHelp
             // 
@@ -263,6 +250,19 @@ namespace Presentation.Forms
             this.buttonLogOut.Text = "Log out";
             this.buttonLogOut.UseVisualStyleBackColor = false;
             this.buttonLogOut.Click += new System.EventHandler(this.ButtonLogOut_Click);
+            // 
+            // pickingInItemBindingSource
+            // 
+            this.pickingInItemBindingSource.DataSource = typeof(Data.Entities.PickingInItem);
+            // 
+            // literatureTitleDataGridViewTextBoxColumn
+            // 
+            this.literatureTitleDataGridViewTextBoxColumn.DataPropertyName = "LiteratureTitle";
+            this.literatureTitleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.literatureTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureTitleDataGridViewTextBoxColumn.Name = "literatureTitleDataGridViewTextBoxColumn";
+            this.literatureTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.literatureTitleDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormPickingIn
             // 
@@ -308,9 +308,9 @@ namespace Presentation.Forms
         private System.Windows.Forms.BindingSource pickingInItemBindingSource;
         private System.Windows.Forms.BindingSource pickingInItemBindingSource1;
         private System.Windows.Forms.Button buttonCreate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn literatureNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Button buttonHelp;
         private System.Windows.Forms.Button buttonLogOut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn literatureTitleDataGridViewTextBoxColumn;
     }
 }

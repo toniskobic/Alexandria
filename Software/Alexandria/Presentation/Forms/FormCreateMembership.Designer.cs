@@ -53,7 +53,7 @@ namespace Presentation.Forms
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(129, 71);
             this.buttonCancel.TabIndex = 35;
-            this.buttonCancel.Text = "Odustani";
+            this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
@@ -69,7 +69,7 @@ namespace Presentation.Forms
             this.buttonCreate.Name = "buttonCreate";
             this.buttonCreate.Size = new System.Drawing.Size(125, 71);
             this.buttonCreate.TabIndex = 34;
-            this.buttonCreate.Text = "Kreiraj";
+            this.buttonCreate.Text = "Create";
             this.buttonCreate.UseVisualStyleBackColor = false;
             this.buttonCreate.Click += new System.EventHandler(this.ButtonCreate_Click);
             // 
@@ -81,9 +81,9 @@ namespace Presentation.Forms
             this.label1.Location = new System.Drawing.Point(155, 172);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 20);
+            this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Korisnik:";
+            this.label1.Text = "User:";
             // 
             // comboBoxUsers
             // 
@@ -126,9 +126,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(243, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 32);
+            this.label2.Size = new System.Drawing.Size(279, 32);
             this.label2.TabIndex = 39;
-            this.label2.Text = "Kreiraj članarinu";
+            this.label2.Text = "Create membership";
             // 
             // FormCreateMembership
             // 
@@ -148,7 +148,7 @@ namespace Presentation.Forms
             this.MinimumSize = new System.Drawing.Size(733, 509);
             this.Name = "FormCreateMembership";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kreiraj članarinu";
+            this.Text = "Create Membership";
             this.Load += new System.EventHandler(this.FormCreateMembership_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);

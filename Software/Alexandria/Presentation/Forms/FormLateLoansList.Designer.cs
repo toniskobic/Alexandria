@@ -68,7 +68,7 @@ namespace Presentation.Forms
             // Username
             // 
             this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Korisničko ime";
+            this.Username.HeaderText = "Username";
             this.Username.MinimumWidth = 6;
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
@@ -77,7 +77,7 @@ namespace Presentation.Forms
             // dateFromDataGridViewTextBoxColumn
             // 
             this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
@@ -85,7 +85,7 @@ namespace Presentation.Forms
             // dateToDataGridViewTextBoxColumn
             // 
             this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Date do";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
             this.dateToDataGridViewTextBoxColumn.Width = 125;
@@ -106,7 +106,7 @@ namespace Presentation.Forms
             this.buttonWarnUser.Name = "buttonWarnUser";
             this.buttonWarnUser.Size = new System.Drawing.Size(196, 65);
             this.buttonWarnUser.TabIndex = 1;
-            this.buttonWarnUser.Text = "Upozori korisnika";
+            this.buttonWarnUser.Text = "Notify user";
             this.buttonWarnUser.UseVisualStyleBackColor = false;
             this.buttonWarnUser.Click += new System.EventHandler(this.ButtonWarnUser_Click);
             // 
@@ -179,9 +179,9 @@ namespace Presentation.Forms
             this.label2.Location = new System.Drawing.Point(180, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 32);
+            this.label2.Size = new System.Drawing.Size(156, 32);
             this.label2.TabIndex = 25;
-            this.label2.Text = "Late Loans";
+            this.label2.Text = "Late loans";
             // 
             // FormLateLoansList
             // 

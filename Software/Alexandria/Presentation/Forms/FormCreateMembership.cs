@@ -42,7 +42,7 @@ namespace Presentation.Forms
             }
             else
             {
-                MessageBox.Show("Članarina već postoji za odabranog korisnika!");
+                MessageBox.Show("Membership already exists for the selected user!");
             }
             this.Close();
         }

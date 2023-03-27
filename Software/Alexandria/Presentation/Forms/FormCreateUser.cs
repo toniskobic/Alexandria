@@ -45,7 +45,7 @@ namespace Presentation.Forms
                 || !ValidationService.AssertStringLength(firstname, 3) || !ValidationService.AssertStringLength(surname, 3)
                 || !ValidationService.AssertStringLength(password, 3))
             {
-                MessageBox.Show("Unesite ispravne podatke");
+                MessageBox.Show("Invalid data!");
                 return;
             }
 

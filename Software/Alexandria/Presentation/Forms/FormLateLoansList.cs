@@ -1,14 +1,14 @@
-﻿using Business.Interfaces;
-using Business.Services;
-using Data;
-using Data.Entities;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Windows.Forms;
+using Business.Interfaces;
+using Business.Services;
+using Data;
+using Data.Entities;
 
 namespace Presentation.Forms
 {
@@ -20,11 +20,16 @@ namespace Presentation.Forms
         {
             _unitOfWork = new UnitOfWork(new AlexandriaContext());
             InitializeComponent();
+
+            if (!CheckIfSmtpSettingsAreLoaded())
+            {
+                buttonWarnUser.Enabled = false;
+            }
         }
 
         private void LateLoansListForm_Load(object sender, EventArgs e)
         {
-            dataGridViewLoans.DataSource =  _unitOfWork.Loans.GetAll()
+            dataGridViewLoans.DataSource = _unitOfWork.Loans.GetAll()
                 .Include(x => x.User)
                 .Include(y => y.LoanItem)
                 .Where(l => (DateTime.Compare(l.DateTo, DateTime.Now) <= 0) && l.Finished != true).ToList();
@@ -34,18 +39,28 @@ namespace Presentation.Forms
         {
             if (dataGridViewLoans.CurrentRow.DataBoundItem is Loan selectedLoan)
             {
-                var smtpClient = new SmtpClient("***REMOVED***")
+                var smtpClient = new SmtpClient(Properties.Settings.Default.SmtpClient)
                 {
-                    Port = 587,
-                    Credentials = new NetworkCredential("***REMOVED***", "***REMOVED***"),
-                    EnableSsl = true,
+                    Port = Properties.Settings.Default.Port,
+                    Credentials = new NetworkCredential(Properties.Settings.Default.Username, Properties.Settings.Default.Password),
+                    EnableSsl = Properties.Settings.Default.EnableSsl,
                 };
 
                 double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
-
-                smtpClient.Send("***REMOVED***", selectedLoan.User.EMail, "Opomena Knjižnica Alexandria", $"Poštovani imate nepodmirena dugovanja. Cijena vaše zakasnine iznosi {dueAmount} HRK.");
-
-                MessageBox.Show("Korisnik upozoren");
+                try
+                {
+                    smtpClient.Send(Properties.Settings.Default.Username,
+                        selectedLoan.User.EMail,
+                        "Alexandria Library Notice",
+                        $"Dear {selectedLoan.User.FullName}," +
+                        $"\n\nYou have unpaid debts.\n\nThe price of your unpaid loan is {dueAmount}." +
+                        $"\n\nSincerely,\n\nAlexandria Library");
+                    MessageBox.Show("User notified!");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("User was not notified!");
+                }
             }
         }
 
@@ -67,6 +82,15 @@ namespace Presentation.Forms
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private bool CheckIfSmtpSettingsAreLoaded()
+        {
+            return !string.IsNullOrEmpty(Properties.Settings.Default.SmtpClient)
+                && !string.IsNullOrEmpty(Properties.Settings.Default.Username)
+                && !string.IsNullOrEmpty(Properties.Settings.Default.Password)
+                && Properties.Settings.Default.Port > 0
+                && Properties.Settings.Default.Port < 65535;
         }
 
         private void ButtonLogOut_Click(object sender, EventArgs e)

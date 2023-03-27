@@ -48,14 +48,11 @@ namespace Presentation.Forms
             this.buttonLateLoansList = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.dataGridViewLoanItems = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.literatureIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loanItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxLiteratureTitle = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonReceipts = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loanIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.literatureIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoans)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loanBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanItems)).BeginInit();
@@ -109,7 +106,7 @@ namespace Presentation.Forms
             // Username
             // 
             this.Username.DataPropertyName = "Username";
-            this.Username.HeaderText = "Korisničko ime";
+            this.Username.HeaderText = "Username";
             this.Username.MinimumWidth = 6;
             this.Username.Name = "Username";
             this.Username.ReadOnly = true;
@@ -118,7 +115,7 @@ namespace Presentation.Forms
             // startedDataGridViewCheckBoxColumn
             // 
             this.startedDataGridViewCheckBoxColumn.DataPropertyName = "Started";
-            this.startedDataGridViewCheckBoxColumn.HeaderText = "Započeta";
+            this.startedDataGridViewCheckBoxColumn.HeaderText = "Started";
             this.startedDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.startedDataGridViewCheckBoxColumn.Name = "startedDataGridViewCheckBoxColumn";
             this.startedDataGridViewCheckBoxColumn.Width = 125;
@@ -126,7 +123,7 @@ namespace Presentation.Forms
             // Finished
             // 
             this.Finished.DataPropertyName = "Finished";
-            this.Finished.HeaderText = "Završena";
+            this.Finished.HeaderText = "Finished";
             this.Finished.MinimumWidth = 6;
             this.Finished.Name = "Finished";
             this.Finished.Width = 125;
@@ -134,7 +131,7 @@ namespace Presentation.Forms
             // dateFromDataGridViewTextBoxColumn
             // 
             this.dateFromDataGridViewTextBoxColumn.DataPropertyName = "DateFrom";
-            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Datum od";
+            this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
@@ -142,7 +139,7 @@ namespace Presentation.Forms
             // dateToDataGridViewTextBoxColumn
             // 
             this.dateToDataGridViewTextBoxColumn.DataPropertyName = "DateTo";
-            this.dateToDataGridViewTextBoxColumn.HeaderText = "Datum do";
+            this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
             this.dateToDataGridViewTextBoxColumn.Width = 125;
@@ -207,7 +204,7 @@ namespace Presentation.Forms
             this.buttonNewLoan.Name = "buttonNewLoan";
             this.buttonNewLoan.Size = new System.Drawing.Size(138, 49);
             this.buttonNewLoan.TabIndex = 26;
-            this.buttonNewLoan.Text = "Nova posudba";
+            this.buttonNewLoan.Text = "New loan";
             this.buttonNewLoan.UseVisualStyleBackColor = false;
             this.buttonNewLoan.Click += new System.EventHandler(this.ButtonNewLoan_Click);
             // 
@@ -240,7 +237,7 @@ namespace Presentation.Forms
             this.buttonLateLoansList.Name = "buttonLateLoansList";
             this.buttonLateLoansList.Size = new System.Drawing.Size(138, 49);
             this.buttonLateLoansList.TabIndex = 28;
-            this.buttonLateLoansList.Text = "Zakasnine";
+            this.buttonLateLoansList.Text = "Late loans";
             this.buttonLateLoansList.UseVisualStyleBackColor = false;
             this.buttonLateLoansList.Click += new System.EventHandler(this.ButtonLateLoansList_Click);
             // 
@@ -256,7 +253,7 @@ namespace Presentation.Forms
             this.buttonReturn.Name = "buttonReturn";
             this.buttonReturn.Size = new System.Drawing.Size(138, 49);
             this.buttonReturn.TabIndex = 29;
-            this.buttonReturn.Text = "Vrati";
+            this.buttonReturn.Text = "Return";
             this.buttonReturn.UseVisualStyleBackColor = false;
             this.buttonReturn.Click += new System.EventHandler(this.ButtonReturn_Click);
             // 
@@ -268,8 +265,7 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.dataGridViewLoanItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewLoanItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.loanIdDataGridViewTextBoxColumn,
+            this.Column1,
             this.literatureIdDataGridViewTextBoxColumn});
             this.dataGridViewLoanItems.DataSource = this.loanItemBindingSource;
             this.dataGridViewLoanItems.Location = new System.Drawing.Point(29, 480);
@@ -279,7 +275,23 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.RowTemplate.Height = 24;
             this.dataGridViewLoanItems.Size = new System.Drawing.Size(838, 198);
             this.dataGridViewLoanItems.TabIndex = 30;
-            this.dataGridViewLoanItems.SelectionChanged += new System.EventHandler(this.DataGridViewLoanItems_SelectionChanged);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "LiteratureTitle";
+            this.Column1.HeaderText = "Literature";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // literatureIdDataGridViewTextBoxColumn
+            // 
+            this.literatureIdDataGridViewTextBoxColumn.DataPropertyName = "LiteratureId";
+            this.literatureIdDataGridViewTextBoxColumn.HeaderText = "Literature ID";
+            this.literatureIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureIdDataGridViewTextBoxColumn.Name = "literatureIdDataGridViewTextBoxColumn";
+            this.literatureIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanItemBindingSource
             // 
@@ -297,31 +309,6 @@ namespace Presentation.Forms
             this.label2.TabIndex = 31;
             this.label2.Text = "Loan items:";
             // 
-            // textBoxLiteratureTitle
-            // 
-            this.textBoxLiteratureTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxLiteratureTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.textBoxLiteratureTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLiteratureTitle.ForeColor = System.Drawing.Color.LightGray;
-            this.textBoxLiteratureTitle.Location = new System.Drawing.Point(382, 434);
-            this.textBoxLiteratureTitle.Multiline = true;
-            this.textBoxLiteratureTitle.Name = "textBoxLiteratureTitle";
-            this.textBoxLiteratureTitle.Size = new System.Drawing.Size(150, 30);
-            this.textBoxLiteratureTitle.TabIndex = 32;
-            this.textBoxLiteratureTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(304, 438);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Title:";
-            // 
             // buttonReceipts
             // 
             this.buttonReceipts.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -334,33 +321,9 @@ namespace Presentation.Forms
             this.buttonReceipts.Name = "buttonReceipts";
             this.buttonReceipts.Size = new System.Drawing.Size(138, 49);
             this.buttonReceipts.TabIndex = 34;
-            this.buttonReceipts.Text = "Izdani računi";
+            this.buttonReceipts.Text = "Receipts";
             this.buttonReceipts.UseVisualStyleBackColor = false;
             this.buttonReceipts.Click += new System.EventHandler(this.ButtonReceipts_Click);
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // loanIdDataGridViewTextBoxColumn
-            // 
-            this.loanIdDataGridViewTextBoxColumn.DataPropertyName = "LoanId";
-            this.loanIdDataGridViewTextBoxColumn.HeaderText = "Loan ID";
-            this.loanIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.loanIdDataGridViewTextBoxColumn.Name = "loanIdDataGridViewTextBoxColumn";
-            this.loanIdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // literatureIdDataGridViewTextBoxColumn
-            // 
-            this.literatureIdDataGridViewTextBoxColumn.DataPropertyName = "LiteratureId";
-            this.literatureIdDataGridViewTextBoxColumn.HeaderText = "Literature ID";
-            this.literatureIdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.literatureIdDataGridViewTextBoxColumn.Name = "literatureIdDataGridViewTextBoxColumn";
-            this.literatureIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // FormLoans
             // 
@@ -369,8 +332,6 @@ namespace Presentation.Forms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
             this.ClientSize = new System.Drawing.Size(891, 861);
             this.Controls.Add(this.buttonReceipts);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBoxLiteratureTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridViewLoanItems);
             this.Controls.Add(this.buttonReturn);
@@ -408,22 +369,19 @@ namespace Presentation.Forms
         private System.Windows.Forms.BindingSource loanBindingSource;
         private System.Windows.Forms.Button buttonNewLoan;
         private System.Windows.Forms.Button buttonHelp;
+        private System.Windows.Forms.Button buttonLateLoansList;
+        private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.DataGridView dataGridViewLoanItems;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.BindingSource loanItemBindingSource;
+        private System.Windows.Forms.Button buttonReceipts;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewCheckBoxColumn startedDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Finished;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateFromDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateToDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button buttonLateLoansList;
-        private System.Windows.Forms.Button buttonReturn;
-        private System.Windows.Forms.DataGridView dataGridViewLoanItems;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource loanItemBindingSource;
-        private System.Windows.Forms.TextBox textBoxLiteratureTitle;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button buttonReceipts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loanIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn literatureIdDataGridViewTextBoxColumn;
     }
 }
