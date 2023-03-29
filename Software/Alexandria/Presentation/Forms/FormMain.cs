@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Business.Services;
+using Data.Static;
 
 namespace Presentation.Forms
 {
@@ -9,7 +10,7 @@ namespace Presentation.Forms
         public FormMain()
         {
             InitializeComponent();
-            if (UserManager.LoggedUser.Role.Name == "User")
+            if (UserManager.LoggedUser.Role.Name == Constants.ROLE_USER)
             {
                 buttonUsers.Enabled = false;
             }
@@ -21,23 +22,6 @@ namespace Presentation.Forms
             this.Hide();
             newForm.ShowDialog();
             this.Show();
-        }
-
-        private void ButtonLogOut_Click(object sender, EventArgs e)
-        {
-            UserManager.LogOut();
-
-            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
-            {
-                if (Application.OpenForms[i].Name != "FormLogin")
-                {
-                    Application.OpenForms[i].Close();
-                }
-                else
-                {
-                    Application.OpenForms[i].Show();
-                }
-            }
         }
 
         private void ButtonLiterature_Click(object sender, EventArgs e)
@@ -78,6 +62,23 @@ namespace Presentation.Forms
             this.Hide();
             newForm.ShowDialog();
             this.Show();
+        }
+
+        private void ButtonLogOut_Click(object sender, EventArgs e)
+        {
+            UserManager.LogOut();
+
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "FormLogin")
+                {
+                    Application.OpenForms[i].Close();
+                }
+                else
+                {
+                    Application.OpenForms[i].Show();
+                }
+            }
         }
     }
 }

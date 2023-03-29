@@ -40,6 +40,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal, Version=7.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.7.0.4\lib\net462\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=7.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation.7.0.4\lib\net462\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,9 +61,13 @@
     <Compile Include="DatabaseScope.cs" />
     <Compile Include="Interfaces\IDatabaseScope.cs" />
     <Compile Include="Interfaces\IGenericRepository.cs" />
-    <Compile Include="Migrations\202106291805438_Initial.cs" />
-    <Compile Include="Migrations\202106291805438_Initial.designer.cs">
-      <DependentUpon>202106291805438_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202303281900050_Initial.cs" />
+    <Compile Include="Migrations\202303281900050_Initial.designer.cs">
+      <DependentUpon>202303281900050_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202303292012273_AddedPasswordHashAndSaltToUser.cs" />
+    <Compile Include="Migrations\202303292012273_AddedPasswordHashAndSaltToUser.designer.cs">
+      <DependentUpon>202303292012273_AddedPasswordHashAndSaltToUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\ReceiptItem.cs" />
@@ -95,6 +105,8 @@
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Static\Constants.cs" />
     <Compile Include="Static\SeedData.cs" />
+    <Compile Include="Static\SeedUser.cs" />
+    <Compile Include="Static\SeedUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -105,8 +117,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106291805438_Initial.resx">
-      <DependentUpon>202106291805438_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303281900050_Initial.resx">
+      <DependentUpon>202303281900050_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202303292012273_AddedPasswordHashAndSaltToUser.resx">
+      <DependentUpon>202303292012273_AddedPasswordHashAndSaltToUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

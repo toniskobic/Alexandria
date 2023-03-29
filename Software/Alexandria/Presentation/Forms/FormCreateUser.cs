@@ -41,20 +41,33 @@ namespace Presentation.Forms
             DateTime BirthDate = this.dateTimePickerBirthDate.Value;
             Role role = comboBoxRoles.SelectedItem as Role;
 
-            if(!ValidationService.AssertEmail(email) || !ValidationService.IsPhoneNumberValid(phoneNumber)
+            if (!ValidationService.AssertEmail(email) || !ValidationService.IsPhoneNumberValid(phoneNumber)
                 || !ValidationService.AssertStringLength(firstname, 3) || !ValidationService.AssertStringLength(surname, 3)
-                || !ValidationService.AssertStringLength(password, 3))
+                || !ValidationService.AssertStringLength(username, 3) || !ValidationService.AssertStringLength(password, 3))
             {
                 MessageBox.Show("Invalid data!");
                 return;
             }
+
+            var user = await _unitOfWork.Users.GetAll().FirstOrDefaultAsync(u => u.UserName == username || u.EMail == email);
+            if (user != null)
+            {
+                var message = user.UserName == username ?
+                    (user.EMail == email ? "User with entered username and e-mail already exists!" : "Username taken!")
+                    : "User with entered e-mail already exists!";
+                MessageBox.Show(message);
+            }
+
+            var salt = UserManager.CreateSalt();
+            var hash = UserManager.HashPasword(password, salt);
 
             User newUser = new User
             {
                 FirstName = firstname,
                 LastName = surname,
                 UserName = username,
-                Password = password,
+                PasswordHash = hash,
+                PasswordSalt = salt,
                 EMail = email,
                 PhoneNumber = phoneNumber,
                 DateOfBirth = BirthDate,

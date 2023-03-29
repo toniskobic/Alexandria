@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Data.Entities
@@ -16,7 +17,11 @@ namespace Data.Entities
 
         public string EMail { get; set; }
 
-        public string Password { get; set; }
+        [MaxLength(255)]
+        public string PasswordHash { get; set; }
+
+        [MaxLength(255)]
+        public string PasswordSalt { get; set; }
 
         public DateTime DateOfBirth { get; set; }
 
@@ -43,7 +48,6 @@ namespace Data.Entities
             {
                 return FirstName + " " + LastName;
             }
-
         }
 
         [NotMapped]
@@ -60,6 +64,5 @@ namespace Data.Entities
             RegistrationDate = DateTime.Now;
             Loan = new List<Loan>();
         }
-
     }
 }

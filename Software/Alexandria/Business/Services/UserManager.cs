@@ -1,5 +1,8 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Security.Cryptography;
+using System.Data.Entity;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Business.Enums;
 using Business.Interfaces;
 using Data;
@@ -15,27 +18,57 @@ namespace Business.Services
 
         public async static Task<LoginResult> LogInUserAsync(string username, string password)
         {
-            var user = await UnitOfWork.Users.GetAll()
+            var user = await UnitOfWork.Users
+                .GetAll()
                 .Include(u => u.Role)
-                .FirstOrDefaultAsync(u => u.UserName == username && u.Password == password);
+                .FirstOrDefaultAsync(u => u.UserName == username);
 
             if (user == null)
             {
                 return LoginResult.NotFound;
             }
-            else if (user.Locked)
+
+            var hashedPassword = HashPasword(password, user.PasswordSalt);
+            if (hashedPassword == user.PasswordHash)
             {
-                return LoginResult.Inactive;
+                if (user.Locked)
+                {
+                    return LoginResult.Inactive;
+                }
+                else
+                {
+                    LoggedUser = user;
+                    return LoginResult.Succesful;
+                }
             }
-            else
-            {
-                LoggedUser = user;
-                return LoginResult.Succesful;
-            }
+
+            return LoginResult.Unsuccesful;
         }
+
         public static void LogOut()
-        { 
+        {
             LoggedUser = null;
+        }
+
+        public static string HashPasword(string password, string salt)
+        {
+            var hash = KeyDerivation.Pbkdf2(
+                password: password,
+                salt: Convert.FromBase64String(salt),
+                prf: KeyDerivationPrf.HMACSHA512,
+                iterationCount: 350000,
+                numBytesRequested: 256 / 8);
+
+            return Convert.ToBase64String(hash);
+        }
+
+        public static string CreateSalt()
+        {
+            var bytes = new byte[128 / 8];
+            var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(bytes);
+
+            return Convert.ToBase64String(bytes);
         }
     }
 }

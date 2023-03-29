@@ -5,6 +5,6 @@
         Succesful,
         NotFound,
         Inactive,
-        Null
+        Unsuccesful
     }
 }

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Business.Enums;
 using Business.Services;
+using Data.Static;
 
 namespace Presentation.Forms
 {
@@ -24,9 +25,9 @@ namespace Presentation.Forms
                 if (result != LoginResult.Succesful)
                 {
                     textBoxPassword.Clear();
-                    MessageBox.Show("Prijava neuspješna!");
+                    MessageBox.Show("Login failed!");
                 }
-                else if (UserManager.LoggedUser.Role.Name != "Member")
+                else if (UserManager.LoggedUser.Role.Name != Constants.ROLE_MEMBER)
                 {
 
                     FormMain form = new FormMain()
@@ -41,7 +42,7 @@ namespace Presentation.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Prijava neuspješna!");
+                    MessageBox.Show("Login failed!");
                 }
 
                 textBoxUsername.Clear();
