@@ -74,11 +74,11 @@ namespace Presentation.Forms
                 .GroupBy(x => x.Literature.AuthorName)
                 .Select(x => new { ID = x.Key, Count = x.Count() })
                 .ToList();
-            chartAuthorsLoansCount.Series["Posudbe"].Points.Clear();
+            chartAuthorsLoansCount.Series["Loans"].Points.Clear();
             chartAuthorsLoansCount.DataSource = data;
             foreach (var item in data)
             {
-                chartAuthorsLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+                chartAuthorsLoansCount.Series["Loans"].Points.AddXY(item.ID, item.Count);
             }
         }
 
@@ -93,11 +93,11 @@ namespace Presentation.Forms
                 .Select(x => new { ID = x.Key, Count = x.Count() })
                 .ToList();
 
-            chartBooksLoansCount.Series["Posudbe"].Points.Clear();
+            chartBooksLoansCount.Series["Loans"].Points.Clear();
             chartBooksLoansCount.DataSource = data;
             foreach (var item in data)
             {
-                chartBooksLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+                chartBooksLoansCount.Series["Loans"].Points.AddXY(item.ID, item.Count);
             }
         }
 
@@ -111,15 +111,15 @@ namespace Presentation.Forms
                 .Select(x => new { ID = x.Key, Count = x.Count() })
                 .ToList();
 
-            chartUsersLoansCount.Series["Posudbe"].Points.Clear();
-            chartUsersLoansCount.Series["Posudbe"]["PointWidth"] = "0.4";
+            chartUsersLoansCount.Series["Loans"].Points.Clear();
+            chartUsersLoansCount.Series["Loans"]["PointWidth"] = "0.4";
             chartUsersLoansCount.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineWidth = 0;
-            chartUsersLoansCount.Series["Posudbe"].IsValueShownAsLabel = true;
+            chartUsersLoansCount.Series["Loans"].IsValueShownAsLabel = true;
             chartUsersLoansCount.DataSource = data;
 
             foreach (var item in data)
             {
-                chartUsersLoansCount.Series["Posudbe"].Points.AddXY(item.ID, item.Count);
+                chartUsersLoansCount.Series["Loans"].Points.AddXY(item.ID, item.Count);
             }
         }
     }

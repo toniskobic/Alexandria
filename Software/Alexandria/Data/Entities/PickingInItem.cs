@@ -17,7 +17,7 @@ namespace Data.Entities
         {
             get
             {
-                return Literature.Title;
+                return Literature?.Title;
             }
         }
 

@@ -261,6 +261,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Data.Entities.PickingInItem.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Literature.datasource" />
     <None Include="Properties\DataSources\Dll.Model.Loan.datasource" />
     <None Include="Properties\DataSources\Dll.Model.LoanItem.datasource" />

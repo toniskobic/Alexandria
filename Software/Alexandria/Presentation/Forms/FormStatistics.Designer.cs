@@ -126,7 +126,7 @@ namespace Presentation.Forms
             this.chartUsersLoansCount.Name = "chartUsersLoansCount";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Posudbe";
+            series1.Name = "Loans";
             this.chartUsersLoansCount.Series.Add(series1);
             this.chartUsersLoansCount.Size = new System.Drawing.Size(428, 330);
             this.chartUsersLoansCount.TabIndex = 27;
@@ -147,7 +147,7 @@ namespace Presentation.Forms
             series2.Legend = "Legend1";
             series2.MarkerBorderColor = System.Drawing.Color.Black;
             series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series2.Name = "Posudbe";
+            series2.Name = "Loans";
             this.chartBooksLoansCount.Series.Add(series2);
             this.chartBooksLoansCount.Size = new System.Drawing.Size(428, 330);
             this.chartBooksLoansCount.TabIndex = 28;
@@ -168,7 +168,7 @@ namespace Presentation.Forms
             series3.Legend = "Legend1";
             series3.MarkerBorderColor = System.Drawing.Color.Black;
             series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Square;
-            series3.Name = "Posudbe";
+            series3.Name = "Loans";
             this.chartAuthorsLoansCount.Series.Add(series3);
             this.chartAuthorsLoansCount.Size = new System.Drawing.Size(428, 330);
             this.chartAuthorsLoansCount.TabIndex = 29;

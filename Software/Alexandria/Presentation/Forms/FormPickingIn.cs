@@ -6,6 +6,7 @@ using Business.Interfaces;
 using Data;
 using Business.Services;
 using Data.Entities;
+using System.ComponentModel;
 
 namespace Presentation.Forms
 {
@@ -20,14 +21,13 @@ namespace Presentation.Forms
             InitializeComponent();
         }
 
-        private async void ButtonAddLiterature_Click(object sender, EventArgs e)
+        private void ButtonAddLiterature_Click(object sender, EventArgs e)
         {
             string title = textBoxTitle.Text;
             Author selectedAuthor = comboBoxAuthor.SelectedItem as Author;
             Category selectedCategory = comboBoxCategory.SelectedItem as Category;
             Literature literature = new Literature(title, selectedCategory, selectedAuthor);
             var newLiterature = _unitOfWork.Literatures.Add(literature);
-            await _unitOfWork.DatabaseScope.SaveAsync();
 
             _newPickingIn.PickingInItem.Add(new PickingInItem
             {
@@ -52,7 +52,7 @@ namespace Presentation.Forms
         public void RefreshDataGrid()
         {
             dataGridViewPickingInItem.DataSource = null;
-            dataGridViewPickingInItem.DataSource = _newPickingIn.PickingInItem;
+            dataGridViewPickingInItem.DataSource = new BindingList<PickingInItem>(_newPickingIn.PickingInItem);
         }
 
         private async void FormPickingIn_Load(object sender, EventArgs e)

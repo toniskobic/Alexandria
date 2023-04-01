@@ -77,92 +77,96 @@ namespace Presentation.Forms
 
         private async void ButtonReturn_Click(object sender, EventArgs e)
         {
-            Loan selectedLoan = dataGridViewLoans.CurrentRow.DataBoundItem as Loan;
-            if (selectedLoan.Finished == false)
+            if (dataGridViewLoans.CurrentRow?.DataBoundItem != null)
             {
-                selectedLoan.Finished = true;
-
-                await _unitOfWork.Loans.UpdateAsync(selectedLoan, selectedLoan.Id);
-                await _unitOfWork.DatabaseScope.SaveAsync();
-
-                if (DateTime.Compare(selectedLoan.DateTo, DateTime.Now) <= 0)
+                Loan selectedLoan = dataGridViewLoans.CurrentRow.DataBoundItem as Loan;
+                if (selectedLoan.Finished == false)
                 {
-                    User user = selectedLoan.User;
-                    User employee = UserManager.LoggedUser;
+                    selectedLoan.Finished = true;
 
-                    Receipt receipt = new Receipt(user, employee);
+                    await _unitOfWork.Loans.UpdateAsync(selectedLoan, selectedLoan.Id);
+                    await _unitOfWork.DatabaseScope.SaveAsync();
 
-                    double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
-
-                    receipt.ReceiptItem.Add(new ReceiptItem
+                    if (DateTime.Compare(selectedLoan.DateTo, DateTime.Now) <= 0)
                     {
-                        Loan = selectedLoan,
-                        Money = dueAmount
-                    });
+                        User user = selectedLoan.User;
+                        User employee = UserManager.LoggedUser;
 
-                    _unitOfWork.Receipts.Add(receipt);
+                        Receipt receipt = new Receipt(user, employee);
 
-                    MessageBox.Show("Literature returned and receipt issued.");
-                }
-                else
-                {
-                    MessageBox.Show("Literature returned.");
-                }
+                        double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
 
-                await _unitOfWork.DatabaseScope.SaveAsync();
+                        receipt.ReceiptItem.Add(new ReceiptItem
+                        {
+                            Loan = selectedLoan,
+                            Money = dueAmount
+                        });
 
-                int literatureId = selectedLoan.LoanItem.First().LiteratureId;
-                Loan reservation = null;
+                        _unitOfWork.Receipts.Add(receipt);
 
-                List<LoanItem> loanItems = await _unitOfWork.LoanItems.GetAll()
-                    .Include(li => li.Loan)
-                    .Include(li => li.Literature)
-                    .Include(li => li.Literature.Author)
-                    .Where(x => x.Literature.Id == literatureId)
-                    .ToListAsync();
-                List<LoanItem> reservations = loanItems.Where(x => x.Loan.Started == false).ToList();
-                LoanItem reservationItems = null;
-
-                if (reservations.Count > 0)
-                {
-                    DateTime lowestDateTime;
-                    if (reservations.Count > 1)
-                    {
-                        lowestDateTime = reservations.Min(x => x.Loan.DateFrom);
+                        MessageBox.Show("Literature returned and receipt issued.");
                     }
                     else
                     {
-                        lowestDateTime = reservations.First().Loan.DateFrom;
+                        MessageBox.Show("Literature returned.");
                     }
-                    reservationItems = reservations.Find(x => x.Loan.DateFrom == lowestDateTime);
-                    reservation = reservationItems.Loan;
+
+                    await _unitOfWork.DatabaseScope.SaveAsync();
+
+                    int literatureId = selectedLoan.LoanItem.First().LiteratureId;
+                    Loan reservation = null;
+
+                    List<LoanItem> loanItems = await _unitOfWork.LoanItems.GetAll()
+                        .Include(li => li.Loan)
+                        .Include(li => li.Literature)
+                        .Include(li => li.Literature.Author)
+                        .Where(x => x.Literature.Id == literatureId)
+                        .ToListAsync();
+                    List<LoanItem> reservations = loanItems.Where(x => x.Loan.Started == false).ToList();
+                    LoanItem reservationItems = null;
+
+                    if (reservations.Count > 0)
+                    {
+                        DateTime lowestDateTime;
+                        if (reservations.Count > 1)
+                        {
+                            lowestDateTime = reservations.Min(x => x.Loan.DateFrom);
+                        }
+                        else
+                        {
+                            lowestDateTime = reservations.First().Loan.DateFrom;
+                        }
+                        reservationItems = reservations.Find(x => x.Loan.DateFrom == lowestDateTime);
+                        reservation = reservationItems.Loan;
+                    }
+
+                    if (CheckIfSmtpSettingsAreLoaded() && reservation != null)
+                    {
+                        var smtpClient = new SmtpClient(Properties.Settings.Default.SmtpClient)
+                        {
+                            Port = Properties.Settings.Default.Port,
+                            Credentials = new NetworkCredential(Properties.Settings.Default.Username, Properties.Settings.Default.Password),
+                            EnableSsl = Properties.Settings.Default.EnableSsl,
+                        };
+
+                        try
+                        {
+                            smtpClient.Send(Properties.Settings.Default.Username, reservation.User.EMail,
+                                "Alexandria Library Reservation",
+                                $"Dear {selectedLoan.User.FullName}," +
+                                $"\n\nReserved literature {reservationItems.Literature.Title} is available for loan." +
+                                $"\n\nSincerely,\n\nAlexandria Library");
+                            MessageBox.Show($"User {reservation.User.UserName} was notified about available literature.");
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show($"User {reservation.User.UserName} was not notified about available literature.");
+                        }
+                    }
+
+                    RefreshLoans();
                 }
 
-                if (CheckIfSmtpSettingsAreLoaded() && reservation != null)
-                {
-                    var smtpClient = new SmtpClient(Properties.Settings.Default.SmtpClient)
-                    {
-                        Port = Properties.Settings.Default.Port,
-                        Credentials = new NetworkCredential(Properties.Settings.Default.Username, Properties.Settings.Default.Password),
-                        EnableSsl = Properties.Settings.Default.EnableSsl,
-                    };
-
-                    try
-                    {
-                        smtpClient.Send(Properties.Settings.Default.Username, reservation.User.EMail,
-                            "Alexandria Library Reservation",
-                            $"Dear {selectedLoan.User.FullName}," +
-                            $"\n\nReserved literature {reservationItems.Literature.Title} is available for loan." +
-                            $"\n\nSincerely,\n\nAlexandria Library");
-                        MessageBox.Show($"User {reservation.User.UserName} was notified about available literature.");
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show($"User {reservation.User.UserName} was not notified about available literature.");
-                    }
-                }
-
-                RefreshLoans();
             }
         }
 

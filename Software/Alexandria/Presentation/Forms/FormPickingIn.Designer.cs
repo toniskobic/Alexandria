@@ -39,6 +39,7 @@ namespace Presentation.Forms
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPickingInItem = new System.Windows.Forms.DataGridView();
+            this.literatureTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pickingInItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonAddLiterature = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace Presentation.Forms
             this.buttonHelp = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
             this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.literatureTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInItemBindingSource1)).BeginInit();
@@ -147,6 +147,15 @@ namespace Presentation.Forms
             this.dataGridViewPickingInItem.RowTemplate.Height = 24;
             this.dataGridViewPickingInItem.Size = new System.Drawing.Size(304, 279);
             this.dataGridViewPickingInItem.TabIndex = 0;
+            // 
+            // literatureTitleDataGridViewTextBoxColumn
+            // 
+            this.literatureTitleDataGridViewTextBoxColumn.DataPropertyName = "LiteratureTitle";
+            this.literatureTitleDataGridViewTextBoxColumn.HeaderText = "Title";
+            this.literatureTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.literatureTitleDataGridViewTextBoxColumn.Name = "literatureTitleDataGridViewTextBoxColumn";
+            this.literatureTitleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.literatureTitleDataGridViewTextBoxColumn.Width = 125;
             // 
             // pickingInItemBindingSource1
             // 
@@ -255,15 +264,6 @@ namespace Presentation.Forms
             // 
             this.pickingInItemBindingSource.DataSource = typeof(Data.Entities.PickingInItem);
             // 
-            // literatureTitleDataGridViewTextBoxColumn
-            // 
-            this.literatureTitleDataGridViewTextBoxColumn.DataPropertyName = "LiteratureTitle";
-            this.literatureTitleDataGridViewTextBoxColumn.HeaderText = "Title";
-            this.literatureTitleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.literatureTitleDataGridViewTextBoxColumn.Name = "literatureTitleDataGridViewTextBoxColumn";
-            this.literatureTitleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.literatureTitleDataGridViewTextBoxColumn.Width = 125;
-            // 
             // FormPickingIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -281,7 +281,7 @@ namespace Presentation.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(762, 754);
             this.Name = "FormPickingIn";
-            this.Text = "Primka";
+            this.Text = "Picking in";
             this.Load += new System.EventHandler(this.FormPickingIn_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingInItem)).EndInit();
