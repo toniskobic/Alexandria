@@ -1,16 +1,16 @@
-﻿using Business.Services;
-using Data.Entities;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using AForge.Video.DirectShow;
-using ZXing;
-using Data;
 using System.Data.Entity;
 using System.Threading.Tasks;
+using AForge.Video.DirectShow;
+using ZXing;
 using Business.Interfaces;
+using Business.Services;
+using Data;
+using Data.Entities;
 
 namespace Presentation.Forms
 {

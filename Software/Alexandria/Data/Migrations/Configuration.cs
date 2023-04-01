@@ -1,8 +1,8 @@
-﻿using Data.Static;
-using Data.Entities;
-using System.Data.Entity.Migrations;
-using System;
+﻿using System;
 using System.Linq;
+using System.Data.Entity.Migrations;
+using Data.Static;
+using Data.Entities;
 
 namespace Data.Migrations
 {

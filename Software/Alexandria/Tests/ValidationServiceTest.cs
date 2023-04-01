@@ -1,5 +1,5 @@
-﻿using Business.Services;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Business.Services;
 
 namespace Tests
 {
