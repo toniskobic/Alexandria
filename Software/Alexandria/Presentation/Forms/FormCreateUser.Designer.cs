@@ -294,6 +294,7 @@ namespace Presentation.Forms
             // 
             // dateTimePickerBirthDate
             // 
+            this.dateTimePickerBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dateTimePickerBirthDate.Location = new System.Drawing.Point(288, 351);
             this.dateTimePickerBirthDate.Name = "dateTimePickerBirthDate";
             this.dateTimePickerBirthDate.Size = new System.Drawing.Size(242, 27);

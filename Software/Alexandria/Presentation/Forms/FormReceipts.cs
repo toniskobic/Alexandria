@@ -6,6 +6,7 @@ using Data.Entities;
 using Business.Interfaces;
 using Data;
 using Business.Services;
+using System.Linq;
 
 namespace Presentation.Forms
 {
@@ -69,12 +70,12 @@ namespace Presentation.Forms
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private async void ReceiptBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void ReceiptBindingSource_CurrentChanged(object sender, EventArgs e)
         {
             var receipt = receiptBindingSource.Current as Receipt;
-            receiptItemBindingSource.DataSource = (await _unitOfWork.Receipts.GetAll()
+            receiptItemBindingSource.DataSource = _unitOfWork.Receipts.GetAll()
                 .Include(x => x.ReceiptItem)
-                .FirstOrDefaultAsync(x => x.Id == receipt.Id))
+                .FirstOrDefault(x => x.Id == receipt.Id)
                 .ReceiptItem;
         }
     }

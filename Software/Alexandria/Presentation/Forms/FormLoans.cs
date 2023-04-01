@@ -94,7 +94,7 @@ namespace Presentation.Forms
 
                         Receipt receipt = new Receipt(user, employee);
 
-                        double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 15;
+                        double dueAmount = (DateTime.Now - selectedLoan.DateTo).TotalDays * 0.2;
 
                         receipt.ReceiptItem.Add(new ReceiptItem
                         {

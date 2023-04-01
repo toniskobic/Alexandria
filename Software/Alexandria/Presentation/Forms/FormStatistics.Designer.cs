@@ -206,9 +206,9 @@ namespace Presentation.Forms
             this.label3.Location = new System.Drawing.Point(973, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 20);
+            this.label3.Size = new System.Drawing.Size(218, 20);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Number of loans by authors:";
+            this.label3.Text = "Number of loans per author:";
             // 
             // FormStatistics
             // 

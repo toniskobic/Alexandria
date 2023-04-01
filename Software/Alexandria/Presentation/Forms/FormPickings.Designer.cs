@@ -39,18 +39,18 @@ namespace Presentation.Forms
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridViewPickingsIn = new System.Windows.Forms.DataGridView();
-            this.pickingInBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewPickingsOut = new System.Windows.Forms.DataGridView();
-            this.pickingOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewPickingInItems = new System.Windows.Forms.DataGridView();
-            this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickingInBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewPickingsOut = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickingOutBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewPickingInItems = new System.Windows.Forms.DataGridView();
             this.LiteratureName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.literatureIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pickingInItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingsIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingsOut)).BeginInit();
@@ -62,7 +62,6 @@ namespace Presentation.Forms
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.LightGray;
             this.label2.Location = new System.Drawing.Point(377, 24);
@@ -172,6 +171,22 @@ namespace Presentation.Forms
             this.dataGridViewPickingsIn.Size = new System.Drawing.Size(469, 244);
             this.dataGridViewPickingsIn.TabIndex = 28;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 125;
+            // 
             // pickingInBindingSource
             // 
             this.pickingInBindingSource.DataSource = typeof(Data.Entities.PickingIn);
@@ -197,49 +212,6 @@ namespace Presentation.Forms
             this.dataGridViewPickingsOut.Size = new System.Drawing.Size(903, 244);
             this.dataGridViewPickingsOut.TabIndex = 29;
             // 
-            // pickingOutBindingSource
-            // 
-            this.pickingOutBindingSource.DataSource = typeof(Data.Entities.PickingOut);
-            // 
-            // dataGridViewPickingInItems
-            // 
-            this.dataGridViewPickingInItems.AllowUserToAddRows = false;
-            this.dataGridViewPickingInItems.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridViewPickingInItems.AutoGenerateColumns = false;
-            this.dataGridViewPickingInItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.dataGridViewPickingInItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPickingInItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LiteratureName,
-            this.literatureIdDataGridViewTextBoxColumn});
-            this.dataGridViewPickingInItems.DataSource = this.pickingInItemBindingSource;
-            this.dataGridViewPickingInItems.Location = new System.Drawing.Point(551, 150);
-            this.dataGridViewPickingInItems.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridViewPickingInItems.Name = "dataGridViewPickingInItems";
-            this.dataGridViewPickingInItems.RowHeadersWidth = 51;
-            this.dataGridViewPickingInItems.RowTemplate.Height = 24;
-            this.dataGridViewPickingInItems.Size = new System.Drawing.Size(368, 244);
-            this.dataGridViewPickingInItems.TabIndex = 30;
-            // 
-            // pickingInItemBindingSource
-            // 
-            this.pickingInItemBindingSource.DataSource = typeof(Data.Entities.PickingInItem);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateDataGridViewTextBoxColumn
-            // 
-            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
-            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
-            this.dateDataGridViewTextBoxColumn.Width = 125;
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -264,6 +236,29 @@ namespace Presentation.Forms
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             this.dateDataGridViewTextBoxColumn1.Width = 125;
             // 
+            // pickingOutBindingSource
+            // 
+            this.pickingOutBindingSource.DataSource = typeof(Data.Entities.PickingOut);
+            // 
+            // dataGridViewPickingInItems
+            // 
+            this.dataGridViewPickingInItems.AllowUserToAddRows = false;
+            this.dataGridViewPickingInItems.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridViewPickingInItems.AutoGenerateColumns = false;
+            this.dataGridViewPickingInItems.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.dataGridViewPickingInItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPickingInItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.LiteratureName,
+            this.literatureIdDataGridViewTextBoxColumn});
+            this.dataGridViewPickingInItems.DataSource = this.pickingInItemBindingSource;
+            this.dataGridViewPickingInItems.Location = new System.Drawing.Point(551, 150);
+            this.dataGridViewPickingInItems.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewPickingInItems.Name = "dataGridViewPickingInItems";
+            this.dataGridViewPickingInItems.RowHeadersWidth = 51;
+            this.dataGridViewPickingInItems.RowTemplate.Height = 24;
+            this.dataGridViewPickingInItems.Size = new System.Drawing.Size(368, 244);
+            this.dataGridViewPickingInItems.TabIndex = 30;
+            // 
             // LiteratureName
             // 
             this.LiteratureName.DataPropertyName = "LiteratureTitle";
@@ -280,6 +275,10 @@ namespace Presentation.Forms
             this.literatureIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.literatureIdDataGridViewTextBoxColumn.Name = "literatureIdDataGridViewTextBoxColumn";
             this.literatureIdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // pickingInItemBindingSource
+            // 
+            this.pickingInItemBindingSource.DataSource = typeof(Data.Entities.PickingInItem);
             // 
             // FormPickings
             // 
@@ -303,7 +302,7 @@ namespace Presentation.Forms
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(965, 875);
             this.Name = "FormPickings";
-            this.Text = "Primke i otpremnice";
+            this.Text = "Pickings";
             this.Load += new System.EventHandler(this.FormPickings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPickingsIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pickingInBindingSource)).EndInit();

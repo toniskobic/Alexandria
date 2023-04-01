@@ -52,12 +52,12 @@ namespace Presentation.Forms
         public void RefreshDataGrid()
         {
             dataGridViewPickingInItem.DataSource = null;
-            dataGridViewPickingInItem.DataSource = new BindingList<PickingInItem>(_newPickingIn.PickingInItem);
+            dataGridViewPickingInItem.DataSource = _newPickingIn.PickingInItem;
         }
 
         private async void FormPickingIn_Load(object sender, EventArgs e)
         {
-            RefreshDataGrid();
+            //RefreshDataGrid();
             await RefreshAuthorsAsync();
             await RefreshCategoriesAsync();
         }

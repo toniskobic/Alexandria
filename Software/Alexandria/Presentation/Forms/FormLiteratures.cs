@@ -92,7 +92,7 @@ namespace Presentation.Forms
             {
 
                 PickingOut newPickingOut = new PickingOut { 
-                    Description = $"Returned, ID = {selectedLiterature.Id}, Title = {selectedLiterature.Title}"
+                    Description = $"Withdrawn, ID = {selectedLiterature.Id}, Title = {selectedLiterature.Title}"
                 };
 
                 _unitOfWork.PickingOuts.Add(newPickingOut);

@@ -137,7 +137,7 @@ namespace Presentation.Forms
             this.buttonPickingOut.Name = "buttonPickingOut";
             this.buttonPickingOut.Size = new System.Drawing.Size(160, 79);
             this.buttonPickingOut.TabIndex = 2;
-            this.buttonPickingOut.Text = "Return literature";
+            this.buttonPickingOut.Text = "Withdraw literature";
             this.buttonPickingOut.UseVisualStyleBackColor = false;
             this.buttonPickingOut.Click += new System.EventHandler(this.ButtonPickingOut_Click);
             // 
