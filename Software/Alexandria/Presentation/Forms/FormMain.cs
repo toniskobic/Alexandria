@@ -42,14 +42,14 @@ namespace Presentation.Forms
 
         private void ButtonHelp_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#3-po%C4%8Detna-stranica");
+            System.Diagnostics.Process.Start("https://github.com/tskobic/Alexandria/wiki/User-Manual#3-homepage");
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.F1))
             {
-                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#3-po%C4%8Detna-stranica");
+                System.Diagnostics.Process.Start("https://github.com/tskobic/Alexandria/wiki/User-Manual#3-homepage");
                 return true;
             }
 

@@ -35,14 +35,14 @@ namespace Presentation.Forms
 
         private void ButtonHelp_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#7-dodaj-kategoriju-");
+            System.Diagnostics.Process.Start("https://github.com/tskobic/Alexandria/wiki/User-Manual#7-add-category");
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == (Keys.F1))
             {
-                System.Diagnostics.Process.Start("https://github.com/foivz/pi21-tskobic-lbojka-piljeg/wiki/Korisni%C4%8Dka-dokumentacija#7-dodaj-kategoriju-");
+                System.Diagnostics.Process.Start("https://github.com/tskobic/Alexandria/wiki/User-Manual#7-add-category");
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
