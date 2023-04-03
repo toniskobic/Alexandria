@@ -7,6 +7,7 @@ This fork of the repository consists of:
 - Completed and refactored implementation of the Repository Pattern
 - Completed and refactored implementation of the Unit of Work Pattern
 - User's password hashing and salting
+- Database Seeding
 - Overall refactoring of the application
 
 ![Login Form](https://github.com/tskobic/Alexandria/blob/main/Documentation/FormLogin.png)
