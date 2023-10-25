@@ -22,7 +22,7 @@ namespace Data.Entities
         {
             get
             {
-                return Category.Name;
+                return Category?.Name;
             }
         }
 
@@ -31,7 +31,7 @@ namespace Data.Entities
         {
             get
             {
-                return Author.FullName;
+                return Author?.FullName;
             }
         }
 

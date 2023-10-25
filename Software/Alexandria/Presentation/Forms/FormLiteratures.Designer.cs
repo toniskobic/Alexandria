@@ -66,6 +66,7 @@ namespace Presentation.Forms
             this.dataGridViewLiteratures.Location = new System.Drawing.Point(19, 247);
             this.dataGridViewLiteratures.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLiteratures.Name = "dataGridViewLiteratures";
+            this.dataGridViewLiteratures.ReadOnly = true;
             this.dataGridViewLiteratures.RowHeadersWidth = 51;
             this.dataGridViewLiteratures.RowTemplate.Height = 24;
             this.dataGridViewLiteratures.Size = new System.Drawing.Size(770, 361);
@@ -77,6 +78,7 @@ namespace Presentation.Forms
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // titleDataGridViewTextBoxColumn
@@ -85,6 +87,7 @@ namespace Presentation.Forms
             this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             this.titleDataGridViewTextBoxColumn.Width = 125;
             // 
             // CategoryName

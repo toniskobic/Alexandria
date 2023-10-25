@@ -75,6 +75,7 @@ namespace Presentation.Forms
             this.dataGridViewLiteratures.Location = new System.Drawing.Point(15, 129);
             this.dataGridViewLiteratures.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLiteratures.Name = "dataGridViewLiteratures";
+            this.dataGridViewLiteratures.ReadOnly = true;
             this.dataGridViewLiteratures.RowHeadersWidth = 51;
             this.dataGridViewLiteratures.RowTemplate.Height = 24;
             this.dataGridViewLiteratures.Size = new System.Drawing.Size(632, 468);
@@ -86,6 +87,7 @@ namespace Presentation.Forms
             this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idDataGridViewTextBoxColumn1.Width = 125;
             // 
             // titleDataGridViewTextBoxColumn
@@ -94,6 +96,7 @@ namespace Presentation.Forms
             this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             this.titleDataGridViewTextBoxColumn.Width = 125;
             // 
             // categoryNameDataGridViewTextBoxColumn
@@ -164,6 +167,7 @@ namespace Presentation.Forms
             this.dataGridViewMemberships.Location = new System.Drawing.Point(748, 129);
             this.dataGridViewMemberships.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewMemberships.Name = "dataGridViewMemberships";
+            this.dataGridViewMemberships.ReadOnly = true;
             this.dataGridViewMemberships.RowHeadersWidth = 51;
             this.dataGridViewMemberships.RowTemplate.Height = 24;
             this.dataGridViewMemberships.Size = new System.Drawing.Size(632, 468);
@@ -175,6 +179,7 @@ namespace Presentation.Forms
             this.Id.HeaderText = "ID";
             this.Id.MinimumWidth = 6;
             this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             this.Id.Width = 125;
             // 
             // userNameDataGridViewTextBoxColumn
@@ -192,6 +197,7 @@ namespace Presentation.Forms
             this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateToDataGridViewTextBoxColumn
@@ -200,6 +206,7 @@ namespace Presentation.Forms
             this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // membershipBindingSource

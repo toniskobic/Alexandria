@@ -80,14 +80,15 @@ namespace Presentation.Forms
             if (dataGridViewLoans.CurrentRow?.DataBoundItem != null)
             {
                 Loan selectedLoan = dataGridViewLoans.CurrentRow.DataBoundItem as Loan;
-                if (selectedLoan.Finished == false)
+                if (!selectedLoan.Finished)
                 {
                     selectedLoan.Finished = true;
+                    selectedLoan.DateReturned = DateTime.Now;
 
                     await _unitOfWork.Loans.UpdateAsync(selectedLoan, selectedLoan.Id);
                     await _unitOfWork.DatabaseScope.SaveAsync();
 
-                    if (DateTime.Compare(selectedLoan.DateTo, DateTime.Now) <= 0)
+                    if (selectedLoan.DateReturned.HasValue && DateTime.Compare(selectedLoan.DateTo, selectedLoan.DateReturned.Value) <= 0)
                     {
                         User user = selectedLoan.User;
                         User employee = UserManager.LoggedUser;

@@ -37,16 +37,16 @@ namespace Presentation.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewReceipts = new System.Windows.Forms.DataGridView();
-            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewLoanItems = new System.Windows.Forms.DataGridView();
-            this.receiptItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateOfIssueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewLoanItems = new System.Windows.Forms.DataGridView();
             this.loanIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moneyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receiptItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReceipts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLoanItems)).BeginInit();
@@ -142,10 +142,47 @@ namespace Presentation.Forms
             this.dataGridViewReceipts.Location = new System.Drawing.Point(14, 131);
             this.dataGridViewReceipts.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridViewReceipts.Name = "dataGridViewReceipts";
+            this.dataGridViewReceipts.ReadOnly = true;
             this.dataGridViewReceipts.RowHeadersWidth = 51;
             this.dataGridViewReceipts.RowTemplate.Height = 24;
             this.dataGridViewReceipts.Size = new System.Drawing.Size(838, 257);
             this.dataGridViewReceipts.TabIndex = 30;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dateOfIssueDataGridViewTextBoxColumn
+            // 
+            this.dateOfIssueDataGridViewTextBoxColumn.DataPropertyName = "DateOfIssue";
+            this.dateOfIssueDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateOfIssueDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateOfIssueDataGridViewTextBoxColumn.Name = "dateOfIssueDataGridViewTextBoxColumn";
+            this.dateOfIssueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateOfIssueDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // employeeNameDataGridViewTextBoxColumn
+            // 
+            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
+            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee";
+            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
+            this.employeeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // receiptBindingSource
             // 
@@ -178,48 +215,11 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.Location = new System.Drawing.Point(13, 458);
             this.dataGridViewLoanItems.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridViewLoanItems.Name = "dataGridViewLoanItems";
+            this.dataGridViewLoanItems.ReadOnly = true;
             this.dataGridViewLoanItems.RowHeadersWidth = 51;
             this.dataGridViewLoanItems.RowTemplate.Height = 24;
             this.dataGridViewLoanItems.Size = new System.Drawing.Size(838, 198);
             this.dataGridViewLoanItems.TabIndex = 32;
-            // 
-            // receiptItemBindingSource
-            // 
-            this.receiptItemBindingSource.DataSource = typeof(Data.Entities.ReceiptItem);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dateOfIssueDataGridViewTextBoxColumn
-            // 
-            this.dateOfIssueDataGridViewTextBoxColumn.DataPropertyName = "DateOfIssue";
-            this.dateOfIssueDataGridViewTextBoxColumn.HeaderText = "Date";
-            this.dateOfIssueDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dateOfIssueDataGridViewTextBoxColumn.Name = "dateOfIssueDataGridViewTextBoxColumn";
-            this.dateOfIssueDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // employeeNameDataGridViewTextBoxColumn
-            // 
-            this.employeeNameDataGridViewTextBoxColumn.DataPropertyName = "EmployeeName";
-            this.employeeNameDataGridViewTextBoxColumn.HeaderText = "Employee";
-            this.employeeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.employeeNameDataGridViewTextBoxColumn.Name = "employeeNameDataGridViewTextBoxColumn";
-            this.employeeNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanIdDataGridViewTextBoxColumn
             // 
@@ -227,6 +227,7 @@ namespace Presentation.Forms
             this.loanIdDataGridViewTextBoxColumn.HeaderText = "Loan ID";
             this.loanIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.loanIdDataGridViewTextBoxColumn.Name = "loanIdDataGridViewTextBoxColumn";
+            this.loanIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.loanIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // moneyDataGridViewTextBoxColumn
@@ -235,7 +236,12 @@ namespace Presentation.Forms
             this.moneyDataGridViewTextBoxColumn.HeaderText = "Amount";
             this.moneyDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.moneyDataGridViewTextBoxColumn.Name = "moneyDataGridViewTextBoxColumn";
+            this.moneyDataGridViewTextBoxColumn.ReadOnly = true;
             this.moneyDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // receiptItemBindingSource
+            // 
+            this.receiptItemBindingSource.DataSource = typeof(Data.Entities.ReceiptItem);
             // 
             // FormReceipts
             // 

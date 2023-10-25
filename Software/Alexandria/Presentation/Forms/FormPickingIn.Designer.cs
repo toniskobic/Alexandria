@@ -143,6 +143,7 @@ namespace Presentation.Forms
             this.dataGridViewPickingInItem.Location = new System.Drawing.Point(26, 69);
             this.dataGridViewPickingInItem.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPickingInItem.Name = "dataGridViewPickingInItem";
+            this.dataGridViewPickingInItem.ReadOnly = true;
             this.dataGridViewPickingInItem.RowHeadersWidth = 51;
             this.dataGridViewPickingInItem.RowTemplate.Height = 24;
             this.dataGridViewPickingInItem.Size = new System.Drawing.Size(304, 279);

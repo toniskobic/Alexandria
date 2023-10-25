@@ -18,6 +18,8 @@ namespace Data.Entities
 
         public DateTime DateTo { get; set; }
 
+        public DateTime? DateReturned { get; set; }
+
         public List<LoanItem> LoanItem { get; set; }
 
         public List<ReceiptItem> ReceiptItem { get; set; }
@@ -44,6 +46,7 @@ namespace Data.Entities
             Finished = finished;
             DateFrom = dateFrom;
             DateTo = dateTo;
+            DateReturned = null;
         }
     }
 }

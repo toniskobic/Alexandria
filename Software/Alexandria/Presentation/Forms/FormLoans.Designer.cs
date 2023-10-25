@@ -90,6 +90,7 @@ namespace Presentation.Forms
             this.dataGridViewLoans.Location = new System.Drawing.Point(29, 157);
             this.dataGridViewLoans.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridViewLoans.Name = "dataGridViewLoans";
+            this.dataGridViewLoans.ReadOnly = true;
             this.dataGridViewLoans.RowHeadersWidth = 51;
             this.dataGridViewLoans.RowTemplate.Height = 24;
             this.dataGridViewLoans.Size = new System.Drawing.Size(838, 257);
@@ -101,6 +102,7 @@ namespace Presentation.Forms
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // Username
@@ -118,6 +120,7 @@ namespace Presentation.Forms
             this.startedDataGridViewCheckBoxColumn.HeaderText = "Started";
             this.startedDataGridViewCheckBoxColumn.MinimumWidth = 6;
             this.startedDataGridViewCheckBoxColumn.Name = "startedDataGridViewCheckBoxColumn";
+            this.startedDataGridViewCheckBoxColumn.ReadOnly = true;
             this.startedDataGridViewCheckBoxColumn.Width = 125;
             // 
             // Finished
@@ -126,6 +129,7 @@ namespace Presentation.Forms
             this.Finished.HeaderText = "Finished";
             this.Finished.MinimumWidth = 6;
             this.Finished.Name = "Finished";
+            this.Finished.ReadOnly = true;
             this.Finished.Width = 125;
             // 
             // dateFromDataGridViewTextBoxColumn
@@ -134,6 +138,7 @@ namespace Presentation.Forms
             this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateToDataGridViewTextBoxColumn
@@ -142,6 +147,7 @@ namespace Presentation.Forms
             this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanBindingSource
@@ -271,6 +277,7 @@ namespace Presentation.Forms
             this.dataGridViewLoanItems.Location = new System.Drawing.Point(29, 480);
             this.dataGridViewLoanItems.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridViewLoanItems.Name = "dataGridViewLoanItems";
+            this.dataGridViewLoanItems.ReadOnly = true;
             this.dataGridViewLoanItems.RowHeadersWidth = 51;
             this.dataGridViewLoanItems.RowTemplate.Height = 24;
             this.dataGridViewLoanItems.Size = new System.Drawing.Size(838, 198);
@@ -291,6 +298,7 @@ namespace Presentation.Forms
             this.literatureIdDataGridViewTextBoxColumn.HeaderText = "Literature ID";
             this.literatureIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.literatureIdDataGridViewTextBoxColumn.Name = "literatureIdDataGridViewTextBoxColumn";
+            this.literatureIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.literatureIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanItemBindingSource

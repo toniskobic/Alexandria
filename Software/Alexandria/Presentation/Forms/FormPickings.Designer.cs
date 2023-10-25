@@ -166,6 +166,7 @@ namespace Presentation.Forms
             this.dataGridViewPickingsIn.Location = new System.Drawing.Point(13, 150);
             this.dataGridViewPickingsIn.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPickingsIn.Name = "dataGridViewPickingsIn";
+            this.dataGridViewPickingsIn.ReadOnly = true;
             this.dataGridViewPickingsIn.RowHeadersWidth = 51;
             this.dataGridViewPickingsIn.RowTemplate.Height = 24;
             this.dataGridViewPickingsIn.Size = new System.Drawing.Size(469, 244);
@@ -177,6 +178,7 @@ namespace Presentation.Forms
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateDataGridViewTextBoxColumn
@@ -185,6 +187,7 @@ namespace Presentation.Forms
             this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn.Width = 125;
             // 
             // pickingInBindingSource
@@ -207,6 +210,7 @@ namespace Presentation.Forms
             this.dataGridViewPickingsOut.Location = new System.Drawing.Point(16, 477);
             this.dataGridViewPickingsOut.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPickingsOut.Name = "dataGridViewPickingsOut";
+            this.dataGridViewPickingsOut.ReadOnly = true;
             this.dataGridViewPickingsOut.RowHeadersWidth = 51;
             this.dataGridViewPickingsOut.RowTemplate.Height = 24;
             this.dataGridViewPickingsOut.Size = new System.Drawing.Size(903, 244);
@@ -218,6 +222,7 @@ namespace Presentation.Forms
             this.idDataGridViewTextBoxColumn1.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
             this.idDataGridViewTextBoxColumn1.Width = 125;
             // 
             // descriptionDataGridViewTextBoxColumn
@@ -226,6 +231,7 @@ namespace Presentation.Forms
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             this.descriptionDataGridViewTextBoxColumn.Width = 400;
             // 
             // dateDataGridViewTextBoxColumn1
@@ -234,6 +240,7 @@ namespace Presentation.Forms
             this.dateDataGridViewTextBoxColumn1.HeaderText = "Date";
             this.dateDataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn1.Width = 125;
             // 
             // pickingOutBindingSource
@@ -254,6 +261,7 @@ namespace Presentation.Forms
             this.dataGridViewPickingInItems.Location = new System.Drawing.Point(551, 150);
             this.dataGridViewPickingInItems.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewPickingInItems.Name = "dataGridViewPickingInItems";
+            this.dataGridViewPickingInItems.ReadOnly = true;
             this.dataGridViewPickingInItems.RowHeadersWidth = 51;
             this.dataGridViewPickingInItems.RowTemplate.Height = 24;
             this.dataGridViewPickingInItems.Size = new System.Drawing.Size(368, 244);
@@ -274,6 +282,7 @@ namespace Presentation.Forms
             this.literatureIdDataGridViewTextBoxColumn.HeaderText = "Literature ID";
             this.literatureIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.literatureIdDataGridViewTextBoxColumn.Name = "literatureIdDataGridViewTextBoxColumn";
+            this.literatureIdDataGridViewTextBoxColumn.ReadOnly = true;
             this.literatureIdDataGridViewTextBoxColumn.Width = 125;
             // 
             // pickingInItemBindingSource

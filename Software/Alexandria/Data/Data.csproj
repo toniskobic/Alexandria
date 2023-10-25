@@ -69,6 +69,10 @@
     <Compile Include="Migrations\202303292012273_AddedPasswordHashAndSaltToUser.designer.cs">
       <DependentUpon>202303292012273_AddedPasswordHashAndSaltToUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310251511460_AddedLoanDateReturnedProp.cs" />
+    <Compile Include="Migrations\202310251511460_AddedLoanDateReturnedProp.designer.cs">
+      <DependentUpon>202310251511460_AddedLoanDateReturnedProp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Entities\ReceiptItem.cs" />
     <Compile Include="Entities\PickingIn.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202303292012273_AddedPasswordHashAndSaltToUser.resx">
       <DependentUpon>202303292012273_AddedPasswordHashAndSaltToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310251511460_AddedLoanDateReturnedProp.resx">
+      <DependentUpon>202310251511460_AddedLoanDateReturnedProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

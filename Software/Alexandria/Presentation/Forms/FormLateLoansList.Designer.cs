@@ -60,6 +60,7 @@ namespace Presentation.Forms
             this.dataGridViewLoans.Location = new System.Drawing.Point(13, 106);
             this.dataGridViewLoans.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewLoans.Name = "dataGridViewLoans";
+            this.dataGridViewLoans.ReadOnly = true;
             this.dataGridViewLoans.RowHeadersWidth = 51;
             this.dataGridViewLoans.RowTemplate.Height = 24;
             this.dataGridViewLoans.Size = new System.Drawing.Size(493, 410);
@@ -80,6 +81,7 @@ namespace Presentation.Forms
             this.dateFromDataGridViewTextBoxColumn.HeaderText = "Date from";
             this.dateFromDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateFromDataGridViewTextBoxColumn.Name = "dateFromDataGridViewTextBoxColumn";
+            this.dateFromDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateFromDataGridViewTextBoxColumn.Width = 125;
             // 
             // dateToDataGridViewTextBoxColumn
@@ -88,6 +90,7 @@ namespace Presentation.Forms
             this.dateToDataGridViewTextBoxColumn.HeaderText = "Date to";
             this.dateToDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateToDataGridViewTextBoxColumn.Name = "dateToDataGridViewTextBoxColumn";
+            this.dateToDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateToDataGridViewTextBoxColumn.Width = 125;
             // 
             // loanBindingSource

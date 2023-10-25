@@ -72,7 +72,7 @@ namespace Business.Services
                 var newLoanItem = await LoanItems.GetAll()
                     .Include(l => l.Loan)
                     .FirstOrDefaultAsync(li => li.Id == loanItem.Id);
-                if (loanItem.Loan.DateTo >= DateTime.Now)
+                if (loanItem.Loan.DateReturned == null)
                 {
                     isLoaned = true;
                     break;
