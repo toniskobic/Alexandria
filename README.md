@@ -10,9 +10,9 @@ This fork of the repository consists of:
 - Database Seeding
 - Overall refactoring of the application
 
-![Login Form](https://github.com/tskobic/Alexandria/blob/main/Documentation/FormLogin.png)
+![Login Form](https://github.com/toniskobic/Alexandria/blob/main/Documentation/FormLogin.png)
 
 # Alexandria User Manual
 
-The [User Manual](https://github.com/tskobic/Alexandria/wiki/User-Manual) wiki chapter consists of forms screenshots and their explanations.
+The [User Manual](https://github.com/toniskobic/Alexandria/wiki/User-Manual) wiki chapter consists of forms screenshots and their explanations.
 
